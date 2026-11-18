@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forbidden Steak — Where Real Steaks Break The Rules | Artisanal Dry-Aged &amp; Wood-Fired Beef</title>
-  <meta name="description"
-    content="Forbidden Steak — We craft carnal cuts, 45-day dry-aged tomahawks, and A5 Miyazaki wagyu seared over white oak and binchotan fire. Break the rules of ordinary steakhouses.">
+  <title>Forbidden Suya — Where Real Suya Breaks The Rules | Artisanal Wood-Fired Lagos Hearth</title>
+  <meta name="description" content="Forbidden Suya — Handcrafted Nigerian suya, grass-fed ram tozo, prime beef skewers, and wild guinea fowl dusted in small-batch Kano yaji and charred over 1,000°F mangrove coals. Victoria Island, Lagos.">
 
   <!-- Favicon -->
   <link rel="icon"
@@ -123,7 +122,7 @@
       theme: {
         extend: {
           colors: {
-            steak: {
+            suya: {
               yellow: '#DCE33A',
               'yellow-dark': '#CAD12D',
               cream: '#E2E6D5',
@@ -267,10 +266,14 @@
   <header class="bg-[#DCE33A] border-b border-black/15 sticky top-0 z-50 w-full">
     <div class="w-full px-5 sm:px-8 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
 
-      <!-- Wordmark Logo: Forbidden Steak (Pushed to far left end) -->
+      <!-- Wordmark Logo: Forbidden Suya with Monochrome Logo Icon -->
       <a href="#hero"
-        class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#121212] hover:opacity-85 transition-opacity flex items-center gap-2">
-        <span>Forbidden Steak</span>
+        class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#121212] hover:opacity-85 transition-opacity flex items-center gap-2.5">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8 text-[#121212] flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
+          <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
+        </svg>
+        <span>Forbidden Suya</span>
       </a>
 
       <!-- Desktop Navigation Links (Pushed to far right end) -->
@@ -281,7 +284,6 @@
         <a href="#cuts" class="hover:underline underline-offset-4">Our Cuts</a>
         <a href="#origins" class="hover:underline underline-offset-4">Origins</a>
         <a href="#expect" class="hover:underline underline-offset-4">Testimonials</a>
-        <a href="#partners" class="hover:underline underline-offset-4">Alliances</a>
         <a href="#philosophy" class="hover:underline underline-offset-4">Philosophy</a>
         <button onclick="openInquiryModal()"
           class="hover:underline underline-offset-4 cursor-pointer font-bold bg-transparent border-0 p-0 text-[#121212] text-xs sm:text-sm tracking-wider">
@@ -307,7 +309,6 @@
       <a href="#cuts" onclick="toggleMobileNav()" class="block py-1">Our Cuts</a>
       <a href="#origins" onclick="toggleMobileNav()" class="block py-1">Origins</a>
       <a href="#expect" onclick="toggleMobileNav()" class="block py-1">Testimonials</a>
-      <a href="#partners" onclick="toggleMobileNav()" class="block py-1">Alliances</a>
       <a href="#philosophy" onclick="toggleMobileNav()" class="block py-1">Philosophy</a>
       <button onclick="openInquiryModal(); toggleMobileNav();"
         class="w-full text-center py-2.5 rounded-full bg-[#121212] text-white font-bold uppercase tracking-wider mt-2 hover:bg-black/85 transition-all cursor-pointer">
@@ -317,13 +318,13 @@
   </header>
 
   <!-- ========================================================================= -->
-  <!-- 2. HERO SECTION: Full-Bleed High-Res Steak Photo + Wavy Ribbon -->
+  <!-- 2. HERO SECTION: Full-Bleed High-Res Suya Photo + Wavy Ribbon -->
   <!-- ========================================================================= -->
   <section id="hero" class="relative w-full bg-[#121212] overflow-hidden">
 
     <!-- Hero Image Container with Full Bleed -->
     <div class="relative w-full h-[620px] sm:h-[720px] lg:h-[820px] overflow-hidden bg-[#121212]">
-      <img src="assets/steak/hero_steak_4k.jpg" alt="Dry-aged prime steak carved over cellar wood"
+      <img src="assets/suya/hero_suya_4k.jpg" alt="Artisanal handcrafted Nigerian suya sizzling over glowing embers"
         class="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.12]">
       <!-- Gradient scrim overlays for mood and readability -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60 pointer-events-none"></div>
@@ -383,7 +384,7 @@
           <text fill="#121212" font-family="'Syne', sans-serif" font-weight="800" font-size="34"
             letter-spacing="2.5">
             <textPath href="#ribbonCenterline" startOffset="50%" text-anchor="middle" dominant-baseline="central">
-              Break the Rules ★ Where Real Steaks Break the Rules ★ Break the Rules ★
+              Break the Rules ★ Where Real Suya Breaks the Rules ★ Break the Rules ★
             </textPath>
           </text>
         </svg>
@@ -401,13 +402,13 @@
       <!-- Eyebrow label -->
       <div
         class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 mb-5 font-bold">
-        ABOUT FORBIDDEN STEAK
+        ABOUT FORBIDDEN SUYA
       </div>
 
       <!-- 3-Line Display Headline (Strictly 3 Lines, 4 Words Per Line, No Pills, Title Case in Oswald) -->
       <h1
         class="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] tracking-tight text-[#121212] leading-[1.12] max-w-5xl mx-auto mb-6">
-        <span class="block whitespace-nowrap">We Craft Daring Steaks,</span>
+        <span class="block whitespace-nowrap">We Craft Daring Suya,</span>
         <span class="block whitespace-nowrap">Sizzling Cuts &amp; Feasts</span>
         <span class="block whitespace-nowrap">That Truly Make Noise</span>
       </h1>
@@ -419,7 +420,7 @@
 
       <!-- Balanced Body Paragraph -->
       <p class="max-w-lg mx-auto text-sm sm:text-[15px] text-black/70 leading-relaxed font-sans mb-8">
-        At Forbidden Steak, we believe extraordinary beef isn’t merely cooked—it’s forged in smoke and flame. Sourced
+        At Forbidden Suya, we believe extraordinary beef isn’t merely cooked—it’s forged in smoke and flame. Sourced
         from single-origin heritage cattle and dry-aged for 45 days in our Himalayan pink salt lockers, every bone-in
         cut is blistered over white oak embers and binchotan charcoal for an unapologetic, mahogany crust and
         butter-soft marbling.
@@ -454,7 +455,7 @@
             <span class="block whitespace-nowrap">RIOTS&mdash;</span>
           </h2>
           <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed max-w-[360px] mb-6">
-            We don&rsquo;t believe in sterile, quiet dining rooms with lukewarm steaks drowning in parsley butter. We
+            We don&rsquo;t believe in sterile, quiet dining rooms with lukewarm skewers drowned in MSG and artificial powder. We
             believe in spitting embers, the intoxicating aroma of caramelizing prime ribeye fat, heavy cast iron, and knife
             edges slicing through dry-aged beef that melts like butter on contact.
           </p>
@@ -477,59 +478,59 @@
           <div class="marquee-wrapper" style="height: 720px; width: 38%;">
             <div class="marquee-col marquee-down-fast">
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
-                <img src="assets/steak/gallery_ribeye_sear.jpg" alt="Prime bone-in ribeye sizzling on cast iron"
+                <img src="assets/suya/suya_skewers_fire.jpg" alt="Prime bone-in ribeye sizzling on cast iron"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
-                <img src="assets/steak/chef_portrait.jpg" alt="Master grill chef at open fire"
+                <img src="assets/suya/suya_grillmaster_hands.jpg" alt="Master grill chef at open fire"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
-                <img src="assets/steak/gallery_fire_smoke.jpg" alt="Hardwood smoke billowing over grill grates"
+                <img src="assets/suya/woodsmoke_hearth.jpg" alt="Hardwood smoke billowing over grill grates"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 250px;">
-                <img src="assets/steak/steak_plate.jpg" alt="Thick cut dry-aged steak plated with herbs"
+                <img src="assets/suya/guinea_fowl_skewers.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
-                <img src="assets/steak/gallery_bone_in_carve.jpg" alt="Slicing tender charred bone-in rib roast"
+                <img src="assets/suya/tozo_beef_sliced.jpg" alt="Slicing tender charred bone-in rib roast"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
-                <img src="assets/steak/butcher_prep.jpg" alt="Artisanal butcher prepping prime cuts"
+                <img src="assets/suya/raw_spiced_skewers.jpg" alt="Artisanal butcher prepping prime cuts"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
-                <img src="assets/steak/gallery_marbling_raw.jpg" alt="Intricate A5 Miyazaki wagyu marbling"
+                <img src="assets/suya/raw_spiced_skewers.jpg" alt="Intricate A5 Miyazaki wagyu marbling"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
-                <img src="assets/steak/gallery_ribeye_sear.jpg" alt="Prime bone-in ribeye sizzling on cast iron"
+                <img src="assets/suya/suya_skewers_fire.jpg" alt="Prime bone-in ribeye sizzling on cast iron"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
-                <img src="assets/steak/chef_portrait.jpg" alt="Master grill chef at open fire"
+                <img src="assets/suya/suya_grillmaster_hands.jpg" alt="Master grill chef at open fire"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
-                <img src="assets/steak/gallery_fire_smoke.jpg" alt="Hardwood smoke billowing over grill grates"
+                <img src="assets/suya/woodsmoke_hearth.jpg" alt="Hardwood smoke billowing over grill grates"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 250px;">
-                <img src="assets/steak/steak_plate.jpg" alt="Thick cut dry-aged steak plated with herbs"
+                <img src="assets/suya/guinea_fowl_skewers.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
-                <img src="assets/steak/gallery_bone_in_carve.jpg" alt="Slicing tender charred bone-in rib roast"
+                <img src="assets/suya/tozo_beef_sliced.jpg" alt="Slicing tender charred bone-in rib roast"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
-                <img src="assets/steak/butcher_prep.jpg" alt="Artisanal butcher prepping prime cuts"
+                <img src="assets/suya/raw_spiced_skewers.jpg" alt="Artisanal butcher prepping prime cuts"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
-                <img src="assets/steak/gallery_marbling_raw.jpg" alt="Intricate A5 Miyazaki wagyu marbling"
+                <img src="assets/suya/raw_spiced_skewers.jpg" alt="Intricate A5 Miyazaki wagyu marbling"
                   class="w-full h-full object-cover marquee-img">
               </div>
             </div>
@@ -539,59 +540,59 @@
           <div class="marquee-wrapper" style="height: 720px; width: 38%;">
             <div class="marquee-col marquee-up-mid">
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
-                <img src="assets/steak/tomahawk_slice.jpg" alt="Dry-aged 45-day Tomahawk sliced with rosemary"
+                <img src="assets/suya/tozo_beef_sliced.jpg" alt="Dry-aged 45-day Tomahawk sliced with rosemary"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
-                <img src="assets/steak/gallery_embers_flame.jpg" alt="Live white oak embers leaping in cellar forge"
+                <img src="assets/suya/live_embers_hearth.jpg" alt="Live white oak embers leaping in cellar forge"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
-                <img src="assets/steak/gallery_castiron_butter.jpg" alt="Butter basting searing steak with fresh thyme"
+                <img src="assets/suya/asun_goat_ribs.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 380px;">
-                <img src="assets/steak/chef_flame.jpg" alt="Open culinary fire licking meat crust"
+                <img src="assets/suya/live_embers_hearth.jpg" alt="Open culinary fire licking meat crust"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
-                <img src="assets/steak/gallery_platter_garnish.jpg" alt="Artisanal steakhouse platter and sea salt"
+                <img src="assets/suya/suya_platter_onions.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
-                <img src="assets/steak/steak_hands.jpg" alt="Hands carving rare steak on wooden cellar table"
+                <img src="assets/suya/suya_grillmaster_hands.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 330px;">
-                <img src="assets/steak/gallery_chef_knife.jpg" alt="Japanese chef knife slicing prime steak"
+                <img src="assets/suya/tozo_beef_sliced.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
-                <img src="assets/steak/tomahawk_slice.jpg" alt="Dry-aged 45-day Tomahawk sliced with rosemary"
+                <img src="assets/suya/tozo_beef_sliced.jpg" alt="Dry-aged 45-day Tomahawk sliced with rosemary"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
-                <img src="assets/steak/gallery_embers_flame.jpg" alt="Live white oak embers leaping in cellar forge"
+                <img src="assets/suya/live_embers_hearth.jpg" alt="Live white oak embers leaping in cellar forge"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
-                <img src="assets/steak/gallery_castiron_butter.jpg" alt="Butter basting searing steak with fresh thyme"
+                <img src="assets/suya/asun_goat_ribs.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 380px;">
-                <img src="assets/steak/chef_flame.jpg" alt="Open culinary fire licking meat crust"
+                <img src="assets/suya/live_embers_hearth.jpg" alt="Open culinary fire licking meat crust"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
-                <img src="assets/steak/gallery_platter_garnish.jpg" alt="Artisanal steakhouse platter and sea salt"
+                <img src="assets/suya/suya_platter_onions.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
-                <img src="assets/steak/steak_hands.jpg" alt="Hands carving rare steak on wooden cellar table"
+                <img src="assets/suya/suya_grillmaster_hands.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 330px;">
-                <img src="assets/steak/gallery_chef_knife.jpg" alt="Japanese chef knife slicing prime steak"
+                <img src="assets/suya/tozo_beef_sliced.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
             </div>
@@ -601,61 +602,61 @@
           <div class="marquee-wrapper" style="height: 720px; width: 24%;">
             <div class="marquee-col marquee-down-slow">
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
-                <img src="assets/steak/gallery_wood_fire.jpg" alt="Binchotan charcoal and split hardwood forge"
+                <img src="assets/suya/woodsmoke_hearth.jpg" alt="Binchotan charcoal and split hardwood forge"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
-                <img src="assets/steak/gallery_tomahawk_board.jpg" alt="Whole charred tomahawk on rustic cutting board"
+                <img src="assets/suya/suya_platter_onions.jpg" alt="Whole charred tomahawk on rustic cutting board"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 230px;">
-                <img src="assets/steak/gallery_skillet_herbs.jpg"
+                <img src="assets/suya/asun_goat_ribs.jpg"
                   alt="Cast iron skillet blistering with rosemary sprigs"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
-                <img src="assets/steak/gallery_butcher_slab.jpg" alt="Dry-aging locker beef hanging on butcher hook"
+                <img src="assets/suya/suya_platter_onions.jpg" alt="Dry-aging locker beef hanging on butcher hook"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 270px;">
-                <img src="assets/steak/dark_steakhouse.jpg" alt="Moody subterranean steakhouse bar ambiance"
+                <img src="assets/suya/woodsmoke_hearth.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
-                <img src="assets/steak/gallery_chef_pan.jpg" alt="Chef flaring prime rib in heavy copper pan"
+                <img src="assets/suya/asun_goat_ribs.jpg" alt="Chef flaring prime rib in heavy copper pan"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
-                <img src="assets/steak/hero_fire_steak.jpg" alt="Fire-kissed thick cut steak crust"
+                <img src="assets/suya/suya_skewers_fire.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
-                <img src="assets/steak/gallery_wood_fire.jpg" alt="Binchotan charcoal and split hardwood forge"
+                <img src="assets/suya/woodsmoke_hearth.jpg" alt="Binchotan charcoal and split hardwood forge"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
-                <img src="assets/steak/gallery_tomahawk_board.jpg" alt="Whole charred tomahawk on rustic cutting board"
+                <img src="assets/suya/suya_platter_onions.jpg" alt="Whole charred tomahawk on rustic cutting board"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 230px;">
-                <img src="assets/steak/gallery_skillet_herbs.jpg"
+                <img src="assets/suya/asun_goat_ribs.jpg"
                   alt="Cast iron skillet blistering with rosemary sprigs"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
-                <img src="assets/steak/gallery_butcher_slab.jpg" alt="Dry-aging locker beef hanging on butcher hook"
+                <img src="assets/suya/suya_platter_onions.jpg" alt="Dry-aging locker beef hanging on butcher hook"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 270px;">
-                <img src="assets/steak/dark_steakhouse.jpg" alt="Moody subterranean steakhouse bar ambiance"
+                <img src="assets/suya/woodsmoke_hearth.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
-                <img src="assets/steak/gallery_chef_pan.jpg" alt="Chef flaring prime rib in heavy copper pan"
+                <img src="assets/suya/asun_goat_ribs.jpg" alt="Chef flaring prime rib in heavy copper pan"
                   class="w-full h-full object-cover marquee-img">
               </div>
               <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
-                <img src="assets/steak/hero_fire_steak.jpg" alt="Fire-kissed thick cut steak crust"
+                <img src="assets/suya/suya_skewers_fire.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
                   class="w-full h-full object-cover marquee-img">
               </div>
             </div>
@@ -709,9 +710,9 @@
       <div
         class="relative grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden border border-black/15 shadow-xl bg-white min-h-[440px]">
 
-        <!-- Left: HD Steak Plating Photo with Navigation Arrows -->
+        <!-- Left: HD Suya Plating Photo with Navigation Arrows -->
         <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto overflow-hidden bg-black">
-          <img id="cut-image" src="assets/steak/tomahawk_slice.jpg" alt="45-Day Tomahawk Ritual"
+          <img id="cut-image" src="assets/suya/tozo_beef_sliced.jpg" alt="45-Day Tomahawk Ritual"
             class="w-full h-full object-cover filter contrast-105 transition-all duration-500 ease-out">
 
           <!-- Cut Indicator Badge -->
@@ -794,7 +795,7 @@
         title: "The Tomahawk Ritual",
         tag: "SIGNATURE EXPERIENCE · 45 OZ",
         desc: "Cut from prime black Angus cattle, dry-aged for 45 days inside our Himalayan pink salt cavern to concentrate flavor into intense hazelnut, umami, and blue cheese notes. Blistered over direct white oak embers.",
-        image: "assets/steak/tomahawk_slice.jpg",
+        image: "assets/suya/tozo_beef_sliced.jpg",
         aging: "45 Days Himalayan Salt Locker",
         fuel: "Seasoned White Oak Embers",
         finish: "Bone Marrow Tallow & Maldon Flakes",
@@ -804,7 +805,7 @@
         title: "Miyazaki A5 Wagyu Ribeye",
         tag: "JAPANESE IMPORT · BMS 11 · 16 OZ",
         desc: "Sourced directly from Miyazaki Prefecture, pure Kuroge Washu cattle with intricate snowflake marbling. Seared over 1,200°F binchotan charcoal so the fat renders into liquid silk on contact.",
-        image: "assets/steak/gallery_marbling_raw.jpg",
+        image: "assets/suya/raw_spiced_skewers.jpg",
         aging: "Chilled Aging (Fresh Cut)",
         fuel: "Kishu Binchotan White Charcoal",
         finish: "Fresh Grated Wasabi & Aged Shoyu",
@@ -814,17 +815,17 @@
         title: "60-Day Truffle Porterhouse",
         tag: "CELLAR RESERVE · 38 OZ",
         desc: "The king of cuts — buttery filet mignon on one side, bold dry-aged strip on the other. Washed in winter black truffle butter and aged 60 days for an unapologetic, deep funky umami profile.",
-        image: "assets/steak/gallery_bone_in_carve.jpg",
+        image: "assets/suya/tozo_beef_sliced.jpg",
         aging: "60 Days Truffle Butter Washed",
         fuel: "White Oak & Pecan Hardwood",
         finish: "Truffle Marrow Jus & Smoked Sea Salt",
         weight: "Serves 2 · 38 oz"
       },
       {
-        title: "Butcher’s Secret Denver Steak",
+        title: "Mallam’s Secret Ram Rib Skewer",
         tag: "FORBIDDEN CUT · LIMITED DAILY · 14 OZ",
         desc: "A prized butcher secret carved from the chuck underblade with deep crimson marbling rivaling ribeye. Cast-iron blistered over coals with smashed garlic cloves, fresh rosemary, and rendered beef tallow.",
-        image: "assets/steak/gallery_ribeye_sear.jpg",
+        image: "assets/suya/suya_skewers_fire.jpg",
         aging: "30 Days Dry-Aged in Cold Room",
         fuel: "Cast Iron over Glowing Coals",
         finish: "Crisp Garlic Confit & Rosemary Baster",
@@ -903,9 +904,9 @@
       </span>
       <h2
         class="font-display font-black text-2xl sm:text-3xl md:text-[2rem] uppercase tracking-tight text-[#121212] leading-[1.2] mb-6">
-        Anyone Can Sell You a Slab of Beef... We Craft Steaks That Spark <span
+        Anyone Can Roast Meat on a Wire... We Craft Suya That Sparks <span
           class="bg-[#DCE33A] px-2 py-0.5 rounded-md">RIOTS</span> — The Kind That Turn Heads, Melt On The Tongue, &amp;
-        Make Ordinary Steakhouses Sweat
+        Make Ordinary Grills Obsolete
       </h2>
       <button onclick="openInquiryModal()"
         class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-sm cursor-pointer">
@@ -939,15 +940,15 @@
           <div class="flex items-center gap-2 bg-white/5 border border-white/15 p-1 rounded-full text-xs font-mono">
             <button id="terroir-tab-0" onclick="switchTerroir(0)"
               class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer bg-[#DCE33A] text-[#121212]">
-              01 Angus
+              01 Zebu & Ram
             </button>
             <button id="terroir-tab-1" onclick="switchTerroir(1)"
               class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white">
-              02 Wagyu
+              02 Kano Yaji
             </button>
             <button id="terroir-tab-2" onclick="switchTerroir(2)"
               class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white">
-              03 Rubia
+              03 Mangrove Coals
             </button>
           </div>
 
@@ -969,7 +970,7 @@
         class="w-full relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/15 bg-black shadow-2xl min-h-[580px] sm:min-h-[640px] md:min-h-[680px] flex flex-col justify-between">
 
         <!-- Background Cinematic Photography -->
-        <img id="terroir-bg-img" src="assets/steak/gallery_ribeye_sear.jpg" alt="Heritage Black Angus Primal"
+        <img id="terroir-bg-img" src="assets/suya/suya_skewers_fire.jpg" alt="Heritage Black Angus Primal"
           class="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] contrast-[1.15] transition-all duration-700">
 
         <!-- Dark moody gradient scrim for extreme contrast and readability -->
@@ -1039,7 +1040,7 @@
         tickerColor: 'text-[#DCE33A]',
         title: 'Heritage Black Angus',
         description: 'Free-range herds grazing native mountain bluegrass and drinking glacial runoff across the Snake River basin. The brutal winters and clean air produce dense, deeply oxygenated red muscle that cures into intense roasted hazelnut and dark chocolate notes.',
-        image: 'assets/steak/gallery_ribeye_sear.jpg',
+        image: 'assets/suya/suya_skewers_fire.jpg',
         specs: [
           { label: 'Altitude & Diet', val: '5,200 Ft · Native Flora' },
           { label: 'Cellar Protocol', val: '45 Days Pink Salt' },
@@ -1055,7 +1056,7 @@
         tickerColor: 'text-[#88BEE8]',
         title: 'A5 Kuroge Washu',
         description: '100% full-blood Japanese Black cattle raised in the shadow of the Kirishima volcanic mountains. Fed a nutrient-dense diet of toasted barley and mountain spring water, the delicate intramuscular fat melts at human body temperature for unprecedented liquid luxury.',
-        image: 'assets/steak/gallery_marbling_raw.jpg',
+        image: 'assets/suya/raw_spiced_skewers.jpg',
         specs: [
           { label: 'Bloodline', val: '100% Full-Blood Black' },
           { label: 'Fat Melt Point', val: '77°F (Liquid Umami)' },
@@ -1071,7 +1072,7 @@
         tickerColor: 'text-[#E59247]',
         title: 'Rubia Gallega Old Cow',
         description: 'Retired dairy cows that graze the salt-sprayed Atlantic hills of Galicia for over a decade. Years of green pastures deposit dense, deep-yellow beta-carotene fat that dry-ages into intense Roquefort, wild mushroom, and ancient game funk.',
-        image: 'assets/steak/gallery_bone_in_carve.jpg',
+        image: 'assets/suya/tozo_beef_sliced.jpg',
         specs: [
           { label: 'Grazing Life', val: '8–12 Years Coastal' },
           { label: 'Fat Pigment', val: 'Golden Beta-Carotene' },
@@ -1196,10 +1197,10 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Jonathan Goldson</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Robb Report</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Robb Report Africa</span>
               <span class="text-[#DCE33A] text-xs">★★★★★</span>
             </div>
-            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The most dangerous steakhouse in the country.&rdquo;</p>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The most dangerous suya in West Africa.&rdquo;</p>
           </div>
         </div>
 
@@ -1210,7 +1211,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Julianne Mercer</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">The New York Times</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Lagos Dining Review</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Visceral performance art over 1,000°F binchotan embers.&rdquo;</p>
           </div>
@@ -1223,7 +1224,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Marcus Sterling</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">GQ Magazine</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">GQ Africa</span>
               <span class="text-[#E59247] text-xs">★★★★★</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Forget polite etiquette. This is pure carnal luxury.&rdquo;</p>
@@ -1237,7 +1238,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Evelyn Ward</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Esquire Dining</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Esquire Africa</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The dry-aged beef gold standard of our generation.&rdquo;</p>
           </div>
@@ -1250,10 +1251,10 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Jonathan Goldson</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Robb Report</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Robb Report Africa</span>
               <span class="text-[#DCE33A] text-xs">★★★★★</span>
             </div>
-            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The most dangerous steakhouse in the country.&rdquo;</p>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The most dangerous suya in West Africa.&rdquo;</p>
           </div>
         </div>
         <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
@@ -1262,7 +1263,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Julianne Mercer</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">The New York Times</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Lagos Dining Review</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Visceral performance art over 1,000°F binchotan embers.&rdquo;</p>
           </div>
@@ -1273,7 +1274,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Marcus Sterling</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">GQ Magazine</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">GQ Africa</span>
               <span class="text-[#E59247] text-xs">★★★★★</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Forget polite etiquette. This is pure carnal luxury.&rdquo;</p>
@@ -1285,7 +1286,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Evelyn Ward</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Esquire Dining</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Esquire Africa</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The dry-aged beef gold standard of our generation.&rdquo;</p>
           </div>
@@ -1301,7 +1302,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#88BEE8] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Dr. Helena Vance</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Cellar Locker #042</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Cellar Locker #042 · Victoria Island</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The 60-day Galician ribeye is unmatched in Europe or America.&rdquo;</p>
           </div>
@@ -1314,7 +1315,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Harrison Brooks</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Forbes Luxury</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Forbes Luxe Africa</span>
               <span class="text-[#DCE33A] text-xs">★★★★★</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;A subterranean rebellion against fine dining clichés.&rdquo;</p>
@@ -1328,7 +1329,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Chloe Martin</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Food &amp; Wine</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Food &amp; Wine Africa</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;An intoxicating clash of ancient pink salt cure and savage heat.&rdquo;</p>
           </div>
@@ -1341,10 +1342,10 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">David Thorne</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Bloomberg Pursuits</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Bloomberg Pursuits Africa</span>
               <span class="text-[#E59247] text-xs">★★★★★</span>
             </div>
-            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Where true steak connoisseurs lose their collective minds.&rdquo;</p>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Where true carnivores lose their collective minds.&rdquo;</p>
           </div>
         </div>
 
@@ -1355,7 +1356,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#88BEE8] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Dr. Helena Vance</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Cellar Locker #042</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Cellar Locker #042 · Victoria Island</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The 60-day Galician ribeye is unmatched in Europe or America.&rdquo;</p>
           </div>
@@ -1366,7 +1367,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Harrison Brooks</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Forbes Luxury</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Forbes Luxe Africa</span>
               <span class="text-[#DCE33A] text-xs">★★★★★</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;A subterranean rebellion against fine dining clichés.&rdquo;</p>
@@ -1378,7 +1379,7 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Chloe Martin</span>
-              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Food &amp; Wine</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Food &amp; Wine Africa</span>
             </div>
             <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;An intoxicating clash of ancient pink salt cure and savage heat.&rdquo;</p>
           </div>
@@ -1389,10 +1390,10 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">David Thorne</span>
-              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Bloomberg Pursuits</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Bloomberg Pursuits Africa</span>
               <span class="text-[#E59247] text-xs">★★★★★</span>
             </div>
-            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Where true steak connoisseurs lose their collective minds.&rdquo;</p>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Where true carnivores lose their collective minds.&rdquo;</p>
           </div>
         </div>
       </div>
@@ -1416,179 +1417,6 @@
     </div>
   </section>
 
-  <!-- ========================================================================= -->
-  <!-- 9B. "PURVEYORS & ALLIANCES" (Prestigious Partners with Logos) -->
-  <!-- ========================================================================= -->
-  <section id="partners" class="bg-[#121212] py-20 sm:py-28 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-white border-b border-white/10 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-
-      <!-- Header Section -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
-        <div>
-          <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-3">
-            <span>★</span>
-            <span>06 / DIRECT PROVENANCE &amp; GUILDS</span>
-          </div>
-          <h2 class="font-display font-black text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-white leading-tight">
-            Purveyors &amp; Alliances
-          </h2>
-        </div>
-        <p class="font-sans text-xs sm:text-sm md:text-base text-white/70 max-w-md leading-relaxed">
-          Direct, zero-compromise partnerships with generational cattle ranchers, Wakayama charcoal kilns, and master Tsukiji bladesmiths.
-        </p>
-      </div>
-
-      <!-- Partner Logos Grid (Sleek Framer-Style Monogram Badges) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-
-        <!-- PARTNER 01 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#DCE33A] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#DCE33A] group-hover:scale-110 transition-transform">
-              SR
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Idaho, USA</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#DCE33A] transition-colors">
-              Snake River
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              American Heritage Wagyu
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 02 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#88BEE8] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#88BEE8] group-hover:scale-110 transition-transform">
-              MZ
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Kyushu, JP</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#88BEE8] transition-colors">
-              Miyazaki Guild
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              A5 Kuroge Washu (BMS 12)
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 03 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#E59247] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#E59247] group-hover:scale-110 transition-transform">
-              KB
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Wakayama, JP</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#E59247] transition-colors">
-              Kishu Binchotan
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              1,000°F White Oak Coals
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 04 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#DCE33A] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#DCE33A] group-hover:scale-110 transition-transform">
-              NT
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Tsukiji, JP</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#DCE33A] transition-colors">
-              Nenohi Cutlery
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              Custom Damascus Blades
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 05 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#88BEE8] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#88BEE8] group-hover:scale-110 transition-transform">
-              MD
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Essex, UK</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#88BEE8] transition-colors">
-              Maldon Sea Salt
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              Smoked Pyramid Flakes
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 06 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#E59247] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#E59247] group-hover:scale-110 transition-transform">
-              RG
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Galicia, ES</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#E59247] transition-colors">
-              Rubia Gallega Co.
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              10-Year Old Cow Terroir
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 07 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#DCE33A] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#DCE33A] group-hover:scale-110 transition-transform">
-              HK
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Khewra Mines</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#DCE33A] transition-colors">
-              Pink Salt Vaults
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              45-Day Microclimate Lockers
-            </p>
-          </div>
-        </div>
-
-        <!-- PARTNER 08 -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#88BEE8] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
-          <div class="flex items-center justify-between">
-            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#88BEE8] group-hover:scale-110 transition-transform">
-              DR
-            </span>
-            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Napa &amp; Bordeaux</span>
-          </div>
-          <div>
-            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#88BEE8] transition-colors">
-              Domaine Reserves
-            </h4>
-            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
-              Single-Vineyard Cask Cellars
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
 
   <!-- ========================================================================= -->
   <!-- 10. "OUR PHILOSOPHY" (Full-Width Chartreuse Yellow Section) -->
@@ -1609,7 +1437,7 @@
 
       <p class="max-w-lg mx-auto text-xs sm:text-sm text-black/80 leading-relaxed font-sans mb-8">
         We exist for those who demand more from their table than predictable cuts and bland traditions. When you sit at
-        Forbidden Steak, you taste the unyielding dedication of farmers who honor heritage genetics, butchers who view
+        Forbidden Suya, you taste the unyielding dedication of farmers who honor heritage genetics, butchers who view
         aging as fine art, and pitmasters who speak fluent fire.
       </p>
 
@@ -1627,9 +1455,9 @@
   <!-- ========================================================================= -->
   <section class="relative bg-[#121212] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
-    <!-- Atmospheric steak dining background -->
+    <!-- Atmospheric suya dining background -->
     <div class="absolute inset-0 z-0 opacity-40">
-      <img src="assets/steak/dark_steakhouse.jpg" alt="Dark steakhouse candlelit table with steak and wine"
+      <img src="assets/suya/woodsmoke_hearth.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
         class="w-full h-full object-cover filter contrast-125">
       <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/70 to-[#121212]"></div>
     </div>
@@ -1656,7 +1484,7 @@
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 12. FOOTER: 6-Thumbnail Photo Gallery + Giant "FORBIDDEN STEAK" Watermark -->
+  <!-- 12. FOOTER: 6-Thumbnail Photo Gallery + Giant "FORBIDDEN SUYA" Watermark -->
   <!-- ========================================================================= -->
   <footer class="bg-[#E2E6D5] pt-14 pb-10 px-4 sm:px-6 lg:px-8 border-t border-black/15">
     <div class="max-w-6xl mx-auto">
@@ -1672,30 +1500,30 @@
         <a href="#philosophy" class="hover:underline">Philosophy</a>
       </div>
 
-      <!-- 6 Thumbnail Steak & Flame Photos in a Row -->
+      <!-- 6 Thumbnail Suya & Flame Photos in a Row -->
       <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-10">
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
-          <img src="assets/steak/hero_fire_steak.jpg" alt="Steak flame"
+          <img src="assets/suya/suya_skewers_fire.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
         </div>
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
-          <img src="assets/steak/tomahawk_slice.jpg" alt="Tomahawk slice"
+          <img src="assets/suya/tozo_beef_sliced.jpg" alt="Tomahawk slice"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
         </div>
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
-          <img src="assets/steak/wagyu_raw.jpg" alt="A5 Wagyu"
+          <img src="assets/suya/suya_platter_onions.jpg" alt="A5 Wagyu"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
         </div>
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
-          <img src="assets/steak/chef_flame.jpg" alt="Live flame"
+          <img src="assets/suya/live_embers_hearth.jpg" alt="Live flame"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
         </div>
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
-          <img src="assets/steak/grill_sizzle.jpg" alt="Grill sizzle"
+          <img src="assets/suya/asun_goat_ribs.jpg" alt="Grill sizzle"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
         </div>
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
-          <img src="assets/steak/steak_plate.jpg" alt="Steak plate"
+          <img src="assets/suya/guinea_fowl_skewers.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
         </div>
       </div>
@@ -1704,14 +1532,14 @@
       <div class="text-center overflow-hidden mb-6">
         <h3
           class="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-black/15 uppercase select-none">
-          FORBIDDEN STEAK
+          FORBIDDEN SUYA
         </h3>
       </div>
 
       <!-- Copyright & Bottom info -->
       <div class="text-center font-mono text-[11px] text-black/50 space-y-1">
-        <p>&copy; 2026 Forbidden Steak Co. All Rights Reserved. Where Real Steaks Break the Rules.</p>
-        <p>Curated with Wood Fire &amp; Himalayan Salt · In-House Master Butchery</p>
+        <p>&copy; 2026 Forbidden Suya Co. All Rights Reserved. Where Real Suya Breaks the Rules.</p>
+        <p>14 Ozumba Mbadiwe Avenue, Victoria Island, Lagos, Nigeria · +234 (0) 1 888 7892 · concierge@forbiddensuya.ng</p>
       </div>
 
     </div>
@@ -1736,14 +1564,14 @@
         &times;
       </button>
 
-      <!-- Left Column: High-Impact Steak Photo (Yellow / Fire) -->
+      <!-- Left Column: High-Impact Suya Photo (Yellow / Fire) -->
       <div class="hidden md:block md:col-span-5 bg-[#DCE33A] relative overflow-hidden">
-        <img src="assets/steak/chef_flame.jpg" alt="Master chef searing steak over open fire"
+        <img src="assets/suya/live_embers_hearth.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
           class="w-full h-full object-cover filter contrast-110">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
           <span class="font-mono text-[9px] uppercase tracking-widest text-[#DCE33A] font-bold block">FORBIDDEN
-            STEAK</span>
+            SUYA</span>
           <span class="font-display font-bold text-xs uppercase">Rare. Uncompromised.</span>
         </div>
       </div>
@@ -1752,11 +1580,11 @@
       <div class="md:col-span-7 bg-[#2563EB] p-6 sm:p-8 text-white flex flex-col justify-center">
 
         <h3 class="font-display font-black text-xl sm:text-2xl leading-tight mb-2 uppercase">
-          Wanna Reserve A Cut Before It Sells Out?
+          Wanna Reserve Your Skewers Before The Fire Runs Out?
         </h3>
 
         <p class="text-xs sm:text-sm text-white/90 font-sans mb-6">
-          Grab your seat at the Butcher’s Hearth or private salt-aging tasting room:
+          Grab your seat at the Master Mallam’s Hearth or private VIP cellar lounge in Victoria Island:
         </p>
 
         <form onsubmit="handleReservationSubmit(event)" class="space-y-3.5">
@@ -1773,20 +1601,20 @@
           <div>
             <select
               class="w-full px-4 py-3 rounded-md bg-white text-[#121212] text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#DCE33A]">
-              <option value="tomahawk">45-Day Dry-Aged Tomahawk (45 oz)</option>
-              <option value="wagyu">A5 Miyazaki Japanese Wagyu (12 oz)</option>
-              <option value="chef">The Chef's Fire Table (8 Courses)</option>
-              <option value="ribeye">Bone-In Salt-Cavern Ribeye (32 oz)</option>
+              <option value="tozo">Prime Ram Tozo Platter (Limited Daily · 450g)</option>
+              <option value="tasting">Master Mallam Tasting Board (8 Skewers)</option>
+              <option value="beef_fowl">Pasture Beef Flank &amp; Smoked Guinea Fowl</option>
+              <option value="asun">Fire-Roasted Asun Goat Ribs Platter (500g)</option>
             </select>
           </div>
 
           <button type="submit"
             class="w-full py-3.5 rounded-md bg-[#DC2626] hover:bg-[#B91C1C] active:scale-[0.99] text-white font-display font-black uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md cursor-pointer mt-1">
-            "Reserve My Cut Now!"
+            "Reserve My Skewers Now!"
           </button>
 
           <p class="text-[10px] text-white/70 text-center font-sans mt-3">
-            We respect your privacy. No spam, only rare cuts &amp; allocations.
+            We respect your privacy. No spam, only prime allocations &amp; VIP fire invitations in Lagos.
           </p>
         </form>
 
@@ -1820,7 +1648,7 @@
 
     function handleReservationSubmit(e) {
       e.preventDefault();
-      alert('Thank you! Your cut reservation request at Forbidden Steak has been received. Our Maître D’ will confirm your table shortly.');
+      alert('Thank you! Your skewer reservation request at Forbidden Suya, Victoria Island has been received. Our Concierge will confirm your table shortly.');
       closeInquiryModal();
     }
   </script>
