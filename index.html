@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forbidden Steak — Where Real Steaks Break The Rules | Artisanal Dry-Aged &amp; Wood-Fired Beef</title>
+  <meta name="description"
+    content="Forbidden Steak — We craft carnal cuts, 45-day dry-aged tomahawks, and A5 Miyazaki wagyu seared over white oak and binchotan fire. Break the rules of ordinary steakhouses.">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23DCE33A'/><text y='70' x='15' font-size='60' font-family='sans-serif' font-weight='900' fill='%23121212'>FS</text></svg>">
+
+  <!-- Google Fonts: Syne, Barlow Condensed, Playfair Display, Plus Jakarta Sans, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Playfair+Display:ital,wght@1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Local and CDN @font-face fallback definitions for 100% offline & online reliability -->
+  <style>
+    @font-face {
+      font-family: 'Syne';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/public/fonts/syne-700.woff2') format('woff2'),
+           url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Syne';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url('/public/fonts/syne-800.woff2') format('woff2'),
+           url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Barlow Condensed';
+      font-style: normal;
+      font-weight: 700 900;
+      font-display: swap;
+      src: url('/public/fonts/barlow-condensed.woff2') format('woff2');
+    }
+
+    /* Unified Brand Typography: Syne across ALL headlines, titles, and display text site-wide */
+    .font-display,
+    .font-condensed {
+      font-family: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+
+    /* Hero Right Headline: Centered on mobile, firmly right-anchored with zero bleed on desktop */
+    .hero-right-overlay {
+      position: absolute;
+      top: 2rem;
+      left: 1rem;
+      right: 1rem;
+      text-align: center;
+      z-index: 20;
+    }
+
+    @media (min-width: 640px) {
+      .hero-right-overlay {
+        top: 2.75rem;
+        left: auto !important;
+        right: 4rem !important;
+        text-align: right !important;
+        max-width: min(85vw, 680px);
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-right-overlay {
+        top: 3.25rem;
+        right: 5rem !important;
+        max-width: min(85vw, 780px);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .hero-right-overlay {
+        right: 6rem !important;
+        max-width: 860px;
+      }
+    }
+
+    /* Kinetic Marquee Keyframes (Framer-Motion Smooth Animation) */
+    @keyframes marqueeLeft {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+    .animate-marquee-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 38s linear infinite;
+    }
+    .animate-marquee-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeRight 42s linear infinite;
+    }
+    .marquee-container:hover .animate-marquee-left,
+    .marquee-container:hover .animate-marquee-right {
+      animation-play-state: paused;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            steak: {
+              yellow: '#DCE33A',
+              'yellow-dark': '#CAD12D',
+              cream: '#E2E6D5',
+              'cream-light': '#ECEEE2',
+              black: '#121212',
+              dark: '#161616',
+              blue: '#88BEE8',
+              'blue-light': '#93C5FD',
+              amber: '#E59247',
+              coral: '#D8583B',
+              grid: '#BDDBEF',
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'system-ui', '-apple-system', 'sans-serif'],
+            condensed: ['Syne', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #E2E6D5;
+      color: #121212;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background-color: #DCE33A;
+      color: #121212;
+    }
+
+    /* Blueprint graph paper grid */
+    .bg-blueprint-grid {
+      background-color: #BDDBEF;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.45) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* Starburst optical flare */
+    .starburst-flare {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 200, 0.85) 25%, rgba(220, 227, 58, 0.45) 45%, transparent 70%);
+      pointer-events-none;
+      mix-blend-mode: screen;
+      filter: blur(2px);
+    }
+
+    .starburst-rays {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background:
+        linear-gradient(0deg, transparent 48.5%, rgba(255, 255, 255, 0.95) 50%, transparent 51.5%),
+        linear-gradient(90deg, transparent 48.5%, rgba(255, 255, 255, 0.95) 50%, transparent 51.5%),
+        linear-gradient(45deg, transparent 48.8%, rgba(255, 255, 255, 0.7) 50%, transparent 51.2%),
+        linear-gradient(-45deg, transparent 48.8%, rgba(255, 255, 255, 0.7) 50%, transparent 51.2%);
+      pointer-events-none;
+      mix-blend-mode: screen;
+    }
+
+    /* Modal Backdrop */
+    .modal-backdrop {
+      background: rgba(18, 18, 18, 0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Vertical marquee animations — staggered speeds with abyss fade & blur */
+    @keyframes marqueeDown {
+      0% {
+        transform: translateY(-50%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes marqueeUp {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    .marquee-col {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .marquee-down-fast {
+      animation: marqueeDown 24s linear infinite;
+    }
+
+    .marquee-up-mid {
+      animation: marqueeUp 32s linear infinite;
+    }
+
+    .marquee-down-slow {
+      animation: marqueeDown 40s linear infinite;
+    }
+
+    .marquee-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Hover parallax on individual marquee images */
+    .marquee-img {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+    }
+
+    .marquee-img:hover {
+      transform: scale(1.06);
+      filter: contrast(1.1) brightness(1.05);
+      z-index: 20;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="antialiased text-[#121212] bg-[#E2E6D5]">
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP NAVBAR (Solid Chartreuse Yellow from Screenshot) -->
+  <!-- ========================================================================= -->
+  <header class="bg-[#DCE33A] border-b border-black/15 sticky top-0 z-50 w-full">
+    <div class="w-full px-5 sm:px-8 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
+
+      <!-- Wordmark Logo: Forbidden Steak (Pushed to far left end) -->
+      <a href="#hero"
+        class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#121212] hover:opacity-85 transition-opacity flex items-center gap-2">
+        <span>Forbidden Steak</span>
+      </a>
+
+      <!-- Desktop Navigation Links (Pushed to far right end) -->
+      <nav
+        class="hidden md:flex items-center gap-7 lg:gap-9 text-xs sm:text-sm font-bold tracking-wider text-[#121212]">
+        <a href="#hero" class="hover:underline underline-offset-4">Home</a>
+        <a href="#about" class="hover:underline underline-offset-4">About</a>
+        <a href="#cuts" class="hover:underline underline-offset-4">Our Cuts</a>
+        <a href="#origins" class="hover:underline underline-offset-4">Origins</a>
+        <a href="#expect" class="hover:underline underline-offset-4">Reviews</a>
+        <a href="#partners" class="hover:underline underline-offset-4">Alliances</a>
+        <a href="#philosophy" class="hover:underline underline-offset-4">Philosophy</a>
+        <button onclick="openInquiryModal()"
+          class="hover:underline underline-offset-4 cursor-pointer font-bold bg-transparent border-0 p-0 text-[#121212] text-xs sm:text-sm tracking-wider">
+          Contact
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle (Far right on mobile) -->
+      <button id="mobile-toggle" onclick="toggleMobileNav()" class="md:hidden p-2 text-black cursor-pointer"
+        aria-label="Toggle Navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-nav"
+      class="hidden md:hidden bg-[#DCE33A] border-t border-black/15 px-6 py-4 space-y-3 text-xs font-bold uppercase tracking-wider">
+      <a href="#hero" onclick="toggleMobileNav()" class="block py-1">Home</a>
+      <a href="#about" onclick="toggleMobileNav()" class="block py-1">About</a>
+      <a href="#cuts" onclick="toggleMobileNav()" class="block py-1">Our Cuts</a>
+      <a href="#origins" onclick="toggleMobileNav()" class="block py-1">Origins</a>
+      <a href="#expect" onclick="toggleMobileNav()" class="block py-1">Reviews</a>
+      <a href="#partners" onclick="toggleMobileNav()" class="block py-1">Alliances</a>
+      <a href="#philosophy" onclick="toggleMobileNav()" class="block py-1">Philosophy</a>
+      <button onclick="openInquiryModal(); toggleMobileNav();"
+        class="w-full text-center py-2.5 rounded-full bg-[#121212] text-white font-bold uppercase tracking-wider mt-2 hover:bg-black/85 transition-all cursor-pointer">
+        Reserve a Table &rarr;
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION: Full-Bleed High-Res Steak Photo + Wavy Ribbon -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative w-full bg-[#121212] overflow-hidden">
+
+    <!-- Hero Image Container with Full Bleed -->
+    <div class="relative w-full h-[620px] sm:h-[720px] lg:h-[820px] overflow-hidden bg-[#121212]">
+      <img src="assets/steak/hero_steak_4k.jpg" alt="Dry-aged prime steak carved over cellar wood"
+        class="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.12]">
+      <!-- Gradient scrim overlays for mood and readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60 pointer-events-none"></div>
+
+      <!-- Top-Left Text Overlay (Desktop / Tablet) -->
+      <div
+        class="absolute top-10 sm:top-14 left-6 sm:left-12 lg:left-16 z-20 max-w-sm sm:max-w-md text-white drop-shadow-md hidden md:block">
+        <p class="text-xs sm:text-sm font-semibold tracking-wide uppercase text-white/90 leading-snug mb-3">
+          We Craft Carnal Cuts<br>
+          Stand Out, Sizzle Loud, &amp; Leave<br>
+          an Impression that Sticks.
+        </p>
+        <button onclick="openInquiryModal()"
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#DCE33A] text-[#121212] text-xs font-mono font-bold tracking-wider uppercase hover:bg-[#CAD12D] active:scale-95 transition-all shadow-md cursor-pointer">
+          <span>Reserve a Cut</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Hero Bold Headline Overlay: Centered on Mobile, Locked Right Anchor with Zero Bleed on Desktop -->
+      <div class="hero-right-overlay">
+        <span
+          class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-2 sm:mb-3">
+          ★ CELLAR AGED &amp; WOOD FIRED
+        </span>
+        <h1
+          class="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] text-white uppercase tracking-tight leading-[0.92] drop-shadow-2xl">
+          <span class="block whitespace-nowrap">FORGED IN</span>
+          <span class="block whitespace-nowrap">SMOKE &amp;</span>
+          <span class="block whitespace-nowrap">FLAME</span>
+        </h1>
+        <p
+          class="text-xs sm:text-sm text-white/85 font-sans mt-3 sm:mt-4 max-w-xs sm:max-w-sm md:max-w-md mx-auto sm:ml-auto sm:mr-0 leading-relaxed drop-shadow-md hidden sm:block">
+          Single-origin heritage cattle dry-aged 45 days in Himalayan salt lockers. Blistered over binchotan embers.
+        </p>
+      </div>
+
+      <!-- Bottom S-Curve Wavy Ribbon Banner -->
+      <div class="absolute bottom-0 left-0 right-0 z-30 pointer-events-none translate-y-[1px]">
+        <svg viewBox="0 0 1600 220"
+          class="w-full h-[95px] sm:h-[130px] md:h-[165px] lg:h-[195px] xl:h-[220px] block select-none pointer-events-none"
+          preserveAspectRatio="none">
+          <defs>
+            <!-- Ribbon midline trajectory -->
+            <path id="ribbonCenterline" d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95" fill="none" />
+          </defs>
+
+          <!-- Cream background fill below ribbon (seamlessly blends into the About section #E2E6D5) -->
+          <path d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95 L 1640,230 L -40,230 Z"
+            fill="#E2E6D5" />
+
+          <!-- Yellow Ribbon Band (Chartreuse #DCE33A, uniform 88px thickness) -->
+          <path d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95" fill="none" stroke="#DCE33A"
+            stroke-width="88" stroke-linecap="square" />
+
+          <!-- High-impact curved text sitting visibly inside the yellow ribbon -->
+          <text fill="#121212" font-family="'Syne', sans-serif" font-weight="800" font-size="34"
+            letter-spacing="2.5">
+            <textPath href="#ribbonCenterline" startOffset="50%" text-anchor="middle" dominant-baseline="central">
+              Break the Rules ★ Where Real Steaks Break the Rules ★ Break the Rules ★
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. ABOUT SECTION: Vintage Cream Background + 3-Line Headline (4 Words Per Line) -->
+  <!-- ========================================================================= -->
+  <section id="about" class="relative bg-[#E2E6D5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <!-- Eyebrow label -->
+      <div
+        class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 mb-5 font-bold">
+        ABOUT FORBIDDEN STEAK
+      </div>
+
+      <!-- 3-Line Display Headline (Strictly 3 Lines, 4 Words Per Line, No Pills, Title Case in Oswald) -->
+      <h1
+        class="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] tracking-tight text-[#121212] leading-[1.12] max-w-5xl mx-auto mb-6">
+        <span class="block whitespace-nowrap">We Craft Daring Steaks,</span>
+        <span class="block whitespace-nowrap">Sizzling Cuts &amp; Feasts</span>
+        <span class="block whitespace-nowrap">That Truly Make Noise</span>
+      </h1>
+
+      <!-- Parenthetical Subtitle in Playfair Display Serif Italics - BIGGER & BOLD -->
+      <p class="font-serif italic font-black text-2xl sm:text-3xl md:text-4xl text-[#121212] tracking-tight mt-6 mb-6">
+        (because well-done is boring)
+      </p>
+
+      <!-- Balanced Body Paragraph -->
+      <p class="max-w-lg mx-auto text-sm sm:text-[15px] text-black/70 leading-relaxed font-sans mb-8">
+        At Forbidden Steak, we believe extraordinary beef isn’t merely cooked—it’s forged in smoke and flame. Sourced
+        from single-origin heritage cattle and dry-aged for 45 days in our Himalayan pink salt lockers, every bone-in
+        cut is blistered over white oak embers and binchotan charcoal for an unapologetic, mahogany crust and
+        butter-soft marbling.
+      </p>
+
+      <!-- Yellow Action Pill Button from Screenshot -->
+      <a href="#cuts"
+        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-sm border border-black/15">
+        <span>See Our Signature Cuts</span>
+        <span>&rarr;</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. "SEE HOW WE TURN CUTS INTO RIOTS" — 3-Column Marquee -->
+  <!-- ========================================================================= -->
+  <section class="relative w-full bg-[#DCE33A] overflow-hidden">
+    <div class="w-full flex flex-col lg:flex-row items-stretch" style="height: 720px;">
+
+      <!-- LEFT CONTENT COLUMN: Vertically centered lockup, no gap between subheadline & button, generous right padding -->
+      <div
+        class="w-full lg:w-[42%] xl:w-[40%] py-10 lg:py-14 pl-6 sm:pl-10 md:pl-12 lg:pl-14 xl:pl-18 pr-8 sm:pr-12 md:pr-14 lg:pr-16 xl:pr-20 flex flex-col justify-center z-20">
+        <div>
+          <h2
+            class="font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
+            style="font-style: normal;">
+            <span class="block whitespace-nowrap">See How</span>
+            <span class="block whitespace-nowrap">We Turn</span>
+            <span class="block whitespace-nowrap">Cuts into</span>
+            <span class="block whitespace-nowrap">RIOTS&mdash;</span>
+          </h2>
+          <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed max-w-[360px] mb-6">
+            We don&rsquo;t believe in sterile, quiet dining rooms with lukewarm steaks drowning in parsley butter. We
+            believe in spitting embers, the intoxicating aroma of caramelizing prime ribeye fat, heavy cast iron, and knife
+            edges slicing through dry-aged beef that melts like butter on contact.
+          </p>
+          <div>
+            <button onclick="openInquiryModal()"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#121212] text-white font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all cursor-pointer shadow-sm">
+              <span>Explore The Cellar</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: 3-COLUMN MARQUEE -->
+      <div class="relative w-full lg:w-[62%] xl:w-[64%] h-[560px] sm:h-[620px] lg:h-full p-0 overflow-hidden">
+        <!-- 3-Column Flow Container (Sharp & Clean) -->
+        <div class="flex flex-row gap-[5px] w-full h-full p-0">
+
+          <!-- COLUMN 1: Scrolls DOWN (fast — 24s) | 21 Distinct Unique HD Photos -->
+          <div class="marquee-wrapper" style="height: 720px; width: 38%;">
+            <div class="marquee-col marquee-down-fast">
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
+                <img src="assets/steak/gallery_ribeye_sear.jpg" alt="Prime bone-in ribeye sizzling on cast iron"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/steak/chef_portrait.jpg" alt="Master grill chef at open fire"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
+                <img src="assets/steak/gallery_fire_smoke.jpg" alt="Hardwood smoke billowing over grill grates"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 250px;">
+                <img src="assets/steak/steak_plate.jpg" alt="Thick cut dry-aged steak plated with herbs"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/steak/gallery_bone_in_carve.jpg" alt="Slicing tender charred bone-in rib roast"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
+                <img src="assets/steak/butcher_prep.jpg" alt="Artisanal butcher prepping prime cuts"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
+                <img src="assets/steak/gallery_marbling_raw.jpg" alt="Intricate A5 Miyazaki wagyu marbling"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
+                <img src="assets/steak/gallery_ribeye_sear.jpg" alt="Prime bone-in ribeye sizzling on cast iron"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/steak/chef_portrait.jpg" alt="Master grill chef at open fire"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
+                <img src="assets/steak/gallery_fire_smoke.jpg" alt="Hardwood smoke billowing over grill grates"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 250px;">
+                <img src="assets/steak/steak_plate.jpg" alt="Thick cut dry-aged steak plated with herbs"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/steak/gallery_bone_in_carve.jpg" alt="Slicing tender charred bone-in rib roast"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
+                <img src="assets/steak/butcher_prep.jpg" alt="Artisanal butcher prepping prime cuts"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
+                <img src="assets/steak/gallery_marbling_raw.jpg" alt="Intricate A5 Miyazaki wagyu marbling"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMN 2: Scrolls UP (medium — 32s) | 21 Distinct Unique HD Photos -->
+          <div class="marquee-wrapper" style="height: 720px; width: 38%;">
+            <div class="marquee-col marquee-up-mid">
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
+                <img src="assets/steak/tomahawk_slice.jpg" alt="Dry-aged 45-day Tomahawk sliced with rosemary"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
+                <img src="assets/steak/gallery_embers_flame.jpg" alt="Live white oak embers leaping in cellar forge"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
+                <img src="assets/steak/gallery_castiron_butter.jpg" alt="Butter basting searing steak with fresh thyme"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 380px;">
+                <img src="assets/steak/chef_flame.jpg" alt="Open culinary fire licking meat crust"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
+                <img src="assets/steak/gallery_platter_garnish.jpg" alt="Artisanal steakhouse platter and sea salt"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/steak/steak_hands.jpg" alt="Hands carving rare steak on wooden cellar table"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 330px;">
+                <img src="assets/steak/gallery_chef_knife.jpg" alt="Japanese chef knife slicing prime steak"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
+                <img src="assets/steak/tomahawk_slice.jpg" alt="Dry-aged 45-day Tomahawk sliced with rosemary"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
+                <img src="assets/steak/gallery_embers_flame.jpg" alt="Live white oak embers leaping in cellar forge"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
+                <img src="assets/steak/gallery_castiron_butter.jpg" alt="Butter basting searing steak with fresh thyme"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 380px;">
+                <img src="assets/steak/chef_flame.jpg" alt="Open culinary fire licking meat crust"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 240px;">
+                <img src="assets/steak/gallery_platter_garnish.jpg" alt="Artisanal steakhouse platter and sea salt"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/steak/steak_hands.jpg" alt="Hands carving rare steak on wooden cellar table"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 330px;">
+                <img src="assets/steak/gallery_chef_knife.jpg" alt="Japanese chef knife slicing prime steak"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: Scrolls DOWN (slow — 40s) | Slim Depth Column -->
+          <div class="marquee-wrapper" style="height: 720px; width: 24%;">
+            <div class="marquee-col marquee-down-slow">
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
+                <img src="assets/steak/gallery_wood_fire.jpg" alt="Binchotan charcoal and split hardwood forge"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/steak/gallery_tomahawk_board.jpg" alt="Whole charred tomahawk on rustic cutting board"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 230px;">
+                <img src="assets/steak/gallery_skillet_herbs.jpg"
+                  alt="Cast iron skillet blistering with rosemary sprigs"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
+                <img src="assets/steak/gallery_butcher_slab.jpg" alt="Dry-aging locker beef hanging on butcher hook"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 270px;">
+                <img src="assets/steak/dark_steakhouse.jpg" alt="Moody subterranean steakhouse bar ambiance"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
+                <img src="assets/steak/gallery_chef_pan.jpg" alt="Chef flaring prime rib in heavy copper pan"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
+                <img src="assets/steak/hero_fire_steak.jpg" alt="Fire-kissed thick cut steak crust"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 260px;">
+                <img src="assets/steak/gallery_wood_fire.jpg" alt="Binchotan charcoal and split hardwood forge"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/steak/gallery_tomahawk_board.jpg" alt="Whole charred tomahawk on rustic cutting board"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 230px;">
+                <img src="assets/steak/gallery_skillet_herbs.jpg"
+                  alt="Cast iron skillet blistering with rosemary sprigs"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 300px;">
+                <img src="assets/steak/gallery_butcher_slab.jpg" alt="Dry-aging locker beef hanging on butcher hook"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 270px;">
+                <img src="assets/steak/dark_steakhouse.jpg" alt="Moody subterranean steakhouse bar ambiance"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
+                <img src="assets/steak/gallery_chef_pan.jpg" alt="Chef flaring prime rib in heavy copper pan"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
+                <img src="assets/steak/hero_fire_steak.jpg" alt="Fire-kissed thick cut steak crust"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. "VIEW OUR CUTS" (Interactive Cut Switcher & Showcase) -->
+  <!-- ========================================================================= -->
+  <section id="cuts" class="bg-[#E2E6D5] pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 w-full">
+    <div class="w-full">
+
+      <!-- Section Header & Filter Pills: Pushed to Both Extreme Ends of the Page -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-10 sm:mb-12 w-full">
+        <div class="flex-shrink-0">
+          <span class="font-mono text-[10px] sm:text-xs tracking-widest uppercase text-black/60 font-bold block mb-1">
+            THE CELLAR SELECTION
+          </span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-[#121212] whitespace-nowrap">
+            View Our Cuts
+          </h2>
+        </div>
+
+        <!-- Interactive Filter Pills: STRICTLY in ONE single line on the extreme right -->
+        <div class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 lg:ml-auto">
+          <button onclick="switchCut(0)" id="cut-tab-0"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
+            45-Day Tomahawk
+          </button>
+          <button onclick="switchCut(1)" id="cut-tab-1"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]">
+            Miyazaki A5 Wagyu
+          </button>
+          <button onclick="switchCut(2)" id="cut-tab-2"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#88BEE8]">
+            60-Day Porterhouse
+          </button>
+          <button onclick="switchCut(3)" id="cut-tab-3"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#E59247]">
+            Butcher’s Reserve
+          </button>
+        </div>
+      </div>
+
+      <!-- Featured Interactive Cut Card: Two Columns -->
+      <div
+        class="relative grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden border border-black/15 shadow-xl bg-white min-h-[440px]">
+
+        <!-- Left: HD Steak Plating Photo with Navigation Arrows -->
+        <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto overflow-hidden bg-black">
+          <img id="cut-image" src="assets/steak/tomahawk_slice.jpg" alt="45-Day Tomahawk Ritual"
+            class="w-full h-full object-cover filter contrast-105 transition-all duration-500 ease-out">
+
+          <!-- Cut Indicator Badge -->
+          <div class="absolute top-4 left-4 z-10">
+            <span id="cut-counter"
+              class="inline-block px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-white font-mono text-xs font-bold uppercase tracking-widest border border-white/20">
+              CUT 01 / 04
+            </span>
+          </div>
+
+          <!-- Quick Prev / Next Overlay Buttons -->
+          <div class="absolute bottom-4 right-4 z-10 flex items-center gap-2">
+            <button onclick="prevCut()" aria-label="Previous Cut"
+              class="w-10 h-10 rounded-full bg-black/70 hover:bg-[#DCE33A] hover:text-[#121212] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm border border-white/20 active:scale-95 text-sm font-bold">
+              &larr;
+            </button>
+            <button onclick="nextCut()" aria-label="Next Cut"
+              class="w-10 h-10 rounded-full bg-black/70 hover:bg-[#DCE33A] hover:text-[#121212] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm border border-white/20 active:scale-95 text-sm font-bold">
+              &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Yellow Detail Box (Dynamically updated via JS) -->
+        <div id="cut-card-details"
+          class="lg:col-span-5 bg-[#DCE33A] p-7 sm:p-10 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-black/15 transition-opacity duration-300">
+          <div>
+            <span id="cut-tag"
+              class="font-mono text-[10px] uppercase tracking-widest text-black/60 font-bold block mb-2">
+              SIGNATURE EXPERIENCE · 45 OZ
+            </span>
+            <h3 id="cut-title"
+              class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-[#121212] mb-3 leading-tight">
+              The Tomahawk Ritual
+            </h3>
+            <p id="cut-desc" class="text-sm sm:text-[15px] text-black/85 font-sans leading-relaxed mb-6">
+              Cut from prime black Angus cattle, dry-aged for 45 days inside our Himalayan pink salt cavern to
+              concentrate flavor into intense hazelnut, umami, and blue cheese notes. Blistered over direct white oak
+              embers.
+            </p>
+
+            <ul id="cut-specs"
+              class="space-y-2.5 text-xs font-mono font-bold text-black/80 mb-8 border-t border-b border-black/15 py-4">
+              <li class="flex items-center justify-between">
+                <span class="text-black/60 font-normal">Aging Protocol:</span>
+                <span id="cut-aging">45 Days Himalayan Salt Locker</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-black/60 font-normal">Wood Fire Fuel:</span>
+                <span id="cut-fuel">Seasoned White Oak Embers</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-black/60 font-normal">Tableside Finish:</span>
+                <span id="cut-finish">Bone Marrow Tallow &amp; Maldon Flakes</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex items-center justify-between gap-4 pt-2">
+            <button onclick="openInquiryModalWithCut()"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white hover:bg-[#88BEE8] hover:text-[#121212] font-mono text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-md cursor-pointer">
+              <span>Reserve This Cut</span>
+              <span>&rarr;</span>
+            </button>
+            <span id="cut-weight" class="font-mono text-xs font-bold text-black/70 uppercase">
+              Serves 2–3
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Cut Switcher JavaScript -->
+  <script>
+    const CUTS_DATA = [
+      {
+        title: "The Tomahawk Ritual",
+        tag: "SIGNATURE EXPERIENCE · 45 OZ",
+        desc: "Cut from prime black Angus cattle, dry-aged for 45 days inside our Himalayan pink salt cavern to concentrate flavor into intense hazelnut, umami, and blue cheese notes. Blistered over direct white oak embers.",
+        image: "assets/steak/tomahawk_slice.jpg",
+        aging: "45 Days Himalayan Salt Locker",
+        fuel: "Seasoned White Oak Embers",
+        finish: "Bone Marrow Tallow & Maldon Flakes",
+        weight: "Serves 2–3 · 45 oz"
+      },
+      {
+        title: "Miyazaki A5 Wagyu Ribeye",
+        tag: "JAPANESE IMPORT · BMS 11 · 16 OZ",
+        desc: "Sourced directly from Miyazaki Prefecture, pure Kuroge Washu cattle with intricate snowflake marbling. Seared over 1,200°F binchotan charcoal so the fat renders into liquid silk on contact.",
+        image: "assets/steak/gallery_marbling_raw.jpg",
+        aging: "Chilled Aging (Fresh Cut)",
+        fuel: "Kishu Binchotan White Charcoal",
+        finish: "Fresh Grated Wasabi & Aged Shoyu",
+        weight: "Ultra Rare · 16 oz"
+      },
+      {
+        title: "60-Day Truffle Porterhouse",
+        tag: "CELLAR RESERVE · 38 OZ",
+        desc: "The king of cuts — buttery filet mignon on one side, bold dry-aged strip on the other. Washed in winter black truffle butter and aged 60 days for an unapologetic, deep funky umami profile.",
+        image: "assets/steak/gallery_bone_in_carve.jpg",
+        aging: "60 Days Truffle Butter Washed",
+        fuel: "White Oak & Pecan Hardwood",
+        finish: "Truffle Marrow Jus & Smoked Sea Salt",
+        weight: "Serves 2 · 38 oz"
+      },
+      {
+        title: "Butcher’s Secret Denver Steak",
+        tag: "FORBIDDEN CUT · LIMITED DAILY · 14 OZ",
+        desc: "A prized butcher secret carved from the chuck underblade with deep crimson marbling rivaling ribeye. Cast-iron blistered over coals with smashed garlic cloves, fresh rosemary, and rendered beef tallow.",
+        image: "assets/steak/gallery_ribeye_sear.jpg",
+        aging: "30 Days Dry-Aged in Cold Room",
+        fuel: "Cast Iron over Glowing Coals",
+        finish: "Crisp Garlic Confit & Rosemary Baster",
+        weight: "Limited Daily · 14 oz"
+      }
+    ];
+
+    let currentCutIndex = 0;
+
+    function switchCut(index) {
+      currentCutIndex = (index + CUTS_DATA.length) % CUTS_DATA.length;
+      const data = CUTS_DATA[currentCutIndex];
+
+      // Update Tab Styles
+      document.querySelectorAll('.cut-tab').forEach((tab, i) => {
+        if (i === currentCutIndex) {
+          tab.className = "cut-tab px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-[#121212] text-white shadow-sm scale-105";
+        } else {
+          tab.className = "cut-tab px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]";
+        }
+      });
+
+      // Smooth Fade Transitions for Card Content
+      const details = document.getElementById('cut-card-details');
+      const img = document.getElementById('cut-image');
+
+      details.style.opacity = '0.3';
+      img.style.opacity = '0.4';
+
+      setTimeout(() => {
+        document.getElementById('cut-title').innerText = data.title;
+        document.getElementById('cut-tag').innerText = data.tag;
+        document.getElementById('cut-desc').innerText = data.desc;
+        document.getElementById('cut-aging').innerText = data.aging;
+        document.getElementById('cut-fuel').innerText = data.fuel;
+        document.getElementById('cut-finish').innerText = data.finish;
+        document.getElementById('cut-weight').innerText = data.weight;
+        document.getElementById('cut-counter').innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
+
+        img.src = data.image;
+        img.alt = data.title;
+
+        details.style.opacity = '1';
+        img.style.opacity = '1';
+      }, 150);
+    }
+
+    function prevCut() {
+      switchCut(currentCutIndex - 1);
+    }
+
+    function nextCut() {
+      switchCut(currentCutIndex + 1);
+    }
+
+    function openInquiryModalWithCut() {
+      const cut = CUTS_DATA[currentCutIndex];
+      const messageField = document.getElementById('inquiry-message');
+      if (messageField) {
+        messageField.value = `I would like to reserve a tasting experience for "${cut.title}" (${cut.tag}).`;
+      }
+      openInquiryModal();
+    }
+  </script>
+
+  </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. PART 2 MANIFESTO BANNER: Condensed Serif Headline + Blue Pill Button -->
+  <!-- ========================================================================= -->
+  <section class="bg-[#E2E6D5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-black/10 text-center">
+    <div class="max-w-3xl mx-auto">
+      <span class="font-mono text-[10px] tracking-widest uppercase text-black/60 font-bold block mb-3">
+        THE EXPERIENCES
+      </span>
+      <h2
+        class="font-display font-black text-2xl sm:text-3xl md:text-[2rem] uppercase tracking-tight text-[#121212] leading-[1.2] mb-6">
+        Anyone Can Sell You a Slab of Beef... We Craft Steaks That Spark <span
+          class="bg-[#DCE33A] px-2 py-0.5 rounded-md">RIOTS</span> — The Kind That Turn Heads, Melt On The Tongue, &amp;
+        Make Ordinary Steakhouses Sweat
+      </h2>
+      <button onclick="openInquiryModal()"
+        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-sm cursor-pointer">
+        <span>Reserve Your Tasting</span>
+        <span>&rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. "ORIGINS & BLOODLINES" (Cinematic Full-Width Hero Showcase) -->
+  <!-- ========================================================================= -->
+  <section id="origins" class="relative bg-[#121212] py-20 sm:py-28 overflow-hidden text-white border-t border-b border-white/10">
+
+    <div class="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 mx-auto max-w-7xl">
+
+      <!-- Header Section with Live Counter and Minimalist Nav Arrows -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-2">
+            <span>★</span>
+            <span>04 / SOURCING EXPEDITIONS &amp; TERROIRS</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-tight">
+            Global Bloodlines
+          </h2>
+        </div>
+
+        <!-- Terroir Quick Tabs & Navigation Controls -->
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+          <div class="flex items-center gap-2 bg-white/5 border border-white/15 p-1 rounded-full text-xs font-mono">
+            <button id="terroir-tab-0" onclick="switchTerroir(0)"
+              class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer bg-[#DCE33A] text-[#121212]">
+              01 Angus
+            </button>
+            <button id="terroir-tab-1" onclick="switchTerroir(1)"
+              class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white">
+              02 Wagyu
+            </button>
+            <button id="terroir-tab-2" onclick="switchTerroir(2)"
+              class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white">
+              03 Rubia
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 ml-auto sm:ml-0">
+            <button onclick="prevTerroir()" aria-label="Previous Terroir"
+              class="w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-[#DCE33A] hover:text-[#121212] hover:border-[#DCE33A] text-white flex items-center justify-center transition-all cursor-pointer active:scale-95 text-base font-bold shadow-md">
+              &larr;
+            </button>
+            <button onclick="nextTerroir()" aria-label="Next Terroir"
+              class="w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-[#DCE33A] hover:text-[#121212] hover:border-[#DCE33A] text-white flex items-center justify-center transition-all cursor-pointer active:scale-95 text-base font-bold shadow-md">
+              &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-Width Hero Stage (Matching media_1794986987550_e9a1adf5.jpg exactly) -->
+      <div id="origins-hero-stage"
+        class="w-full relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/15 bg-black shadow-2xl min-h-[580px] sm:min-h-[640px] md:min-h-[680px] flex flex-col justify-between">
+
+        <!-- Background Cinematic Photography -->
+        <img id="terroir-bg-img" src="assets/steak/gallery_ribeye_sear.jpg" alt="Heritage Black Angus Primal"
+          class="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] contrast-[1.15] transition-all duration-700">
+
+        <!-- Dark moody gradient scrim for extreme contrast and readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/35 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent pointer-events-none"></div>
+
+        <!-- Top Telemetry Ribbon Ticker -->
+        <div id="terroir-top-ticker"
+          class="relative z-10 bg-black/80 backdrop-blur-md border-b border-white/10 px-5 sm:px-8 py-3 flex items-center justify-between text-[10px] sm:text-xs font-mono font-bold tracking-widest text-[#DCE33A] uppercase transition-all duration-300">
+          <span id="terroir-region">REGION 01 · MONTANA HIGH COUNTRY</span>
+          <span id="terroir-elevation" class="hidden sm:inline text-white/50">ELEVATION: 5,200 FT · SUB-ALPINE</span>
+          <span id="terroir-cure">45-DAY SALT CURE</span>
+        </div>
+
+        <!-- Bottom Narrative & Telemetry Specs Overlay -->
+        <div id="terroir-content-wrap" class="relative z-10 p-6 sm:p-10 lg:p-12 xl:p-14 max-w-4xl transition-all duration-300">
+          <!-- Category Pill Badge -->
+          <span id="terroir-badge"
+            class="inline-block px-3.5 py-1.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+            American Heritage Genetics
+          </span>
+
+          <!-- Massive Syne Display Headline -->
+          <h3 id="terroir-title"
+            class="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] uppercase tracking-tight text-white mb-4 leading-none drop-shadow-2xl">
+            Heritage Black Angus
+          </h3>
+
+          <!-- Narrative Paragraph -->
+          <p id="terroir-desc"
+            class="text-xs sm:text-base md:text-lg text-white/85 font-sans max-w-2xl leading-relaxed mb-8 drop-shadow-md">
+            Free-range herds grazing native mountain bluegrass and drinking glacial runoff across the Snake River basin.
+            The brutal winters and clean air produce dense, deeply oxygenated red muscle that cures into intense roasted hazelnut and dark chocolate notes.
+          </p>
+
+          <!-- Technical Terroir Specs Bar -->
+          <div id="terroir-specs" class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 border-t border-white/15 pt-5 font-mono max-w-2xl">
+            <div>
+              <span id="spec-lbl-0" class="text-white/50 text-[10px] sm:text-xs block uppercase mb-1">Altitude &amp; Diet</span>
+              <span id="spec-val-0" class="text-white font-bold text-xs sm:text-sm md:text-base">5,200 Ft · Native Flora</span>
+            </div>
+            <div>
+              <span id="spec-lbl-1" class="text-white/50 text-[10px] sm:text-xs block uppercase mb-1">Cellar Protocol</span>
+              <span id="spec-val-1" class="text-white font-bold text-xs sm:text-sm md:text-base">45 Days Pink Salt</span>
+            </div>
+            <div>
+              <span id="spec-lbl-2" class="text-white/50 text-[10px] sm:text-xs block uppercase mb-1">Fire Pairing</span>
+              <span id="spec-val-2" class="text-white font-bold text-xs sm:text-sm md:text-base">Seasoned White Oak</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Terroir Hero Stage Controller Script -->
+  <script>
+    const TERROIRS = [
+      {
+        region: 'REGION 01 · MONTANA HIGH COUNTRY',
+        elevation: 'ELEVATION: 5,200 FT · SUB-ALPINE',
+        cure: '45-DAY SALT CURE',
+        badge: 'American Heritage Genetics',
+        badgeColor: 'bg-[#DCE33A] text-[#121212]',
+        tickerColor: 'text-[#DCE33A]',
+        title: 'Heritage Black Angus',
+        description: 'Free-range herds grazing native mountain bluegrass and drinking glacial runoff across the Snake River basin. The brutal winters and clean air produce dense, deeply oxygenated red muscle that cures into intense roasted hazelnut and dark chocolate notes.',
+        image: 'assets/steak/gallery_ribeye_sear.jpg',
+        specs: [
+          { label: 'Altitude & Diet', val: '5,200 Ft · Native Flora' },
+          { label: 'Cellar Protocol', val: '45 Days Pink Salt' },
+          { label: 'Fire Pairing', val: 'Seasoned White Oak' }
+        ]
+      },
+      {
+        region: 'REGION 02 · MIYAZAKI PREFECTURE',
+        elevation: 'MARBLING: BMS 11–12 · TOP 1%',
+        cure: '77°F FAT MELTDOWN',
+        badge: 'Pure Japanese Kuroge Washu',
+        badgeColor: 'bg-[#88BEE8] text-[#121212]',
+        tickerColor: 'text-[#88BEE8]',
+        title: 'A5 Kuroge Washu',
+        description: '100% full-blood Japanese Black cattle raised in the shadow of the Kirishima volcanic mountains. Fed a nutrient-dense diet of toasted barley and mountain spring water, the delicate intramuscular fat melts at human body temperature for unprecedented liquid luxury.',
+        image: 'assets/steak/gallery_marbling_raw.jpg',
+        specs: [
+          { label: 'Bloodline', val: '100% Full-Blood Black' },
+          { label: 'Fat Melt Point', val: '77°F (Liquid Umami)' },
+          { label: 'Fire Protocol', val: '900°F Kishu Binchotan' }
+        ]
+      },
+      {
+        region: 'REGION 03 · GALICIA, NORTHWEST SPAIN',
+        elevation: 'CATTLE MATURITY: 8–12 YEARS',
+        cure: '60-DAY CELLAR FUNK',
+        badge: 'Vintage European Old Cow',
+        badgeColor: 'bg-[#E59247] text-white',
+        tickerColor: 'text-[#E59247]',
+        title: 'Rubia Gallega Old Cow',
+        description: 'Retired dairy cows that graze the salt-sprayed Atlantic hills of Galicia for over a decade. Years of green pastures deposit dense, deep-yellow beta-carotene fat that dry-ages into intense Roquefort, wild mushroom, and ancient game funk.',
+        image: 'assets/steak/gallery_bone_in_carve.jpg',
+        specs: [
+          { label: 'Grazing Life', val: '8–12 Years Coastal' },
+          { label: 'Fat Pigment', val: 'Golden Beta-Carotene' },
+          { label: 'Flavor Profile', val: 'Roquefort & Dark Truffle' }
+        ]
+      }
+    ];
+
+    let currentTerroirIndex = 0;
+
+    function switchTerroir(index) {
+      if (index < 0) index = TERROIRS.length - 1;
+      if (index >= TERROIRS.length) index = 0;
+      currentTerroirIndex = index;
+      const data = TERROIRS[index];
+
+      // Update tabs
+      for (let i = 0; i < TERROIRS.length; i++) {
+        const tab = document.getElementById(`terroir-tab-${i}`);
+        if (tab) {
+          if (i === index) {
+            tab.className = 'px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer bg-[#DCE33A] text-[#121212]';
+          } else {
+            tab.className = 'px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white';
+          }
+        }
+      }
+
+      // Smooth fade transition
+      const content = document.getElementById('terroir-content-wrap');
+      const bgImg = document.getElementById('terroir-bg-img');
+      const ticker = document.getElementById('terroir-top-ticker');
+
+      if (content) content.style.opacity = '0.3';
+      if (bgImg) bgImg.style.opacity = '0.5';
+
+      setTimeout(() => {
+        if (bgImg) {
+          bgImg.src = data.image;
+          bgImg.alt = data.title;
+          bgImg.style.opacity = '1';
+        }
+
+        // Ticker
+        const regionEl = document.getElementById('terroir-region');
+        const elevEl = document.getElementById('terroir-elevation');
+        const cureEl = document.getElementById('terroir-cure');
+        if (regionEl) regionEl.textContent = data.region;
+        if (elevEl) elevEl.textContent = data.elevation;
+        if (cureEl) cureEl.textContent = data.cure;
+        if (ticker) {
+          ticker.className = `relative z-10 bg-black/80 backdrop-blur-md border-b border-white/10 px-5 sm:px-8 py-3 flex items-center justify-between text-[10px] sm:text-xs font-mono font-bold tracking-widest ${data.tickerColor} uppercase transition-all duration-300`;
+        }
+
+        // Badge & Title & Desc
+        const badgeEl = document.getElementById('terroir-badge');
+        const titleEl = document.getElementById('terroir-title');
+        const descEl = document.getElementById('terroir-desc');
+
+        if (badgeEl) {
+          badgeEl.className = `inline-block px-3.5 py-1.5 rounded-full ${data.badgeColor} font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-4 shadow-sm`;
+          badgeEl.textContent = data.badge;
+        }
+        if (titleEl) titleEl.textContent = data.title;
+        if (descEl) descEl.textContent = data.description;
+
+        // Specs
+        for (let i = 0; i < 3; i++) {
+          const lbl = document.getElementById(`spec-lbl-${i}`);
+          const val = document.getElementById(`spec-val-${i}`);
+          if (lbl && data.specs[i]) lbl.textContent = data.specs[i].label;
+          if (val && data.specs[i]) val.textContent = data.specs[i].val;
+        }
+
+        if (content) content.style.opacity = '1';
+      }, 150);
+    }
+
+    function prevTerroir() {
+      switchTerroir(currentTerroirIndex - 1);
+    }
+
+    function nextTerroir() {
+      switchTerroir(currentTerroirIndex + 1);
+    }
+  </script>
+
+  <!-- ========================================================================= -->
+  <!-- 9. "THE CRITICAL ACCLAIM" (Concept C: Dual Infinite Kinetic Marquee + Interactive Spotlight) -->
+  <!-- ========================================================================= -->
+  <section id="expect" class="bg-[#E2E6D5] py-20 sm:py-28 overflow-hidden border-b border-black/10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16 mb-12 sm:mb-16">
+
+      <!-- Section Editorial Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 font-bold mb-3">
+            <span>★</span>
+            <span>05 / CULINARY REPUTATION &amp; ACCLAIM</span>
+          </div>
+          <h2 class="font-display font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl uppercase tracking-tight text-[#121212] leading-[0.92]">
+            The Critical Acclaim
+          </h2>
+        </div>
+        <p class="font-sans text-sm sm:text-base md:text-lg text-black/80 leading-relaxed max-w-md">
+          What the nation's leading gastronomy critics and private locker members write when legacy fine dining etiquette is burned.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Dual Kinetic Marquee Tracks (Smooth Framer-Style Continuous Animation with Rich Imagery) -->
+    <div class="marquee-container space-y-4 sm:space-y-6 overflow-hidden"
+      style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+
+      <!-- TRACK 01: Glides Left (Critics & Publications with Dish & Hearth Imagery) -->
+      <div class="animate-marquee-left flex gap-4 sm:gap-6 items-center">
+        <!-- ITEM 1: Robb Report -->
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_ribeye_sear.jpg" alt="Robb Report Sear"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Robb Report</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The most dangerous steakhouse in the country.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- ITEM 2: New York Times -->
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_embers_flame.jpg" alt="1,000°F Binchotan Embers"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">New York Times</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Critic Dispatch</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Visceral performance art over 1,000°F binchotan embers.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- ITEM 3: GQ Magazine -->
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_restaurant_plating.jpg" alt="Forbidden Steak Plating"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">GQ Magazine</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Forget polite etiquette. This is pure carnal luxury.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- ITEM 4: Esquire -->
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_bone_in_carve.jpg" alt="Bone-in Dry Aged Ribeye Carve"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Esquire</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Gold Standard</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The dry-aged beef gold standard of our generation.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET 1 FOR SEAMLESS 100% INFINITE LOOP -->
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_ribeye_sear.jpg" alt="Robb Report Sear"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Robb Report</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The most dangerous steakhouse in the country.&rdquo;</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_embers_flame.jpg" alt="1,000°F Binchotan Embers"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">New York Times</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Critic Dispatch</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Visceral performance art over 1,000°F binchotan embers.&rdquo;</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_restaurant_plating.jpg" alt="Forbidden Steak Plating"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">GQ Magazine</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Forget polite etiquette. This is pure carnal luxury.&rdquo;</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_bone_in_carve.jpg" alt="Bone-in Dry Aged Ribeye Carve"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Esquire</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Gold Standard</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The dry-aged beef gold standard of our generation.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRACK 02: Glides Right (Member Ledgers & Industry Dispatches with Imagery) -->
+      <div class="animate-marquee-right flex gap-4 sm:gap-6 items-center">
+        <!-- ITEM 5: Locker #042 -->
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/steak_hands.jpg" alt="Butcher hands holding Wagyu"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#88BEE8] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Locker #042</span>
+              <span class="font-mono text-[10px] text-black/50">— Dr. Helena Vance</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The 60-day Galician ribeye is unmatched in Europe or America.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- ITEM 6: Forbes Luxury -->
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/dark_steakhouse.jpg" alt="Subterranean Cellar Atmosphere"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Forbes Luxury</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;A subterranean rebellion against fine dining clichés.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- ITEM 7: Food & Wine -->
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_castiron_butter.jpg" alt="Butter basted cast iron steak"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Food &amp; Wine</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Editor's Pick</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;An intoxicating clash of ancient pink salt cure and savage heat.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- ITEM 8: Bloomberg Pursuits -->
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_tomahawk_board.jpg" alt="Wood-fired Tomahawk Board"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Bloomberg Pursuits</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Where true steak connoisseurs lose their collective minds.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET 2 FOR SEAMLESS 100% INFINITE LOOP -->
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/steak_hands.jpg" alt="Butcher hands holding Wagyu"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#88BEE8] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Locker #042</span>
+              <span class="font-mono text-[10px] text-black/50">— Dr. Helena Vance</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The 60-day Galician ribeye is unmatched in Europe or America.&rdquo;</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/dark_steakhouse.jpg" alt="Subterranean Cellar Atmosphere"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Forbes Luxury</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;A subterranean rebellion against fine dining clichés.&rdquo;</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_castiron_butter.jpg" alt="Butter basted cast iron steak"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-black/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Food &amp; Wine</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Editor's Pick</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;An intoxicating clash of ancient pink salt cure and savage heat.&rdquo;</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/steak/gallery_tomahawk_board.jpg" alt="Wood-fired Tomahawk Board"
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl object-cover border border-white/15 flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Bloomberg Pursuits</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Where true steak connoisseurs lose their collective minds.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Reserve Invitation Strip -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16 mt-12 sm:mt-16 text-center">
+      <div class="inline-flex flex-wrap items-center justify-center gap-4">
+        <button onclick="openInquiryModal()"
+          class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#121212] text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
+          <span>Reserve Your Tasting Experience</span>
+          <span>&rarr;</span>
+        </button>
+        <button onclick="openInquiryModal()"
+          class="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-black/20 text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-black/5 transition-all cursor-pointer">
+          <span>Inquire for Private Cellar Vault</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 9B. "PURVEYORS & ALLIANCES" (Prestigious Partners with Logos) -->
+  <!-- ========================================================================= -->
+  <section id="partners" class="bg-[#121212] py-20 sm:py-28 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-white border-b border-white/10 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Header Section -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-3">
+            <span>★</span>
+            <span>06 / DIRECT PROVENANCE &amp; GUILDS</span>
+          </div>
+          <h2 class="font-display font-black text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-white leading-tight">
+            Purveyors &amp; Alliances
+          </h2>
+        </div>
+        <p class="font-sans text-xs sm:text-sm md:text-base text-white/70 max-w-md leading-relaxed">
+          Direct, zero-compromise partnerships with generational cattle ranchers, Wakayama charcoal kilns, and master Tsukiji bladesmiths.
+        </p>
+      </div>
+
+      <!-- Partner Logos Grid (Sleek Framer-Style Monogram Badges) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+
+        <!-- PARTNER 01 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#DCE33A] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#DCE33A] group-hover:scale-110 transition-transform">
+              SR
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Idaho, USA</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#DCE33A] transition-colors">
+              Snake River
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              American Heritage Wagyu
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 02 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#88BEE8] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#88BEE8] group-hover:scale-110 transition-transform">
+              MZ
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Kyushu, JP</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#88BEE8] transition-colors">
+              Miyazaki Guild
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              A5 Kuroge Washu (BMS 12)
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 03 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#E59247] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#E59247] group-hover:scale-110 transition-transform">
+              KB
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Wakayama, JP</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#E59247] transition-colors">
+              Kishu Binchotan
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              1,000°F White Oak Coals
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 04 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#DCE33A] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#DCE33A] group-hover:scale-110 transition-transform">
+              NT
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Tsukiji, JP</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#DCE33A] transition-colors">
+              Nenohi Cutlery
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              Custom Damascus Blades
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 05 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#88BEE8] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#88BEE8] group-hover:scale-110 transition-transform">
+              MD
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Essex, UK</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#88BEE8] transition-colors">
+              Maldon Sea Salt
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              Smoked Pyramid Flakes
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 06 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#E59247] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#E59247] group-hover:scale-110 transition-transform">
+              RG
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Galicia, ES</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#E59247] transition-colors">
+              Rubia Gallega Co.
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              10-Year Old Cow Terroir
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 07 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#DCE33A] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#DCE33A] group-hover:scale-110 transition-transform">
+              HK
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Khewra Mines</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#DCE33A] transition-colors">
+              Pink Salt Vaults
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              45-Day Microclimate Lockers
+            </p>
+          </div>
+        </div>
+
+        <!-- PARTNER 08 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#88BEE8] hover:bg-white/[0.08] transition-all duration-300 group cursor-default h-44 sm:h-52">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-display font-black text-lg text-[#88BEE8] group-hover:scale-110 transition-transform">
+              DR
+            </span>
+            <span class="font-mono text-[10px] uppercase text-white/40 tracking-widest">Napa &amp; Bordeaux</span>
+          </div>
+          <div>
+            <h4 class="font-display font-black text-base sm:text-lg uppercase text-white tracking-wide group-hover:text-[#88BEE8] transition-colors">
+              Domaine Reserves
+            </h4>
+            <p class="font-mono text-[10px] sm:text-xs text-white/50 uppercase tracking-wider mt-1">
+              Single-Vineyard Cask Cellars
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 10. "OUR PHILOSOPHY" (Full-Width Chartreuse Yellow Section) -->
+  <!-- ========================================================================= -->
+  <section id="philosophy"
+    class="bg-[#DCE33A] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-black/15 text-center">
+    <div class="max-w-3xl mx-auto">
+
+      <span class="font-mono text-[10px] tracking-widest uppercase text-black/60 font-bold block mb-3">
+        OUR PHILOSOPHY
+      </span>
+
+      <h2
+        class="font-display font-black text-2xl sm:text-3xl md:text-[2.25rem] uppercase tracking-tight text-[#121212] leading-[1.2] mb-6">
+        You're Not Here For "Safe." You're Here to TASTE PERFECTION, Savor The Smoke, &amp; Experience Pure Carnal
+        Luxury.
+      </h2>
+
+      <p class="max-w-lg mx-auto text-xs sm:text-sm text-black/80 leading-relaxed font-sans mb-8">
+        We exist for those who demand more from their table than predictable cuts and bland traditions. When you sit at
+        Forbidden Steak, you taste the unyielding dedication of farmers who honor heritage genetics, butchers who view
+        aging as fine art, and pitmasters who speak fluent fire.
+      </p>
+
+      <button onclick="openInquiryModal()"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
+        <span>Reserve Your Cut</span>
+        <span>&rarr;</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 11. "READY TO DO THIS?" (Dark Dramatic Atmosphere with CTA) -->
+  <!-- ========================================================================= -->
+  <section class="relative bg-[#121212] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+    <!-- Atmospheric steak dining background -->
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img src="assets/steak/dark_steakhouse.jpg" alt="Dark steakhouse candlelit table with steak and wine"
+        class="w-full h-full object-cover filter contrast-125">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/70 to-[#121212]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
+      <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#88BEE8] block mb-3">
+        LET'S CONNECT
+      </span>
+
+      <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-6">
+        Ready to Do This?
+      </h2>
+
+      <p class="max-w-md mx-auto text-xs sm:text-sm text-white/80 font-sans leading-relaxed mb-8">
+        Reservations at the Fire Hearth and private cellar tastings open 30 days in advance. Secure your table before
+        the evening’s dry-aged reserve cuts sell out.
+      </p>
+
+      <button onclick="openInquiryModal()"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
+        <span>Book Your Table &rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 12. FOOTER: 6-Thumbnail Photo Gallery + Giant "FORBIDDEN STEAK" Watermark -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#E2E6D5] pt-14 pb-10 px-4 sm:px-6 lg:px-8 border-t border-black/15">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Nav Links -->
+      <div
+        class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs font-mono font-bold uppercase tracking-wider text-black/80 mb-8">
+        <a href="#hero" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">The Cellar</a>
+        <a href="#cuts" class="hover:underline">Our Cuts</a>
+        <a href="#origins" class="hover:underline">Origins</a>
+        <a href="#expect" class="hover:underline">Ritual</a>
+        <a href="#philosophy" class="hover:underline">Philosophy</a>
+      </div>
+
+      <!-- 6 Thumbnail Steak & Flame Photos in a Row -->
+      <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-10">
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/steak/hero_fire_steak.jpg" alt="Steak flame"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/steak/tomahawk_slice.jpg" alt="Tomahawk slice"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/steak/wagyu_raw.jpg" alt="A5 Wagyu"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/steak/chef_flame.jpg" alt="Live flame"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/steak/grill_sizzle.jpg" alt="Grill sizzle"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/steak/steak_plate.jpg" alt="Steak plate"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+      </div>
+
+      <!-- Giant Outlined / Muted Watermark -->
+      <div class="text-center overflow-hidden mb-6">
+        <h3
+          class="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-black/15 uppercase select-none">
+          FORBIDDEN STEAK
+        </h3>
+      </div>
+
+      <!-- Copyright & Bottom info -->
+      <div class="text-center font-mono text-[11px] text-black/50 space-y-1">
+        <p>&copy; 2026 Forbidden Steak Co. All Rights Reserved. Where Real Steaks Break the Rules.</p>
+        <p>Curated with Wood Fire &amp; Himalayan Salt · In-House Master Butchery</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 13. RESERVATION POPUP MODAL (Exact match to Screenshot Modal Form) -->
+  <!-- ========================================================================= -->
+  <div id="inquiry-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+    <!-- Backdrop -->
+    <div onclick="closeInquiryModal()" class="absolute inset-0 modal-backdrop"></div>
+
+    <!-- Modal Content Box -->
+    <div
+      class="relative z-10 w-full max-w-2xl bg-white rounded-2xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-12 transform scale-95 transition-transform duration-300"
+      id="modal-box">
+
+      <!-- Close 'X' Button -->
+      <button onclick="closeInquiryModal()"
+        class="absolute top-3 right-3 z-30 w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/30 text-lg cursor-pointer">
+        &times;
+      </button>
+
+      <!-- Left Column: High-Impact Steak Photo (Yellow / Fire) -->
+      <div class="hidden md:block md:col-span-5 bg-[#DCE33A] relative overflow-hidden">
+        <img src="assets/steak/chef_flame.jpg" alt="Master chef searing steak over open fire"
+          class="w-full h-full object-cover filter contrast-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="font-mono text-[9px] uppercase tracking-widest text-[#DCE33A] font-bold block">FORBIDDEN
+            STEAK</span>
+          <span class="font-display font-bold text-xs uppercase">Rare. Uncompromised.</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Cobalt Blue Box with White Headline and Inputs -->
+      <div class="md:col-span-7 bg-[#2563EB] p-6 sm:p-8 text-white flex flex-col justify-center">
+
+        <h3 class="font-display font-black text-xl sm:text-2xl leading-tight mb-2 uppercase">
+          Wanna Reserve A Cut Before It Sells Out?
+        </h3>
+
+        <p class="text-xs sm:text-sm text-white/90 font-sans mb-6">
+          Grab your seat at the Butcher’s Hearth or private salt-aging tasting room:
+        </p>
+
+        <form onsubmit="handleReservationSubmit(event)" class="space-y-3.5">
+          <div>
+            <input type="text" required placeholder="First &amp; Last Name"
+              class="w-full px-4 py-3 rounded-md bg-white text-[#121212] placeholder-gray-400 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#DCE33A]">
+          </div>
+
+          <div>
+            <input type="email" required placeholder="Email Address"
+              class="w-full px-4 py-3 rounded-md bg-white text-[#121212] placeholder-gray-400 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#DCE33A]">
+          </div>
+
+          <div>
+            <select
+              class="w-full px-4 py-3 rounded-md bg-white text-[#121212] text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#DCE33A]">
+              <option value="tomahawk">45-Day Dry-Aged Tomahawk (45 oz)</option>
+              <option value="wagyu">A5 Miyazaki Japanese Wagyu (12 oz)</option>
+              <option value="chef">The Chef's Fire Table (8 Courses)</option>
+              <option value="ribeye">Bone-In Salt-Cavern Ribeye (32 oz)</option>
+            </select>
+          </div>
+
+          <button type="submit"
+            class="w-full py-3.5 rounded-md bg-[#DC2626] hover:bg-[#B91C1C] active:scale-[0.99] text-white font-display font-black uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md cursor-pointer mt-1">
+            "Reserve My Cut Now!"
+          </button>
+
+          <p class="text-[10px] text-white/70 text-center font-sans mt-3">
+            We respect your privacy. No spam, only rare cuts &amp; allocations.
+          </p>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal & Nav -->
+  <script>
+    function openInquiryModal() {
+      const modal = document.getElementById('inquiry-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }
+
+    function closeInquiryModal() {
+      const modal = document.getElementById('inquiry-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      box.classList.remove('scale-100');
+      box.classList.add('scale-95');
+    }
+
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('hidden');
+    }
+
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your cut reservation request at Forbidden Steak has been received. Our Maître D’ will confirm your table shortly.');
+      closeInquiryModal();
+    }
+  </script>
+
+</body>
+
+</html>
