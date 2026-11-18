@@ -584,19 +584,19 @@
         <div class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 lg:ml-auto">
           <button onclick="switchCut(0)" id="cut-tab-0"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
-            45-Day Tomahawk
+            Ram Tozo (Hump)
           </button>
           <button onclick="switchCut(1)" id="cut-tab-1"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]">
-            Miyazaki A5 Wagyu
+            Prime Beef Suya
           </button>
           <button onclick="switchCut(2)" id="cut-tab-2"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#88BEE8]">
-            60-Day Porterhouse
+            Smoked Guinea Fowl
           </button>
           <button onclick="switchCut(3)" id="cut-tab-3"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#E59247]">
-            Butcher’s Reserve
+            Fire-Roasted Asun
           </button>
         </div>
       </div>
@@ -607,7 +607,7 @@
 
         <!-- Left: HD Suya Plating Photo with Navigation Arrows -->
         <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto overflow-hidden bg-black">
-          <img id="cut-image" src="assets/suya/suya_skewers_fire.jpg" alt="45-Day Tomahawk Ritual"
+          <img id="cut-image" src="assets/suya/suya_skewers_fire.jpg" alt="The Ram Tozo Ritual"
             class="w-full h-full object-cover filter contrast-105 transition-all duration-500 ease-out">
 
           <!-- Cut Indicator Badge -->
@@ -637,31 +637,29 @@
           <div>
             <span id="cut-tag"
               class="font-mono text-[10px] uppercase tracking-widest text-black/60 font-bold block mb-2">
-              SIGNATURE EXPERIENCE · 45 OZ
+              SIGNATURE CUT · LIMITED DAILY · 450G
             </span>
             <h3 id="cut-title"
               class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-[#121212] mb-3 leading-tight">
-              The Tomahawk Ritual
+              The Ram Tozo Ritual
             </h3>
             <p id="cut-desc" class="text-sm sm:text-[15px] text-black/85 font-sans leading-relaxed mb-6">
-              Cut from prime black Angus cattle, dry-aged for 45 days inside our Himalayan pink salt cavern to
-              concentrate flavor into intense hazelnut, umami, and blue cheese notes. Blistered over direct white oak
-              embers.
+              Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and charred over 1,000°F mangrove coals until edges crackle while the center melts into spiced butter.
             </p>
 
             <ul id="cut-specs"
               class="space-y-2.5 text-xs font-mono font-bold text-black/80 mb-8 border-t border-b border-black/15 py-4">
               <li class="flex items-center justify-between">
-                <span class="text-black/60 font-normal">Aging Protocol:</span>
-                <span id="cut-aging">45 Days Himalayan Salt Locker</span>
+                <span class="text-black/60 font-normal">Marinade Protocol:</span>
+                <span id="cut-aging">Cold-Pressed Kulikuli &amp; Ginger</span>
               </li>
               <li class="flex items-center justify-between">
-                <span class="text-black/60 font-normal">Wood Fire Fuel:</span>
-                <span id="cut-fuel">Seasoned White Oak Embers</span>
+                <span class="text-black/60 font-normal">Hearth Charcoal:</span>
+                <span id="cut-fuel">1,000°F Niger Delta Mangrove Coals</span>
               </li>
               <li class="flex items-center justify-between">
                 <span class="text-black/60 font-normal">Tableside Finish:</span>
-                <span id="cut-finish">Bone Marrow Tallow &amp; Maldon Flakes</span>
+                <span id="cut-finish">Sweet Purple Shallots &amp; Fresh Plum Tomatoes</span>
               </li>
             </ul>
           </div>
@@ -669,11 +667,11 @@
           <div class="flex items-center justify-between gap-4 pt-2">
             <button onclick="openInquiryModalWithCut()"
               class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white hover:bg-[#88BEE8] hover:text-[#121212] font-mono text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-md cursor-pointer">
-              <span>Reserve This Cut</span>
+              <span>Reserve This Skewer</span>
               <span>&rarr;</span>
             </button>
             <span id="cut-weight" class="font-mono text-xs font-bold text-black/70 uppercase">
-              Serves 2–3
+              Serves 2–3 · 450g
             </span>
           </div>
         </div>
@@ -687,44 +685,44 @@
   <script>
     const CUTS_DATA = [
       {
-        title: "The Tomahawk Ritual",
-        tag: "SIGNATURE EXPERIENCE · 45 OZ",
-        desc: "Cut from prime black Angus cattle, dry-aged for 45 days inside our Himalayan pink salt cavern to concentrate flavor into intense hazelnut, umami, and blue cheese notes. Blistered over direct white oak embers.",
+        title: "The Ram Tozo Ritual",
+        tag: "SIGNATURE CUT · LIMITED DAILY · 450G",
+        desc: "Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and charred over 1,000°F mangrove coals until edges crackle while the center melts into spiced butter.",
         image: "assets/suya/suya_skewers_fire.jpg",
-        aging: "45 Days Himalayan Salt Locker",
-        fuel: "Seasoned White Oak Embers",
-        finish: "Bone Marrow Tallow & Maldon Flakes",
-        weight: "Serves 2–3 · 45 oz"
+        aging: "Cold-Pressed Kulikuli & Ginger",
+        fuel: "1,000°F Niger Delta Mangrove Coals",
+        finish: "Sweet Purple Shallots & Fresh Plum Tomatoes",
+        weight: "Serves 2–3 · 450g Allocation"
       },
       {
-        title: "Miyazaki A5 Wagyu Ribeye",
-        tag: "JAPANESE IMPORT · BMS 11 · 16 OZ",
-        desc: "Sourced directly from Miyazaki Prefecture, pure Kuroge Washu cattle with intricate snowflake marbling. Seared over 1,200°F binchotan charcoal so the fat renders into liquid silk on contact.",
+        title: "Prime Zebu Beef Flank",
+        tag: "SAVANNAH HERITAGE · 400G",
+        desc: "Razor-thin ribbons of grass-fed Northern Zebu beef, hand-sliced against the grain by generational Mallams. Steeped in de-oiled kulikuli presscake, calabash nutmeg, and fiery Cameroon pepper. Flash-seared for 90 seconds.",
         image: "assets/suya/suya_platter_onions.jpg",
-        aging: "Chilled Aging (Fresh Cut)",
-        fuel: "Kishu Binchotan White Charcoal",
-        finish: "Fresh Grated Wasabi & Aged Shoyu",
-        weight: "Ultra Rare · 16 oz"
+        aging: "Stoneground Kano Yaji & Ginger Pods",
+        fuel: "Dense White-Hot Mangrove Coals",
+        finish: "Sliced Garden Tomatoes & Fresh Lime Squeeze",
+        weight: "Serves 1–2 · 400g Skewers"
       },
       {
-        title: "60-Day Truffle Porterhouse",
-        tag: "MALLAM RESERVE · LIMITED SKEWERS",
-        desc: "The king of cuts — buttery filet mignon on one side, bold dry-aged strip on the other. Washed in winter black truffle butter and aged 60 days for an unapologetic, deep funky umami profile.",
-        image: "assets/suya/suya_skewers_fire.jpg",
-        aging: "60 Days Truffle Butter Washed",
-        fuel: "White Oak & Pecan Hardwood",
-        finish: "Truffle Marrow Jus & Smoked Sea Salt",
-        weight: "Serves 2 · 38 oz"
+        title: "Smoked Guinea Fowl & Gizzards",
+        tag: "SAVANNAH WILDGAME · 600G",
+        desc: "Free-range native Savannah guinea fowl slow-smoked over sweet mahogany fruitwood embers, basted in spiced scotch-bonnet citrus glaze, and served with skewers of crackling flame-charred gizzards.",
+        image: "assets/suya/hero_suya_4k.jpg",
+        aging: "3-Hour Mahogany Wood Smoke",
+        fuel: "Fruitwood Embers & Mangrove Coals",
+        finish: "Wild Forest Honey & Charred Shallots",
+        weight: "Serves 2 · 600g Whole Split"
       },
       {
-        title: "Mallam’s Secret Ram Rib Skewer",
-        tag: "FORBIDDEN CUT · LIMITED DAILY · 14 OZ",
-        desc: "A prized butcher secret carved from the chuck underblade with deep crimson marbling rivaling ribeye. Cast-iron blistered over coals with smashed garlic cloves, fresh rosemary, and rendered beef tallow.",
-        image: "assets/suya/suya_skewers_fire.jpg",
-        aging: "30 Days Dry-Aged in Cold Room",
-        fuel: "Cast Iron over Glowing Coals",
-        finish: "Crisp Garlic Confit & Rosemary Baster",
-        weight: "Limited Daily · 14 oz"
+        title: "Fire-Roasted Asun Goat Ribs",
+        tag: "HEARTH SPECIALTY · 500G",
+        desc: "Tender bone-in goat ribs pit-roasted over smoldering ironwood logs, then tossed over roaring open coals with charred habaneros, sweet purple onions, and crushed alligator pepper.",
+        image: "assets/suya/asun_goat_ribs.jpg",
+        aging: "Pit-Smoked Ironwood Log Slow Roast",
+        fuel: "Direct Open Flame & Blistering Embers",
+        finish: "Sizzling Cast Iron & Roasted Bird's-Eye Rodo",
+        weight: "Feast for 2 · 500g Ribs"
       }
     ];
 
