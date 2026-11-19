@@ -749,7 +749,7 @@
     <div class="w-full">
 
       <!-- Section Header & Filter Pills: Centered on mobile, Pushed to extreme ends on desktop -->
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between items-center lg:items-end text-center lg:text-left gap-6 mb-10 sm:mb-12 w-full">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between items-center lg:items-end text-center lg:text-left gap-5 mb-8 sm:mb-12 w-full">
         <div class="text-center lg:text-left flex-shrink-0">
           <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-2">
             THE LIVE GRILL
@@ -760,8 +760,27 @@
           </h2>
         </div>
 
-        <!-- Interactive Filter Pills: Centered on mobile, Right-aligned on desktop -->
-        <div class="flex items-center justify-center lg:justify-end gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 max-w-full lg:ml-auto">
+        <!-- Mobile Pagination Arrows (Replacing tags on mobile with sleek UI controls) -->
+        <div class="flex lg:hidden items-center justify-center gap-3">
+          <button onclick="prevCut()" aria-label="Previous Cut"
+            class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+          <span id="cut-counter-mobile" class="font-mono text-xs font-bold text-black/80 tracking-widest px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10">
+            CUT 01 / 04
+          </span>
+          <button onclick="nextCut()" aria-label="Next Cut"
+            class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop Interactive Filter Pills (Hidden on mobile) -->
+        <div class="hidden lg:flex items-center justify-end gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 max-w-full lg:ml-auto">
           <button onclick="switchCut(0)" id="cut-tab-0"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
             Ram Tozo (Hump)
@@ -798,8 +817,8 @@
             </span>
           </div>
 
-          <!-- Quick Prev / Next Overlay Buttons -->
-          <div class="absolute bottom-4 right-4 z-10 flex items-center gap-2">
+          <!-- Quick Prev / Next Overlay Buttons (Desktop Only) -->
+          <div class="hidden lg:flex absolute bottom-4 right-4 z-10 items-center gap-2">
             <button onclick="prevCut()" aria-label="Previous Cut"
               class="w-10 h-10 rounded-full bg-black/70 hover:bg-[#DCE33A] hover:text-[#121212] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm border border-white/20 active:scale-95 text-sm font-bold">
               &larr;
@@ -825,22 +844,22 @@
             </h3>
             <p id="cut-desc" class="text-sm sm:text-[15px] text-black/85 font-sans leading-relaxed mb-6">
               Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and
-              charred over 1,000°F mangrove coals until edges crackle while the center melts into spiced butter.
+              charred over red-hot mangrove coals until edges crackle while the center melts into spiced butter.
             </p>
 
             <ul id="cut-specs"
               class="space-y-2.5 text-xs font-mono font-bold text-black/80 mb-8 border-t border-b border-black/15 py-4">
               <li class="flex items-center justify-between">
-                <span class="text-black/60 font-normal">Marinade Protocol:</span>
-                <span id="cut-aging">Cold-Pressed Kulikuli &amp; Ginger</span>
+                <span class="text-black/60 font-normal">Spice Rub:</span>
+                <span id="cut-aging">Cold-Pressed Kulikuli, Ginger &amp; Kano Yaji</span>
               </li>
               <li class="flex items-center justify-between">
-                <span class="text-black/60 font-normal">Grill Charcoal:</span>
-                <span id="cut-fuel">1,000°F Niger Delta Mangrove Coals</span>
+                <span class="text-black/60 font-normal">Fire &amp; Embers:</span>
+                <span id="cut-fuel">Red-Hot Mangrove Coals</span>
               </li>
               <li class="flex items-center justify-between">
-                <span class="text-black/60 font-normal">Tableside Finish:</span>
-                <span id="cut-finish">Sweet Purple Shallots &amp; Fresh Plum Tomatoes</span>
+                <span class="text-black/60 font-normal">Served With:</span>
+                <span id="cut-finish">Red Onions, Plum Tomatoes &amp; Fresh Lime</span>
               </li>
             </ul>
           </div>
@@ -868,41 +887,41 @@
       {
         title: "The Ram Tozo Ritual",
         tag: "SIGNATURE CUT · LIMITED DAILY · 450G",
-        desc: "Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and charred over 1,000°F mangrove coals until edges crackle while the center melts into spiced butter.",
+        desc: "Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and charred over red-hot mangrove coals until edges crackle while the center melts into spiced butter.",
         image: "assets/suya/suya_skewers_fire.jpg",
-        aging: "Cold-Pressed Kulikuli & Ginger",
-        fuel: "1,000°F Niger Delta Mangrove Coals",
-        finish: "Sweet Purple Shallots & Fresh Plum Tomatoes",
+        aging: "Cold-Pressed Kulikuli, Ginger & Kano Yaji",
+        fuel: "Red-Hot Mangrove Coals",
+        finish: "Red Onions, Plum Tomatoes & Fresh Lime",
         weight: "Serves 2–3 · 450g Allocation"
       },
       {
         title: "Prime Zebu Beef Flank",
         tag: "SAVANNAH HERITAGE · 400G",
-        desc: "Razor-thin ribbons of grass-fed Northern Zebu beef, hand-sliced against the grain by generational Mallams. Steeped in de-oiled kulikuli presscake, calabash nutmeg, and fiery Cameroon pepper. Flash-seared for 90 seconds.",
+        desc: "Razor-thin ribbons of grass-fed Northern Zebu beef, hand-sliced against the grain by generational Mallams. Steeped in kulikuli presscake, calabash nutmeg, and fiery Cameroon pepper. Flash-seared over coals.",
         image: "assets/suya/suya_platter_onions.jpg",
-        aging: "Stoneground Kano Yaji & Ginger Pods",
-        fuel: "Dense White-Hot Mangrove Coals",
-        finish: "Sliced Garden Tomatoes & Fresh Lime Squeeze",
+        aging: "Stoneground Kano Yaji & Calabash Nutmeg",
+        fuel: "White-Hot Mangrove Embers",
+        finish: "Sliced Tomatoes, Sweet Onions & Fresh Lime",
         weight: "Serves 1–2 · 400g Skewers"
       },
       {
         title: "Smoked Guinea Fowl & Gizzards",
         tag: "SAVANNAH WILDGAME · 600G",
-        desc: "Free-range native Savannah guinea fowl slow-smoked over sweet mahogany fruitwood embers, basted in spiced scotch-bonnet citrus glaze, and served with skewers of crackling flame-charred gizzards.",
+        desc: "Native Savannah guinea fowl slow-smoked over sweet mahogany fruitwood, basted in spiced scotch-bonnet citrus glaze, and served with skewers of flame-charred gizzards.",
         image: "assets/suya/hero_suya_4k.jpg",
-        aging: "3-Hour Mahogany Wood Smoke",
-        fuel: "Fruitwood Embers & Mangrove Coals",
-        finish: "Wild Forest Honey & Charred Shallots",
+        aging: "Scotch Bonnet & Spiced Citrus Glaze",
+        fuel: "Sweet Mahogany Fruitwood Embers",
+        finish: "Charred Purple Onions & Wild Honey",
         weight: "Serves 2 · 600g Whole Split"
       },
       {
         title: "Fire-Roasted Asun Goat Ribs",
         tag: "HOUSE SPECIALTY · 500G",
-        desc: "Tender bone-in goat ribs pit-roasted over smoldering ironwood logs, then tossed over roaring open coals with charred habaneros, sweet purple onions, and crushed alligator pepper.",
+        desc: "Tender bone-in goat ribs pit-roasted over smoldering ironwood logs, then tossed over open coals with charred habaneros, sweet red onions, and crushed alligator pepper.",
         image: "assets/suya/asun_goat_ribs.jpg",
-        aging: "Pit-Smoked Ironwood Log Slow Roast",
-        fuel: "Direct Open Flame & Blistering Embers",
-        finish: "Sizzling Cast Iron & Roasted Bird's-Eye Rodo",
+        aging: "Crushed Alligator Pepper & Habanero",
+        fuel: "Direct Open Flame & Ironwood Embers",
+        finish: "Fire-Roasted Rodo & Caramelized Onions",
         weight: "Feast for 2 · 500g Ribs"
       }
     ];
@@ -937,7 +956,11 @@
         document.getElementById('cut-fuel').innerText = data.fuel;
         document.getElementById('cut-finish').innerText = data.finish;
         document.getElementById('cut-weight').innerText = data.weight;
-        document.getElementById('cut-counter').innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
+        
+        const counterEl = document.getElementById('cut-counter');
+        if (counterEl) counterEl.innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
+        const counterMobileEl = document.getElementById('cut-counter-mobile');
+        if (counterMobileEl) counterMobileEl.innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
 
         img.src = data.image;
         img.alt = data.title;
@@ -1581,87 +1604,63 @@
         </p>
       </div>
 
-      <!-- 2-Column Layout: Contact Info / Reservation Callout + Contact Form (Equal Height Flex Row) -->
-      <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 items-stretch w-full">
+      <!-- 2-Column Layout: Contact Info & Inquiry Form (Clean Minimal Editorial Layout - No Vibe-Code Card Outlines) -->
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start w-full">
         
-        <!-- Left Column: Sanctuary Address & Reservation Direct Action -->
-        <div class="w-full lg:w-[42%] xl:w-[40%] flex flex-col justify-between gap-6">
-          
-          <!-- Location & Details Card -->
-          <div class="bg-black/60 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl flex-1 flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold block mb-3">
-                VICTORIA ISLAND SANCTUARY
-              </span>
-              <h3 class="font-display font-black text-2xl uppercase tracking-tight text-white mb-2">
-                14 Ozumba Mbadiwe Ave
-              </h3>
-              <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed mb-6">
-                Victoria Island, Lagos, Nigeria.<br>
-                Valet parking available at our private entrance.
-              </p>
-            </div>
-
-            <div class="border-t border-white/10 pt-5 space-y-4 font-mono text-xs">
-              <div>
-                <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1">Opening Hours</div>
-                <div class="text-white font-bold">Tuesday &ndash; Thursday: 5:00 PM &ndash; 1:00 AM</div>
-                <div class="text-white font-bold">Friday &ndash; Sunday: 4:00 PM &ndash; 2:00 AM</div>
-                <div class="text-[#DCE33A]">Monday: Coals Rest (Closed)</div>
-              </div>
-              <div class="border-t border-white/5 pt-3">
-                <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1">Direct Inquiries</div>
-                <div class="text-white font-bold">+234 (0) 1 888 7892</div>
-                <div class="text-white/80 font-mono text-xs">concierge@forbiddensuya.ng</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reservation Notice Callout -->
-          <div class="bg-[#DCE33A]/10 border border-[#DCE33A]/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-xl">
-            <div class="block mb-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold">
-              TABLE RESERVATIONS
-            </div>
-            <h4 class="font-display font-black text-xl uppercase tracking-tight text-white mb-2">
-              Looking To Dine Tonight?
-            </h4>
-            <p class="text-xs sm:text-sm text-white/75 font-sans leading-relaxed mb-5">
-              Individual and group table reservations at the Live Grill counter or VIP lounge are handled exclusively through our booking concierge.
+        <!-- Left Column: Sanctuary Address & Opening Hours (Clean Typography, No Card Outline) -->
+        <div class="w-full lg:w-[42%] xl:w-[40%] space-y-8 py-2">
+          <div>
+            <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold block mb-3">
+              VICTORIA ISLAND SANCTUARY
+            </span>
+            <h3 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-2">
+              14 Ozumba Mbadiwe Ave
+            </h3>
+            <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed">
+              Victoria Island, Lagos, Nigeria.<br>
+              Valet parking available at our private entrance.
             </p>
-            <button onclick="openInquiryModal()"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-md cursor-pointer">
-              <span>Book A Table</span>
-              <span>&rarr;</span>
-            </button>
           </div>
 
+          <div class="border-t border-white/15 pt-6 space-y-5 font-mono text-xs">
+            <div>
+              <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1.5">Opening Hours</div>
+              <div class="text-white font-bold text-xs sm:text-sm">Tuesday &ndash; Thursday: 5:00 PM &ndash; 1:00 AM</div>
+              <div class="text-white font-bold text-xs sm:text-sm">Friday &ndash; Sunday: 4:00 PM &ndash; 2:00 AM</div>
+              <div class="text-[#DCE33A] font-bold text-xs sm:text-sm">Monday: Coals Rest (Closed)</div>
+            </div>
+            <div class="border-t border-white/10 pt-4">
+              <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1.5">Direct Inquiries</div>
+              <div class="text-white font-bold text-sm sm:text-base">+234 (0) 1 888 7892</div>
+              <div class="text-white/80 font-mono text-xs">concierge@forbiddensuya.ng</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Column: Interactive Contact Us Form (Equal Height Flex Column) -->
-        <div
-          class="w-full lg:w-[58%] xl:w-[60%] flex-1 bg-[#181818]/90 border border-white/15 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl flex flex-col justify-between">
-          <div>
+        <!-- Right Column: Interactive Contact Us Form (Direct Flat Surface, No Card Containers) -->
+        <div class="w-full lg:w-[58%] xl:w-[60%] py-2">
+          <div class="mb-6">
             <h3 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-2">
               Send An Inquiry
             </h3>
-            <p class="text-xs sm:text-sm text-white/70 font-sans mb-6 leading-relaxed">
+            <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed">
               Fill out the form below and our Victoria Island concierge team will connect with you directly.
             </p>
           </div>
 
           <form id="contact-form" onsubmit="handleContactSubmit(event)"
-            class="space-y-4 sm:space-y-5 flex-1 flex flex-col justify-between">
-            <div class="space-y-4 sm:space-y-5 flex-1 flex flex-col">
+            class="space-y-4 sm:space-y-5">
+            <div class="space-y-4 sm:space-y-5">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Name *</label>
                   <input type="text" required placeholder="e.g. Babatunde Adeleke"
-                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                    class="w-full bg-white/5 border border-white/20 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
                 </div>
                 <div>
                   <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Email Address *</label>
                   <input type="email" required placeholder="name@domain.com"
-                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                    class="w-full bg-white/5 border border-white/20 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
                 </div>
               </div>
 
@@ -1669,12 +1668,12 @@
                 <div>
                   <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Phone / WhatsApp</label>
                   <input type="tel" placeholder="+234 800 000 0000"
-                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                    class="w-full bg-white/5 border border-white/20 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
                 </div>
                 <div>
                   <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Inquiry Type *</label>
                   <select required
-                    class="w-full bg-[#1e1e1e] border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors">
+                    class="w-full bg-[#1e1e1e] border border-white/20 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors">
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Private Event Buyout">Private Event Buyout</option>
                     <option value="Corporate Dining">Corporate Dining &amp; Gifting</option>
@@ -1684,14 +1683,14 @@
                 </div>
               </div>
 
-              <div class="flex-1 flex flex-col min-h-[140px]">
+              <div class="flex flex-col min-h-[140px]">
                 <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Message *</label>
                 <textarea required rows="4" placeholder="Tell us how we can help, expected dates, or specific requirements..."
-                  class="w-full flex-1 bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors resize-none"></textarea>
+                  class="w-full bg-white/5 border border-white/20 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors resize-none"></textarea>
               </div>
             </div>
 
-            <div class="pt-4 mt-auto">
+            <div class="pt-4">
               <button type="submit"
                 class="w-full py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-[#CAD12D] active:scale-[0.99] transition-all shadow-xl cursor-pointer">
                 Send Message &rarr;
