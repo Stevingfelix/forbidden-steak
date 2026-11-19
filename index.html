@@ -850,13 +850,13 @@
             </ul>
           </div>
 
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between items-start gap-3 sm:gap-4 pt-2">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between items-center text-center sm:text-left gap-3 sm:gap-4 pt-2 w-full">
             <button onclick="openInquiryModalWithCut()"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white hover:bg-[#88BEE8] hover:text-[#121212] font-mono text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-md cursor-pointer">
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white hover:bg-[#88BEE8] hover:text-[#121212] font-mono text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-md cursor-pointer mx-auto sm:mx-0">
               <span>Book A Table</span>
               <span>&rarr;</span>
             </button>
-            <span id="cut-weight" class="font-mono text-xs font-bold text-black/70 uppercase">
+            <span id="cut-weight" class="font-mono text-xs font-bold text-black/70 uppercase text-center sm:text-right block w-full sm:w-auto">
               Serves 2–3 · 450g
             </span>
           </div>
@@ -1791,10 +1791,10 @@
       class="relative z-10 w-full max-w-xl transform scale-95 transition-transform duration-300"
       id="modal-box">
 
-      <!-- Close Button: Sits inside container on mobile (black icon, no background) & floats outside on desktop -->
+      <!-- Close Button: Sits inside container on mobile (clean black icon) & aligned with top edge of card on desktop (Canva style) -->
       <button onclick="closeInquiryModal()" aria-label="Close Modal"
-        class="absolute top-3.5 right-3.5 sm:-top-3 sm:-right-14 md:-right-16 z-50 p-1.5 sm:p-0 text-[#121212] bg-transparent sm:bg-white sm:w-10 sm:h-10 sm:rounded-full sm:shadow-2xl sm:border sm:border-black/15 flex items-center justify-center hover:opacity-75 sm:hover:bg-neutral-100 active:scale-90 sm:active:scale-95 transition-all cursor-pointer focus:outline-none">
-        <svg class="w-6 h-6 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        class="absolute top-3.5 right-3.5 sm:top-0 sm:left-[calc(100%+14px)] sm:right-auto z-50 p-1.5 sm:p-0 text-[#121212] bg-transparent sm:bg-white sm:w-10 sm:h-10 sm:rounded-full sm:shadow-lg sm:border sm:border-black/10 flex items-center justify-center hover:opacity-75 sm:hover:bg-neutral-50 active:scale-90 sm:active:scale-95 transition-all cursor-pointer focus:outline-none">
+        <svg class="w-6 h-6 sm:w-4 sm:h-4 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -1898,10 +1898,10 @@
       class="relative z-10 w-full max-w-md transform scale-95 transition-transform duration-300"
       id="contact-success-box">
 
-      <!-- Close Button: Sits inside container on mobile (black icon, no background) & floats outside on desktop -->
+      <!-- Close Button: Sits inside container on mobile (clean black icon) & aligned with top edge of card on desktop (Canva style) -->
       <button onclick="closeContactSuccessModal()" aria-label="Close Modal"
-        class="absolute top-3.5 right-3.5 sm:-top-3 sm:-right-14 md:-right-16 z-50 p-1.5 sm:p-0 text-[#121212] bg-transparent sm:bg-white sm:w-10 sm:h-10 sm:rounded-full sm:shadow-2xl sm:border sm:border-black/15 flex items-center justify-center hover:opacity-75 sm:hover:bg-neutral-100 active:scale-90 sm:active:scale-95 transition-all cursor-pointer focus:outline-none">
-        <svg class="w-6 h-6 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        class="absolute top-3.5 right-3.5 sm:top-0 sm:left-[calc(100%+14px)] sm:right-auto z-50 p-1.5 sm:p-0 text-[#121212] bg-transparent sm:bg-white sm:w-10 sm:h-10 sm:rounded-full sm:shadow-lg sm:border sm:border-black/10 flex items-center justify-center hover:opacity-75 sm:hover:bg-neutral-50 active:scale-90 sm:active:scale-95 transition-all cursor-pointer focus:outline-none">
+        <svg class="w-6 h-6 sm:w-4 sm:h-4 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
