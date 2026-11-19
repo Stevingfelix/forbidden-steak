@@ -271,78 +271,43 @@
       position: relative;
     }
 
-    /* Flame flicker & burn animations for preloader */
-    @keyframes fireFlicker {
+    /* Cool Flat Flame Motion Animation */
+    @keyframes flatFlameDance {
       0%, 100% {
-        transform: scale(1) rotate(0deg);
-        filter: drop-shadow(0 0 14px rgba(220, 227, 58, 0.85))
-                drop-shadow(0 -8px 24px rgba(245, 158, 11, 0.85))
-                drop-shadow(0 -16px 36px rgba(239, 68, 68, 0.65));
+        transform: scale(1, 1) rotate(0deg);
+        filter: drop-shadow(0 0 10px rgba(220, 227, 58, 0.55));
       }
       20% {
-        transform: scale(1.06, 0.95) rotate(-1.5deg);
-        filter: drop-shadow(0 0 18px rgba(220, 227, 58, 1))
-                drop-shadow(0 -12px 32px rgba(245, 158, 11, 0.95))
-                drop-shadow(0 -22px 45px rgba(239, 68, 68, 0.75));
+        transform: scale(0.95, 1.1) rotate(-3deg);
+        filter: drop-shadow(0 0 18px rgba(220, 227, 58, 0.8));
       }
       40% {
-        transform: scale(0.96, 1.05) rotate(1deg);
-        filter: drop-shadow(0 0 12px rgba(220, 227, 58, 0.75))
-                drop-shadow(0 -6px 20px rgba(245, 158, 11, 0.7))
-                drop-shadow(0 -14px 30px rgba(239, 68, 68, 0.55));
+        transform: scale(1.06, 0.94) rotate(2deg);
+        filter: drop-shadow(0 0 12px rgba(220, 227, 58, 0.6));
       }
       60% {
-        transform: scale(1.05, 0.97) rotate(-1deg);
-        filter: drop-shadow(0 0 22px rgba(220, 227, 58, 1))
-                drop-shadow(0 -14px 38px rgba(245, 158, 11, 1))
-                drop-shadow(0 -24px 50px rgba(239, 68, 68, 0.85));
+        transform: scale(0.93, 1.14) rotate(-2deg);
+        filter: drop-shadow(0 0 20px rgba(220, 227, 58, 0.85));
       }
       80% {
-        transform: scale(0.97, 1.04) rotate(1.2deg);
-        filter: drop-shadow(0 0 15px rgba(220, 227, 58, 0.85))
-                drop-shadow(0 -10px 26px rgba(245, 158, 11, 0.8))
-                drop-shadow(0 -18px 38px rgba(239, 68, 68, 0.65));
+        transform: scale(1.04, 0.96) rotate(2.5deg);
+        filter: drop-shadow(0 0 14px rgba(220, 227, 58, 0.65));
       }
     }
 
-    @keyframes riseEmber {
-      0% {
-        transform: translateY(0) scale(1) translateX(0);
-        opacity: 0.95;
-      }
-      50% {
-        transform: translateY(-40px) scale(0.8) translateX(6px);
-        opacity: 0.7;
-      }
-      100% {
-        transform: translateY(-90px) scale(0.2) translateX(-8px);
-        opacity: 0;
-      }
+    .flat-flame-icon {
+      animation: flatFlameDance 0.65s ease-in-out infinite alternate;
+      transform-origin: 16px 28px;
     }
 
-    @keyframes preloaderBar {
-      0% {
-        width: 0%;
-      }
-      100% {
-        width: 100%;
-      }
+    /* Typewriter Cursor Pulse */
+    @keyframes blinkCaret {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
-    .fire-burn {
-      animation: fireFlicker 0.4s ease-in-out infinite alternate;
-      transform-origin: bottom center;
-    }
-
-    .ember-particle {
-      position: absolute;
-      border-radius: 9999px;
-      pointer-events: none;
-      animation: riseEmber linear infinite;
-    }
-
-    .preloader-progress {
-      animation: preloaderBar 2s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+    .typewriter-cursor {
+      animation: blinkCaret 0.7s infinite;
     }
   </style>
 </head>
@@ -350,58 +315,25 @@
 <body class="antialiased text-[#121212] bg-[#E2E6D5]">
 
   <!-- ========================================================================= -->
-  <!-- 0. BURNING FLAME LIVE-FIRE PRELOADER (2 Seconds) -->
+  <!-- 0. FLAT FLAME & TYPEWRITER PRELOADER (2 Seconds) -->
   <!-- ========================================================================= -->
   <div id="preloader"
     class="fixed inset-0 z-[99999] bg-[#121212] flex flex-col items-center justify-center transition-opacity duration-700 select-none pointer-events-auto">
     
     <div class="relative flex flex-col items-center justify-center px-4">
-      <!-- Rising Fire Embers Particles -->
-      <div class="absolute inset-0 -top-14 pointer-events-none overflow-visible">
-        <span class="ember-particle bg-[#DCE33A] w-1.5 h-1.5 left-[22%]" style="animation-duration: 1.8s; animation-delay: 0.1s;"></span>
-        <span class="ember-particle bg-[#F59E0B] w-2 h-2 left-[48%]" style="animation-duration: 2.1s; animation-delay: 0.4s;"></span>
-        <span class="ember-particle bg-[#EF4444] w-1.5 h-1.5 left-[68%]" style="animation-duration: 1.6s; animation-delay: 0.2s;"></span>
-        <span class="ember-particle bg-[#DCE33A] w-1 h-1 left-[35%]" style="animation-duration: 1.9s; animation-delay: 0.7s;"></span>
-        <span class="ember-particle bg-[#FBBF24] w-2 h-2 left-[78%]" style="animation-duration: 2.3s; animation-delay: 0.5s;"></span>
-      </div>
-
-      <!-- Burning Flame SVG Emblem (Header Icon with Fire Gradient & Glow) -->
-      <svg class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 fire-burn flex-shrink-0 relative z-10" viewBox="0 0 32 32">
-        <defs>
-          <linearGradient id="preloaderFireGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#DC2626" />
-            <stop offset="35%" stop-color="#EA580C" />
-            <stop offset="70%" stop-color="#F59E0B" />
-            <stop offset="100%" stop-color="#DCE33A" />
-          </linearGradient>
-          <linearGradient id="preloaderCoreGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#EA580C" />
-            <stop offset="50%" stop-color="#FDE047" />
-            <stop offset="100%" stop-color="#FFFFFF" />
-          </linearGradient>
-        </defs>
-        <!-- Outer flame body with fire gradient -->
-        <path fill="url(#preloaderFireGrad)"
-          d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2Z" />
-        <!-- Inner dancing core flame -->
-        <path fill="url(#preloaderCoreGrad)"
-          d="M16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
-        <!-- Hearth base -->
-        <rect x="6" y="27" width="20" height="2.5" rx="1.25" fill="#DCE33A" />
+      <!-- Flat Animated Flame SVG Emblem (Header Logo Flat Icon) -->
+      <svg class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 text-[#DCE33A] flat-flame-icon flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
+        <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
       </svg>
 
-      <!-- Wordmark below emblem -->
-      <h1 class="font-display font-black text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.22em] text-white mt-6 drop-shadow-lg text-center">
-        Forbidden Suya
-      </h1>
-
-      <p class="font-mono text-[10px] sm:text-xs text-[#DCE33A] tracking-[0.3em] uppercase mt-2 font-bold text-center">
-        Live-Fire Hearth &middot; Victoria Island &middot; Lagos
-      </p>
-
-      <!-- Sleek 2-second Progress Bar -->
-      <div class="w-44 sm:w-56 h-[3px] bg-white/10 rounded-full overflow-hidden mt-6">
-        <div class="h-full bg-gradient-to-r from-[#DCE33A] via-[#F59E0B] to-[#DCE33A] rounded-full preloader-progress"></div>
+      <!-- Typewriter Wordmark: Forbidden Suya -->
+      <div class="mt-6 sm:mt-8 flex items-center justify-center min-h-[3rem] sm:min-h-[4rem]">
+        <h1 id="typewriter-text"
+          class="font-display font-black text-2xl sm:text-3xl md:text-5xl uppercase tracking-[0.2em] text-white"></h1>
+        <span id="typewriter-cursor"
+          class="w-1 sm:w-1.5 h-6 sm:h-8 md:h-10 bg-[#DCE33A] ml-1.5 typewriter-cursor inline-block"></span>
       </div>
     </div>
   </div>
@@ -559,7 +491,7 @@
 
       <!-- Parenthetical Subtitle in Playfair Display Serif Italics - BIGGER & BOLD -->
       <p class="font-serif italic font-black text-2xl sm:text-3xl md:text-4xl text-[#121212] tracking-tight mt-6 mb-6">
-        (because well-done is boring)
+        (because regular roadside suya is boooring!)
       </p>
 
       <!-- Balanced Body Paragraph -->
@@ -1806,10 +1738,13 @@
       class="relative z-10 w-full max-w-2xl transform scale-95 transition-transform duration-300"
       id="modal-box">
 
-      <!-- Floating External Close 'X' Button -->
+      <!-- Floating External Close Button (Canva-Style Floating Outside Modal) -->
       <button onclick="closeInquiryModal()" aria-label="Close Modal"
-        class="absolute -top-3.5 -right-3.5 sm:-top-4 sm:-right-4 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#121212] text-white flex items-center justify-center hover:bg-black active:scale-90 text-xl font-bold border-2 border-white/30 shadow-2xl transition-all cursor-pointer">
-        &times;
+        class="absolute -top-12 right-0 sm:-top-3 sm:-right-14 md:-right-16 z-50 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-neutral-800 flex items-center justify-center hover:bg-neutral-100 hover:scale-105 active:scale-95 shadow-2xl transition-all cursor-pointer border border-black/10 focus:outline-none">
+        <svg class="w-4 h-4 text-neutral-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </button>
 
       <!-- Inner Rounded Card Container -->
@@ -1875,8 +1810,21 @@
 
   <!-- JavaScript for Modal, Nav, Contact Form & Preloader -->
   <script>
-    // 2-Second Live-Fire Preloader Dismissal
+    // Flat Flame & Typewriter Preloader Animation
     window.addEventListener('DOMContentLoaded', function () {
+      const textToType = "Forbidden Suya";
+      let charIdx = 0;
+      const textEl = document.getElementById('typewriter-text');
+      
+      function typeChar() {
+        if (textEl && charIdx < textToType.length) {
+          textEl.textContent += textToType.charAt(charIdx);
+          charIdx++;
+          setTimeout(typeChar, 60);
+        }
+      }
+      setTimeout(typeChar, 180);
+
       const preloader = document.getElementById('preloader');
       if (preloader) {
         setTimeout(function () {
@@ -1884,7 +1832,7 @@
           setTimeout(function () {
             preloader.style.display = 'none';
           }, 700);
-        }, 2000);
+        }, 2200);
       }
     });
 
