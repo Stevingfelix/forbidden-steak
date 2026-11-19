@@ -12,11 +12,16 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23DCE33A'/><text y='70' x='15' font-size='60' font-family='sans-serif' font-weight='900' fill='%23121212'>FS</text></svg>">
 
+  <!-- High-Priority Font Preloads to eliminate FOUT / Flash of Unstyled Text on Slow Networks -->
+  <link rel="preload" href="/fonts/syne-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- Google Fonts: Syne, Barlow Condensed, Playfair Display, Plus Jakarta Sans, Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Playfair+Display:ital,wght@1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Playfair+Display:ital,wght@1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=block"
     rel="stylesheet">
 
   <!-- Local and CDN @font-face fallback definitions for 100% offline & online reliability -->
@@ -25,8 +30,9 @@
       font-family: 'Syne';
       font-style: normal;
       font-weight: 700;
-      font-display: swap;
-      src: url('/public/fonts/syne-700.woff2') format('woff2'),
+      font-display: block;
+      src: url('/fonts/syne-700.woff2') format('woff2'),
+        url('/public/fonts/syne-700.woff2') format('woff2'),
         url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
     }
 
@@ -34,8 +40,9 @@
       font-family: 'Syne';
       font-style: normal;
       font-weight: 800;
-      font-display: swap;
-      src: url('/public/fonts/syne-800.woff2') format('woff2'),
+      font-display: block;
+      src: url('/fonts/syne-800.woff2') format('woff2'),
+        url('/public/fonts/syne-800.woff2') format('woff2'),
         url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
     }
 
@@ -43,8 +50,9 @@
       font-family: 'Barlow Condensed';
       font-style: normal;
       font-weight: 700 900;
-      font-display: swap;
-      src: url('/public/fonts/barlow-condensed.woff2') format('woff2');
+      font-display: block;
+      src: url('/fonts/barlow-condensed.woff2') format('woff2'),
+        url('/public/fonts/barlow-condensed.woff2') format('woff2');
     }
 
     /* Unified Brand Typography: Syne across ALL headlines, titles, and display text site-wide */
@@ -600,7 +608,7 @@
   <section id="hero" class="relative w-full bg-[#121212] overflow-hidden">
 
     <!-- Hero Media Container with Full Bleed Live Video Background (Sized so yellow ribbon shows on mobile) -->
-    <div class="relative w-full h-[100svh] min-h-[580px] max-h-[720px] sm:max-h-none sm:min-h-[820px] sm:h-[860px] lg:h-[960px] overflow-hidden bg-[#121212]">
+    <div class="relative w-full h-[90svh] min-h-[540px] max-h-[660px] sm:max-h-none sm:min-h-[820px] sm:h-[860px] lg:h-[960px] overflow-hidden bg-[#121212]">
       <!-- Background Video: Autoplay, Loop, Muted, Playsinline for 100% Mobile & Desktop Support -->
       <video autoplay loop muted playsinline poster="assets/suya/hero_suya_4k.jpg"
         class="w-full h-full object-cover object-center filter brightness-[0.94] contrast-[1.12]">
@@ -652,7 +660,7 @@
       <!-- Bottom S-Curve Wavy Ribbon Banner -->
       <div class="absolute bottom-0 left-0 right-0 z-30 pointer-events-none translate-y-[1px]">
         <svg viewBox="0 0 1600 220"
-          class="w-full h-[75px] sm:h-[100px] md:h-[125px] lg:h-[145px] xl:h-[165px] block select-none pointer-events-none"
+          class="w-full h-[96px] sm:h-[115px] md:h-[135px] lg:h-[155px] xl:h-[175px] block select-none pointer-events-none"
           preserveAspectRatio="none">
           <defs>
             <!-- Ribbon midline trajectory -->
@@ -663,12 +671,12 @@
           <path d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95 L 1640,230 L -40,230 Z"
             fill="#E2E6D5" />
 
-          <!-- Yellow Ribbon Band (Chartreuse #DCE33A, uniform 88px thickness) -->
+          <!-- Yellow Ribbon Band (Chartreuse #DCE33A, uniform 100px thickness) -->
           <path d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95" fill="none" stroke="#DCE33A"
-            stroke-width="88" stroke-linecap="square" />
+            stroke-width="100" stroke-linecap="square" />
 
-          <!-- High-impact curved text sitting visibly inside the yellow ribbon -->
-          <text fill="#121212" font-family="'Syne', sans-serif" font-weight="800" font-size="34" letter-spacing="2.5">
+          <!-- High-impact curved text sitting visibly inside the yellow ribbon (Bold & Bigger) -->
+          <text fill="#121212" font-family="'Syne', sans-serif" font-weight="900" font-size="44" letter-spacing="3">
             <textPath href="#ribbonCenterline" startOffset="50%" text-anchor="middle" dominant-baseline="central">
               Break the Rules ★ Where Real Suya Breaks the Rules ★ Break the Rules ★
             </textPath>
@@ -2298,8 +2306,12 @@
 
       const preloader = document.getElementById('preloader');
       if (preloader) {
-        setTimeout(function () {
-          // Elegant curtain exit
+        // Guarantee font readiness: wait for min preloader duration AND document.fonts.ready
+        const minTimePromise = new Promise(resolve => setTimeout(resolve, 2000));
+        const fontsPromise = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+
+        Promise.all([minTimePromise, fontsPromise]).then(function () {
+          // Elegant curtain exit - ONLY after Syne & brand fonts are 100% loaded in memory
           preloader.classList.add('preloader-hidden');
           // Trigger choreographed hero elements entrance
           document.body.classList.add('hero-loaded');
@@ -2307,9 +2319,13 @@
           setTimeout(function () {
             preloader.style.display = 'none';
           }, 850);
-        }, 2200);
+        });
       } else {
-        document.body.classList.add('hero-loaded');
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(() => document.body.classList.add('hero-loaded'));
+        } else {
+          document.body.classList.add('hero-loaded');
+        }
       }
 
       // Initialize Framer Motion Scroll Reveals, Progress, Back To Top & Header Transition
