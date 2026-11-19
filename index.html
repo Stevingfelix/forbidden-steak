@@ -1248,8 +1248,69 @@
 
     </div>
 
-    <!-- Dual Kinetic Marquee Tracks (Smooth Framer-Style Continuous Animation with People Portait Avatars) -->
-    <div class="marquee-container space-y-4 sm:space-y-6 overflow-hidden"
+    <!-- MOBILE EDITORIAL SPOTLIGHT (Option 2: Focused, Legible Luxury Quote Showcase) -->
+    <div class="block md:hidden px-6 text-center max-w-lg mx-auto">
+      <div id="spotlight-card" class="bg-white/85 border border-black/15 rounded-3xl p-6 sm:p-8 shadow-sm backdrop-blur-sm transition-opacity duration-300">
+        
+        <!-- Rating Stars -->
+        <div class="text-[#E59247] text-sm tracking-wider mb-3 flex justify-center gap-1">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <!-- Large Pull Quote (Full sentence, clear, legible) -->
+        <p id="spotlight-quote" class="font-display font-black text-lg sm:text-xl uppercase tracking-tight text-[#121212] leading-snug mb-6 min-h-[4.5rem] flex items-center justify-center">
+          &ldquo;Their ram tozo literally melts in your mouth! You won't touch roadside suya again.&rdquo;
+        </p>
+
+        <!-- Diner Author Details -->
+        <div class="flex flex-col items-center justify-center gap-2 mb-6">
+          <img id="spotlight-avatar" src="assets/avatars/critic_2.jpg" alt="Zainab M."
+            class="w-14 h-14 rounded-full object-cover border-2 border-black/20 shadow-sm">
+          <div>
+            <h4 id="spotlight-name" class="font-mono text-xs font-bold uppercase tracking-wider text-[#121212]">
+              Zainab M.
+            </h4>
+            <span id="spotlight-role" class="font-mono text-[10px] text-black/55 uppercase tracking-widest block">
+              Food Lover · Lekki Phase 1
+            </span>
+          </div>
+        </div>
+
+        <!-- Sleek Navigation Controller (Matching Cuts Counter Style) -->
+        <div class="flex items-center justify-center gap-3 pt-3 border-t border-black/10">
+          <button onclick="prevSpotlight()" aria-label="Previous Review"
+            class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+          
+          <span id="spotlight-counter" class="font-mono text-xs font-bold text-black/80 tracking-widest px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10">
+            01 / 05
+          </span>
+
+          <button onclick="nextSpotlight()" aria-label="Next Review"
+            class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Quick Review Selector Dots -->
+      <div class="flex items-center justify-center gap-2 mt-4">
+        <button onclick="switchSpotlight(0)" id="spotlight-dot-0" class="w-6 h-2 rounded-full bg-[#121212] transition-all" aria-label="Review 1"></button>
+        <button onclick="switchSpotlight(1)" id="spotlight-dot-1" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 2"></button>
+        <button onclick="switchSpotlight(2)" id="spotlight-dot-2" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 3"></button>
+        <button onclick="switchSpotlight(3)" id="spotlight-dot-3" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 4"></button>
+        <button onclick="switchSpotlight(4)" id="spotlight-dot-4" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 5"></button>
+      </div>
+    </div>
+
+    <!-- Dual Kinetic Marquee Tracks (Desktop / Tablet Only - Smooth Framer-Style Continuous Animation) -->
+    <div class="hidden md:block marquee-container space-y-4 sm:space-y-6 overflow-hidden"
       style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
 
       <!-- TRACK 01: Glides Left -->
@@ -1542,6 +1603,87 @@
     </div>
   </section>
 
+  <!-- Mobile Testimonial Spotlight Script -->
+  <script>
+    const SPOTLIGHT_REVIEWS = [
+      {
+        quote: "Their ram tozo literally melts in your mouth! You won't touch roadside suya again.",
+        name: "Zainab M.",
+        role: "Food Lover · Lekki Phase 1",
+        avatar: "assets/avatars/critic_2.jpg"
+      },
+      {
+        quote: "Best suya in Lagos, very soft and juicy. The spice level is just perfect.",
+        name: "Babatunde A.",
+        role: "Diner · Victoria Island",
+        avatar: "assets/avatars/critic_1.jpg"
+      },
+      {
+        quote: "The yaji spice hits completely different. Fresh, aromatic, and not oily at all.",
+        name: "Amara N.",
+        role: "Guest · Ikoyi",
+        avatar: "assets/avatars/critic_4.jpg"
+      },
+      {
+        quote: "Came with friends on Friday night. The meat quality and cold drinks are 10/10.",
+        name: "Chukwuma O.",
+        role: "Friday Regular · Lagos",
+        avatar: "assets/avatars/critic_3.jpg"
+      },
+      {
+        quote: "Hands down the best suya spot on the Island. Proper fire-roasted perfection.",
+        name: "Damilola A.",
+        role: "Food Blogger · Lagos",
+        avatar: "assets/avatars/critic_8.jpg"
+      }
+    ];
+
+    let currentSpotlightIdx = 0;
+
+    function switchSpotlight(idx) {
+      currentSpotlightIdx = (idx + SPOTLIGHT_REVIEWS.length) % SPOTLIGHT_REVIEWS.length;
+      const data = SPOTLIGHT_REVIEWS[currentSpotlightIdx];
+      const card = document.getElementById('spotlight-card');
+      if (card) card.style.opacity = '0.3';
+
+      setTimeout(() => {
+        const quoteEl = document.getElementById('spotlight-quote');
+        const nameEl = document.getElementById('spotlight-name');
+        const roleEl = document.getElementById('spotlight-role');
+        const avatarEl = document.getElementById('spotlight-avatar');
+        const counterEl = document.getElementById('spotlight-counter');
+
+        if (quoteEl) quoteEl.innerHTML = `&ldquo;${data.quote}&rdquo;`;
+        if (nameEl) nameEl.textContent = data.name;
+        if (roleEl) roleEl.textContent = data.role;
+        if (avatarEl) {
+          avatarEl.src = data.avatar;
+          avatarEl.alt = data.name;
+        }
+        if (counterEl) counterEl.textContent = `0${currentSpotlightIdx + 1} / 0${SPOTLIGHT_REVIEWS.length}`;
+
+        for (let i = 0; i < SPOTLIGHT_REVIEWS.length; i++) {
+          const dot = document.getElementById(`spotlight-dot-${i}`);
+          if (dot) {
+            dot.className = i === currentSpotlightIdx
+              ? "w-6 h-2 rounded-full bg-[#121212] transition-all"
+              : "w-2 h-2 rounded-full bg-black/25 transition-all";
+          }
+        }
+
+        if (card) card.style.opacity = '1';
+      }, 150);
+    }
+
+    function prevSpotlight() {
+      switchSpotlight(currentSpotlightIdx - 1);
+    }
+
+    function nextSpotlight() {
+      switchSpotlight(currentSpotlightIdx + 1);
+    }
+  </script>
+
 
   <!-- ========================================================================= -->
   <!-- 10. "OUR PHILOSOPHY" (Full-Width Chartreuse Yellow Section) -->
@@ -1607,9 +1749,9 @@
       <!-- 2-Column Layout: Contact Info & Inquiry Form (Clean Minimal Editorial Layout - No Vibe-Code Card Outlines) -->
       <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start w-full">
         
-        <!-- Left Column: Sanctuary Address & Opening Hours (Clean Typography, No Card Outline) -->
-        <div class="w-full lg:w-[42%] xl:w-[40%] space-y-8 py-2">
-          <div>
+        <!-- Left Column: Sanctuary Address & Opening Hours (Clean Typography, Centered on Mobile, Left on Desktop) -->
+        <div class="w-full lg:w-[42%] xl:w-[40%] space-y-8 py-2 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <div class="text-center lg:text-left">
             <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold block mb-3">
               VICTORIA ISLAND SANCTUARY
             </span>
@@ -1622,7 +1764,7 @@
             </p>
           </div>
 
-          <div class="border-t border-white/15 pt-6 space-y-5 font-mono text-xs">
+          <div class="border-t border-white/15 pt-6 space-y-5 font-mono text-xs w-full text-center lg:text-left">
             <div>
               <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1.5">Opening Hours</div>
               <div class="text-white font-bold text-xs sm:text-sm">Tuesday &ndash; Thursday: 5:00 PM &ndash; 1:00 AM</div>
@@ -1637,13 +1779,13 @@
           </div>
         </div>
 
-        <!-- Right Column: Interactive Contact Us Form (Direct Flat Surface, No Card Containers) -->
+        <!-- Right Column: Interactive Contact Us Form (Direct Flat Surface, Centered Headers on Mobile) -->
         <div class="w-full lg:w-[58%] xl:w-[60%] py-2">
-          <div class="mb-6">
+          <div class="mb-6 text-center lg:text-left">
             <h3 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-2">
               Send An Inquiry
             </h3>
-            <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed">
+            <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed max-w-md mx-auto lg:mx-0">
               Fill out the form below and our Victoria Island concierge team will connect with you directly.
             </p>
           </div>
