@@ -1539,23 +1539,25 @@
       </div>
 
       <!-- 2-Column Layout: Contact Info / Reservation Callout + Contact Form -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
         
         <!-- Left Column: Sanctuary Address & Reservation Direct Action -->
-        <div class="lg:col-span-5 space-y-6">
+        <div class="lg:col-span-5 flex flex-col justify-between gap-6">
           
           <!-- Location & Details Card -->
-          <div class="bg-black/60 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl">
-            <span class="font-mono text-[10px] tracking-widest uppercase text-[#DCE33A] font-bold block mb-3">
-              VICTORIA ISLAND SANCTUARY
-            </span>
-            <h3 class="font-display font-black text-2xl uppercase tracking-tight text-white mb-2">
-              14 Ozumba Mbadiwe Ave
-            </h3>
-            <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed mb-6">
-              Victoria Island, Lagos, Nigeria.<br>
-              Valet parking available at our private hearth entrance.
-            </p>
+          <div class="bg-black/60 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl flex-1 flex flex-col justify-between">
+            <div>
+              <span class="font-mono text-[10px] tracking-widest uppercase text-[#DCE33A] font-bold block mb-3">
+                VICTORIA ISLAND SANCTUARY
+              </span>
+              <h3 class="font-display font-black text-2xl uppercase tracking-tight text-white mb-2">
+                14 Ozumba Mbadiwe Ave
+              </h3>
+              <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed mb-6">
+                Victoria Island, Lagos, Nigeria.<br>
+                Valet parking available at our private hearth entrance.
+              </p>
+            </div>
 
             <div class="border-t border-white/10 pt-5 space-y-4 font-mono text-xs">
               <div>
@@ -1593,64 +1595,70 @@
 
         </div>
 
-        <!-- Right Column: Interactive Contact Us Form -->
-        <div class="lg:col-span-7">
-          <div class="bg-[#181818]/90 border border-white/15 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl">
-            <h3 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-2">
-              Send An Inquiry
-            </h3>
-            <p class="text-xs sm:text-sm text-white/70 font-sans mb-6 leading-relaxed">
-              Fill out the form below and our Victoria Island concierge team will connect with you directly.
-            </p>
+        <!-- Right Column: Interactive Contact Us Form (Full Height Matched to Left) -->
+        <div class="lg:col-span-7 flex flex-col h-full">
+          <div class="bg-[#181818]/90 border border-white/15 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl h-full flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-2">
+                Send An Inquiry
+              </h3>
+              <p class="text-xs sm:text-sm text-white/70 font-sans mb-6 leading-relaxed">
+                Fill out the form below and our Victoria Island concierge team will connect with you directly.
+              </p>
+            </div>
 
-            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 sm:space-y-5">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Name *</label>
-                  <input type="text" required placeholder="e.g. Babatunde Adeleke"
-                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 sm:space-y-5 flex-1 flex flex-col justify-between">
+              <div class="space-y-4 sm:space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Name *</label>
+                    <input type="text" required placeholder="e.g. Babatunde Adeleke"
+                      class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Email Address *</label>
+                    <input type="email" required placeholder="name@domain.com"
+                      class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                  </div>
                 </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Phone / WhatsApp</label>
+                    <input type="tel" placeholder="+234 800 000 0000"
+                      class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Inquiry Type *</label>
+                    <select required
+                      class="w-full bg-[#1e1e1e] border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors">
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Private Hearth Buyout">Private Hearth Buyout / Event</option>
+                      <option value="Corporate Dining">Corporate Dining &amp; Gifting</option>
+                      <option value="Press & Media">Press &amp; Media Inquiries</option>
+                      <option value="Careers">Careers &amp; Stagiaire</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div>
-                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Email Address *</label>
-                  <input type="email" required placeholder="name@domain.com"
-                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Message *</label>
+                  <textarea required rows="4" placeholder="Tell us how we can help, expected dates, or specific requirements..."
+                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors resize-none min-h-[120px]"></textarea>
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Phone / WhatsApp</label>
-                  <input type="tel" placeholder="+234 800 000 0000"
-                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+              <div class="pt-2">
+                <button type="submit"
+                  class="w-full py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-[#CAD12D] active:scale-[0.99] transition-all shadow-xl cursor-pointer">
+                  Send Message &rarr;
+                </button>
+
+                <div id="contact-status" class="hidden mt-4 p-4 rounded-xl bg-black/60 border border-[#DCE33A]/40 text-center">
+                  <span class="text-[#DCE33A] text-xs font-mono font-bold uppercase tracking-wider block">
+                    ✓ Message Received &mdash; Our concierge team will reply within 24 hours.
+                  </span>
                 </div>
-                <div>
-                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Inquiry Type *</label>
-                  <select required
-                    class="w-full bg-[#1e1e1e] border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors">
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Private Hearth Buyout">Private Hearth Buyout / Event</option>
-                    <option value="Corporate Dining">Corporate Dining &amp; Gifting</option>
-                    <option value="Press & Media">Press &amp; Media Inquiries</option>
-                    <option value="Careers">Careers &amp; Stagiaire</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Message *</label>
-                <textarea required rows="4" placeholder="Tell us how we can help, expected dates, or specific requirements..."
-                  class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors resize-none"></textarea>
-              </div>
-
-              <button type="submit"
-                class="w-full py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-[#CAD12D] active:scale-[0.99] transition-all shadow-xl cursor-pointer">
-                Send Message &rarr;
-              </button>
-
-              <div id="contact-status" class="hidden mt-4 p-4 rounded-xl bg-black/60 border border-[#DCE33A]/40 text-center">
-                <span class="text-[#DCE33A] text-xs font-mono font-bold uppercase tracking-wider block">
-                  ✓ Message Received &mdash; Our concierge team will reply within 24 hours.
-                </span>
               </div>
             </form>
           </div>
