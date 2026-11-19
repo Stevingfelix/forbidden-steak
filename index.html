@@ -942,21 +942,21 @@
         </div>
 
         <!-- Desktop Interactive Filter Pills (Hidden on mobile) -->
-        <div class="reveal-on-scroll stagger-3 hidden lg:flex items-center justify-end gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 max-w-full lg:ml-auto">
+        <div class="reveal-on-scroll stagger-3 hidden lg:flex items-center justify-end gap-2.5 flex-wrap py-2 px-2 lg:ml-auto overflow-visible">
           <button onclick="switchCut(0)" id="cut-tab-0"
-            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm focus:outline-none focus:ring-0">
             Ram Tozo (Hump)
           </button>
           <button onclick="switchCut(1)" id="cut-tab-1"
-            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]">
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A] focus:outline-none focus:ring-0">
             Prime Beef Suya
           </button>
           <button onclick="switchCut(2)" id="cut-tab-2"
-            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#88BEE8]">
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#88BEE8] focus:outline-none focus:ring-0">
             Smoked Guinea Fowl
           </button>
           <button onclick="switchCut(3)" id="cut-tab-3"
-            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#E59247]">
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#E59247] focus:outline-none focus:ring-0">
             Fire-Roasted Asun
           </button>
         </div>
@@ -1097,9 +1097,9 @@
       // Update Tab Styles
       document.querySelectorAll('.cut-tab').forEach((tab, i) => {
         if (i === currentCutIndex) {
-          tab.className = "cut-tab px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-[#121212] text-white shadow-sm scale-105";
+          tab.className = "cut-tab px-4 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-[#121212] text-white shadow-md focus:outline-none focus:ring-0";
         } else {
-          tab.className = "cut-tab px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]";
+          tab.className = "cut-tab px-4 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A] focus:outline-none focus:ring-0";
         }
       });
 
