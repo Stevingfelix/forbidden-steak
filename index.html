@@ -1221,49 +1221,49 @@
 
     </div>
 
-    <!-- MOBILE EDITORIAL SPOTLIGHT (Option 2: Focused, Legible Luxury Quote Showcase) -->
-    <div class="block md:hidden px-6 text-center max-w-lg mx-auto">
-      <div id="spotlight-card" class="bg-white/85 border border-black/15 rounded-3xl p-6 sm:p-8 shadow-sm backdrop-blur-sm transition-opacity duration-300">
+    <!-- MOBILE EDITORIAL SPOTLIGHT (Matching Current Brand UI: Deep Charcoal/Black, Chartreuse Yellow Accents, Pill Badges) -->
+    <div class="block md:hidden px-5 sm:px-6 text-center max-w-md mx-auto">
+      <div id="spotlight-card" class="bg-[#121212] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10 transition-opacity duration-300">
         
-        <!-- Rating Stars -->
-        <div class="text-[#E59247] text-sm tracking-wider mb-3 flex justify-center gap-1">
+        <!-- Rating Stars (Chartreuse Yellow matching brand UI) -->
+        <div class="text-[#DCE33A] text-sm tracking-widest mb-4 flex justify-center gap-1.5">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
 
-        <!-- Large Pull Quote (Full sentence, clear, legible) -->
-        <p id="spotlight-quote" class="font-display font-black text-lg sm:text-xl uppercase tracking-tight text-[#121212] leading-snug mb-6 min-h-[4.5rem] flex items-center justify-center">
+        <!-- Large Pull Quote (Bold Syne Display Typography) -->
+        <p id="spotlight-quote" class="font-display font-black text-base sm:text-lg uppercase tracking-tight text-white leading-snug mb-6 min-h-[4.5rem] flex items-center justify-center">
           &ldquo;Their ram tozo literally melts in your mouth! You won't touch roadside suya again.&rdquo;
         </p>
 
-        <!-- Diner Author Details -->
-        <div class="flex flex-col items-center justify-center gap-2 mb-6">
+        <!-- Diner Author Details with Signature Brand Pill -->
+        <div class="flex flex-col items-center justify-center gap-2.5 mb-6">
           <img id="spotlight-avatar" src="assets/avatars/critic_2.jpg" alt="Zainab M."
-            class="w-14 h-14 rounded-full object-cover border-2 border-black/20 shadow-sm">
-          <div>
-            <h4 id="spotlight-name" class="font-mono text-xs font-bold uppercase tracking-wider text-[#121212]">
+            class="w-14 h-14 rounded-full object-cover border-2 border-[#DCE33A] shadow-md">
+          <div class="flex flex-col items-center gap-1">
+            <span id="spotlight-name" class="px-3 py-1 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[11px] font-bold uppercase tracking-wider shadow-sm">
               Zainab M.
-            </h4>
-            <span id="spotlight-role" class="font-mono text-[10px] text-black/55 uppercase tracking-widest block">
+            </span>
+            <span id="spotlight-role" class="font-mono text-[10px] text-white/60 uppercase tracking-widest block mt-0.5">
               Food Lover · Lekki Phase 1
             </span>
           </div>
         </div>
 
-        <!-- Sleek Navigation Controller (Matching Cuts Counter Style) -->
-        <div class="flex items-center justify-center gap-3 pt-3 border-t border-black/10">
+        <!-- Sleek Navigation Controller (Brand UI: Clean, Dark, No Blue Focus Rings) -->
+        <div class="flex items-center justify-center gap-3 pt-4 border-t border-white/10">
           <button onclick="prevSpotlight()" aria-label="Previous Review"
-            class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
+            class="w-10 h-10 rounded-full bg-white/10 text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-white/15 outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
             </svg>
           </button>
           
-          <span id="spotlight-counter" class="font-mono text-xs font-bold text-black/80 tracking-widest px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10">
+          <span id="spotlight-counter" class="font-mono text-xs font-bold text-white/90 tracking-widest px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15">
             01 / 05
           </span>
 
           <button onclick="nextSpotlight()" aria-label="Next Review"
-            class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
+            class="w-10 h-10 rounded-full bg-white/10 text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-white/15 outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
             </svg>
@@ -1274,11 +1274,11 @@
 
       <!-- Quick Review Selector Dots -->
       <div class="flex items-center justify-center gap-2 mt-4">
-        <button onclick="switchSpotlight(0)" id="spotlight-dot-0" class="w-6 h-2 rounded-full bg-[#121212] transition-all" aria-label="Review 1"></button>
-        <button onclick="switchSpotlight(1)" id="spotlight-dot-1" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 2"></button>
-        <button onclick="switchSpotlight(2)" id="spotlight-dot-2" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 3"></button>
-        <button onclick="switchSpotlight(3)" id="spotlight-dot-3" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 4"></button>
-        <button onclick="switchSpotlight(4)" id="spotlight-dot-4" class="w-2 h-2 rounded-full bg-black/25 transition-all" aria-label="Review 5"></button>
+        <button onclick="switchSpotlight(0)" id="spotlight-dot-0" class="w-6 h-2 rounded-full bg-[#121212] transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]" aria-label="Review 1"></button>
+        <button onclick="switchSpotlight(1)" id="spotlight-dot-1" class="w-2 h-2 rounded-full bg-black/20 transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]" aria-label="Review 2"></button>
+        <button onclick="switchSpotlight(2)" id="spotlight-dot-2" class="w-2 h-2 rounded-full bg-black/20 transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]" aria-label="Review 3"></button>
+        <button onclick="switchSpotlight(3)" id="spotlight-dot-3" class="w-2 h-2 rounded-full bg-black/20 transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]" aria-label="Review 4"></button>
+        <button onclick="switchSpotlight(4)" id="spotlight-dot-4" class="w-2 h-2 rounded-full bg-black/20 transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]" aria-label="Review 5"></button>
       </div>
     </div>
 
@@ -1639,8 +1639,8 @@
           const dot = document.getElementById(`spotlight-dot-${i}`);
           if (dot) {
             dot.className = i === currentSpotlightIdx
-              ? "w-6 h-2 rounded-full bg-[#121212] transition-all"
-              : "w-2 h-2 rounded-full bg-black/25 transition-all";
+              ? "w-6 h-2 rounded-full bg-[#121212] transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]"
+              : "w-2 h-2 rounded-full bg-black/20 transition-all outline-none focus:outline-none [-webkit-tap-highlight-color:transparent]";
           }
         }
 
