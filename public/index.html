@@ -56,9 +56,9 @@
     /* Hero Right Headline: Centered on mobile, firmly right-anchored with zero bleed on desktop */
     .hero-right-overlay {
       position: absolute;
-      top: 2rem;
-      left: 1rem;
-      right: 1rem;
+      top: 4.75rem;
+      left: 1.25rem;
+      right: 1.25rem;
       text-align: center;
       z-index: 20;
     }
@@ -320,20 +320,20 @@
   <div id="preloader"
     class="fixed inset-0 z-[99999] bg-[#121212] flex flex-col items-center justify-center transition-opacity duration-700 select-none pointer-events-auto">
     
-    <div class="relative flex flex-col items-center justify-center px-4">
+    <div class="relative flex flex-col items-center justify-center px-4 text-center">
       <!-- Flat Animated Flame SVG Emblem (Header Logo Flat Icon) -->
-      <svg class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 text-[#DCE33A] flat-flame-icon flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
+      <svg class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-[#DCE33A] flat-flame-icon flex-shrink-0 mx-auto" viewBox="0 0 32 32" fill="currentColor">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
         <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
       </svg>
 
-      <!-- Typewriter Wordmark: Forbidden Suya -->
-      <div class="mt-6 sm:mt-8 flex items-center justify-center min-h-[3rem] sm:min-h-[4rem]">
+      <!-- Typewriter Wordmark: Forbidden Suya (Centered and Smaller on Mobile) -->
+      <div class="mt-5 sm:mt-7 flex items-center justify-center min-h-[2.5rem] sm:min-h-[3.5rem] text-center mx-auto">
         <h1 id="typewriter-text"
-          class="font-display font-black text-2xl sm:text-3xl md:text-5xl uppercase tracking-[0.2em] text-white"></h1>
+          class="font-display font-black text-xl sm:text-2xl md:text-4xl uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white text-center"></h1>
         <span id="typewriter-cursor"
-          class="w-1 sm:w-1.5 h-6 sm:h-8 md:h-10 bg-[#DCE33A] ml-1.5 typewriter-cursor inline-block"></span>
+          class="w-1 sm:w-1.5 h-5 sm:h-7 md:h-9 bg-[#DCE33A] ml-1.5 typewriter-cursor inline-block"></span>
       </div>
     </div>
   </div>
@@ -344,7 +344,7 @@
   <header class="bg-[#DCE33A] border-b border-black/15 sticky top-0 z-50 w-full">
     <div class="w-full px-5 sm:px-8 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
 
-      <!-- Wordmark Logo: Forbidden Suya with Monochrome Logo Icon -->
+      <!-- Wordmark Logo: Monochrome Flame Icon + Wordmark (Hidden on mobile so only flame displays) -->
       <a href="#hero"
         class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#121212] hover:opacity-85 transition-opacity flex items-center gap-2.5">
         <svg class="w-7 h-7 sm:w-8 sm:h-8 text-[#121212] flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
@@ -352,7 +352,7 @@
             d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
           <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
         </svg>
-        <span>Forbidden Suya</span>
+        <span class="hidden sm:inline">Forbidden Suya</span>
       </a>
 
       <!-- Desktop Navigation Links (Pushed to far right end) -->
@@ -368,7 +368,7 @@
       </nav>
 
       <!-- Mobile Menu Toggle (Far right on mobile) -->
-      <button id="mobile-toggle" onclick="toggleMobileNav()" class="md:hidden p-2 text-black cursor-pointer"
+      <button id="mobile-toggle" onclick="openMobileNav()" class="md:hidden p-2 text-black cursor-pointer"
         aria-label="Toggle Navigation">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -377,20 +377,74 @@
 
     </div>
 
-    <!-- Mobile Nav Dropdown -->
+    <!-- FULL-SCREEN MOBILE NAVIGATION OVERLAY (Animated Intro & Outro Transitions) -->
     <div id="mobile-nav"
-      class="hidden md:hidden bg-[#DCE33A] border-t border-black/15 px-6 py-4 space-y-3 text-xs font-bold uppercase tracking-wider">
-      <a href="#hero" onclick="toggleMobileNav()" class="block py-1">Home</a>
-      <a href="#about" onclick="toggleMobileNav()" class="block py-1">About</a>
-      <a href="#cuts" onclick="toggleMobileNav()" class="block py-1">Our Cuts</a>
-      <a href="#origins" onclick="toggleMobileNav()" class="block py-1">Origins</a>
-      <a href="#expect" onclick="toggleMobileNav()" class="block py-1">Testimonials</a>
-      <a href="#philosophy" onclick="toggleMobileNav()" class="block py-1">Philosophy</a>
-      <a href="#contact" onclick="toggleMobileNav()" class="block py-1">Contact</a>
-      <button onclick="openInquiryModal(); toggleMobileNav();"
-        class="w-full text-center py-2.5 rounded-full bg-[#121212] text-white font-bold uppercase tracking-wider mt-2 hover:bg-black/85 transition-all cursor-pointer">
-        Book A Table &rarr;
-      </button>
+      class="fixed inset-0 z-[100] bg-[#DCE33A] text-[#121212] flex flex-col justify-between p-6 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+      
+      <!-- Top Bar: Wordmark / Logo & Dedicated Close Button -->
+      <div class="flex items-center justify-between w-full border-b border-black/15 pb-4">
+        <div class="flex items-center gap-2 font-display font-black text-xl uppercase tracking-tight text-[#121212]">
+          <svg class="w-6 h-6 text-[#121212]" viewBox="0 0 32 32" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
+            <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
+          </svg>
+          <span>Forbidden Suya</span>
+        </div>
+
+        <button onclick="closeMobileNav()" aria-label="Close Navigation"
+          class="w-10 h-10 rounded-full bg-white text-[#121212] flex items-center justify-center shadow-md active:scale-95 transition-transform border border-black/15 cursor-pointer">
+          <svg class="w-5 h-5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links: Large Display Type with Staggered Intro/Outro Transitions -->
+      <nav id="mobile-nav-links" class="flex flex-col justify-center space-y-3 sm:space-y-4 my-auto py-2">
+        <a href="#hero" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          Home
+        </a>
+        <a href="#about" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          About
+        </a>
+        <a href="#cuts" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          Our Cuts
+        </a>
+        <a href="#origins" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          Origins
+        </a>
+        <a href="#expect" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          Testimonials
+        </a>
+        <a href="#philosophy" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          Philosophy
+        </a>
+        <a href="#contact" onclick="closeMobileNav()"
+          class="mobile-nav-item font-display font-black text-2xl sm:text-3xl uppercase tracking-tight hover:text-black/70 transition-all duration-300 transform translate-y-6 opacity-0 block">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Bottom CTAs & Information -->
+      <div class="border-t border-black/15 pt-4 space-y-3">
+        <button onclick="closeMobileNav(); openInquiryModal();"
+          class="w-full py-3.5 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-widest hover:bg-black active:scale-95 transition-all shadow-xl cursor-pointer">
+          Book A Table &rarr;
+        </button>
+        <div class="flex items-center justify-between font-mono text-[10px] text-black/60 uppercase tracking-widest">
+          <span>VICTORIA ISLAND · LAGOS</span>
+          <span>TUE - SUN: 5PM - LATE</span>
+        </div>
+      </div>
+
     </div>
   </header>
 
@@ -424,17 +478,17 @@
       <!-- Hero Bold Headline Overlay: Centered on Mobile, Locked Right Anchor with Zero Bleed on Desktop -->
       <div class="hero-right-overlay">
         <span
-          class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-2 sm:mb-3">
+          class="inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-2 sm:mb-3">
           ★ LIVE MANGROVE &amp; KANO YAJI
         </span>
         <h1
-          class="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] text-white uppercase tracking-tight leading-[0.92] drop-shadow-2xl">
-          <span class="block whitespace-nowrap">FORGED IN</span>
-          <span class="block whitespace-nowrap">SMOKE &amp;</span>
-          <span class="block whitespace-nowrap">FLAME</span>
+          class="font-display font-black text-[2.6rem] sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] text-white uppercase tracking-tight leading-[0.94] drop-shadow-2xl">
+          <span class="block">FORGED IN</span>
+          <span class="block">SMOKE &amp;</span>
+          <span class="block">FLAME</span>
         </h1>
         <p
-          class="text-xs sm:text-sm text-white/85 font-sans mt-3 sm:mt-4 max-w-xs sm:max-w-sm md:max-w-md mx-auto sm:ml-auto sm:mr-0 leading-relaxed drop-shadow-md hidden sm:block">
+          class="text-xs sm:text-sm text-white/90 font-sans mt-3 sm:mt-4 max-w-xs sm:max-w-sm md:max-w-md mx-auto sm:ml-auto sm:mr-0 leading-relaxed drop-shadow-md block">
           Single-origin heritage cattle dry-aged 45 days in Himalayan salt lockers. Blistered over binchotan embers.
         </p>
       </div>
@@ -472,21 +526,21 @@
   <!-- ========================================================================= -->
   <!-- 3. ABOUT SECTION: Vintage Cream Background + 3-Line Headline (4 Words Per Line) -->
   <!-- ========================================================================= -->
-  <section id="about" class="relative bg-[#E2E6D5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+  <section id="about" class="relative bg-[#E2E6D5] py-16 sm:py-24 px-6 sm:px-10 lg:px-16">
     <div class="max-w-5xl mx-auto text-center">
 
       <!-- Eyebrow label -->
       <div
-        class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 mb-5 font-bold">
+        class="inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 mb-5 font-bold">
         ABOUT FORBIDDEN SUYA
       </div>
 
-      <!-- 3-Line Display Headline (Strictly 3 Lines, 4 Words Per Line, No Pills, Title Case in Oswald) -->
+      <!-- 3-Line Display Headline (No edge bleeding, breaks cleanly on mobile) -->
       <h1
         class="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] tracking-tight text-[#121212] leading-[1.12] max-w-5xl mx-auto mb-6">
-        <span class="block whitespace-nowrap">We Craft Daring Suya,</span>
-        <span class="block whitespace-nowrap">Sizzling Cuts &amp; Feasts</span>
-        <span class="block whitespace-nowrap">That Truly Make Noise</span>
+        <span class="block">We Craft Daring Suya,</span>
+        <span class="block">Sizzling Cuts &amp; Feasts</span>
+        <span class="block">That Truly Make Noise</span>
       </h1>
 
       <!-- Parenthetical Subtitle in Playfair Display Serif Italics - BIGGER & BOLD -->
@@ -525,10 +579,10 @@
           <h2
             class="font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
             style="font-style: normal;">
-            <span class="block whitespace-nowrap">See How</span>
-            <span class="block whitespace-nowrap">We Turn</span>
-            <span class="block whitespace-nowrap">Embers into</span>
-            <span class="block whitespace-nowrap">OBSESSION&mdash;</span>
+            <span class="block">See How</span>
+            <span class="block">We Turn</span>
+            <span class="block">Embers into</span>
+            <span class="block">OBSESSION</span>
           </h2>
           <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed max-w-[360px] mb-6">
             We don&rsquo;t believe in roadside compromises, gristly cuts, or lukewarm skewers drowned in MSG. We believe
@@ -689,17 +743,17 @@
   <!-- 5. "VIEW OUR CUTS" (Interactive Cut Switcher & Showcase) -->
   <!-- ========================================================================= -->
   <section id="cuts"
-    class="bg-[#E2E6D5] pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 w-full">
+    class="bg-[#E2E6D5] pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 w-full">
     <div class="w-full">
 
       <!-- Section Header & Filter Pills: Pushed to Both Extreme Ends of the Page -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-10 sm:mb-12 w-full">
         <div class="flex-shrink-0">
-          <span class="font-mono text-[10px] sm:text-xs tracking-widest uppercase text-black/60 font-bold block mb-1">
+          <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-2">
             THE LIVE GRILL
           </span>
           <h2
-            class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-[#121212] whitespace-nowrap">
+            class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-[#121212]">
             View Our Cuts
           </h2>
         </div>
@@ -915,15 +969,12 @@
   <!-- ========================================================================= -->
   <!-- 7. PART 2 MANIFESTO BANNER: Generous Spacing, Editorial Typography -->
   <!-- ========================================================================= -->
-  <section class="bg-[#E2E6D5] py-20 sm:py-28 md:py-32 px-5 sm:px-8 lg:px-12 border-b border-black/10 text-center">
+  <section class="bg-[#E2E6D5] py-20 sm:py-28 md:py-32 px-6 sm:px-10 lg:px-16 border-b border-black/10 text-center">
     <div class="max-w-4xl mx-auto">
-      <span class="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-black/60 font-bold block mb-5">
-        ★ THE MANIFESTO
-      </span>
       <h2
         class="font-display font-black text-xl sm:text-2xl md:text-3xl lg:text-[2.2rem] uppercase tracking-wide text-[#121212] leading-[1.4] sm:leading-[1.45] md:leading-[1.5] mb-8">
         Any Aboki can roast meat on a wire... but we turn every skewer into <span
-          class="bg-[#DCE33A] px-2.5 py-1 rounded-lg">PURE OBSESSION</span> &mdash; the kind that awakens the senses,
+          class="bg-[#DCE33A] px-2.5 py-1 rounded-lg">PURE OBSESSION</span> the kind that awakens the senses,
         melts on the tongue, &amp; redefines live-fire gastronomy.
       </h2>
       <button onclick="openInquiryModal()"
@@ -940,13 +991,13 @@
   <section id="origins"
     class="relative bg-[#121212] py-20 sm:py-28 overflow-hidden text-white border-t border-b border-white/10">
 
-    <div class="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 w-full">
+    <div class="px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 w-full">
 
       <!-- Header Section with Live Counter: Pushed to Both Extreme Ends -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10 w-full">
         <div>
           <div
-            class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-2">
+            class="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-2">
             <span>★</span>
             <span>04 / PROVENANCE &amp; SAVANNAH TERROIRS</span>
           </div>
@@ -1152,13 +1203,13 @@
   <!-- 9. "TESTIMONIALS & ACCLAIM" (Concept C: Dual Infinite Kinetic Marquee + Interactive Spotlight) -->
   <!-- ========================================================================= -->
   <section id="expect" class="bg-[#E2E6D5] py-20 sm:py-28 overflow-hidden border-b border-black/10 w-full">
-    <div class="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 mb-12 sm:mb-16 w-full">
+    <div class="px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 mb-12 sm:mb-16 w-full">
 
       <!-- Section Editorial Header: Pushed to Both Extreme Ends -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 w-full">
         <div class="flex-shrink-0">
           <div
-            class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 font-bold mb-3">
+            class="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold mb-3">
             <span>★</span>
             <span>05 / WHAT PEOPLE SAY</span>
           </div>
@@ -1473,10 +1524,10 @@
   <!-- 10. "OUR PHILOSOPHY" (Full-Width Chartreuse Yellow Section) -->
   <!-- ========================================================================= -->
   <section id="philosophy"
-    class="bg-[#DCE33A] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-black/15 text-center">
+    class="bg-[#DCE33A] py-16 sm:py-24 px-6 sm:px-10 lg:px-12 border-b border-black/15 text-center">
     <div class="max-w-3xl mx-auto">
 
-      <span class="font-mono text-[10px] tracking-widest uppercase text-black/60 font-bold block mb-3">
+      <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-3">
         OUR PHILOSOPHY
       </span>
 
@@ -1505,7 +1556,7 @@
   <!-- 11. "CONTACT US" (Live Grill & Concierge Inquiry Section) -->
   <!-- ========================================================================= -->
   <section id="contact"
-    class="relative bg-[#121212] py-24 sm:py-32 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden border-t border-white/10 text-white">
+    class="relative bg-[#121212] py-24 sm:py-32 px-6 sm:px-10 lg:px-12 xl:px-16 overflow-hidden border-t border-white/10 text-white">
 
     <!-- Atmospheric suya dining background with glowing embers visible -->
     <div class="absolute inset-0 z-0 opacity-40">
@@ -1519,7 +1570,7 @@
       
       <!-- Section Header -->
       <div class="max-w-2xl mb-12 sm:mb-16">
-        <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-3">
+        <div class="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-3">
           <span>★</span>
           <span>06 / LIVE GRILL &amp; INQUIRIES</span>
         </div>
@@ -1540,7 +1591,7 @@
           <!-- Location & Details Card -->
           <div class="bg-black/60 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl flex-1 flex flex-col justify-between">
             <div>
-              <span class="font-mono text-[10px] tracking-widest uppercase text-[#DCE33A] font-bold block mb-3">
+              <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold block mb-3">
                 VICTORIA ISLAND SANCTUARY
               </span>
               <h3 class="font-display font-black text-2xl uppercase tracking-tight text-white mb-2">
@@ -1569,7 +1620,7 @@
 
           <!-- Reservation Notice Callout -->
           <div class="bg-[#DCE33A]/10 border border-[#DCE33A]/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-xl">
-            <div class="flex items-center gap-2 mb-2 font-mono text-[10px] tracking-widest uppercase text-[#DCE33A] font-bold">
+            <div class="flex items-center gap-2 mb-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold">
               <span>★</span>
               <span>TABLE RESERVATIONS</span>
             </div>
@@ -1736,13 +1787,13 @@
 
     <!-- Modal Content Box with Floating External Close Button -->
     <div
-      class="relative z-10 w-full max-w-2xl transform scale-95 transition-transform duration-300"
+      class="relative z-10 w-full max-w-xl transform scale-95 transition-transform duration-300"
       id="modal-box">
 
-      <!-- Floating External Close Button (Bigger White Pill with Bold Centered 'X') -->
+      <!-- Floating External Close Button (Slightly Reduced Size & Clean Position like Canva) -->
       <button onclick="closeInquiryModal()" aria-label="Close Modal"
-        class="absolute -top-14 right-0 sm:-top-4 sm:-right-16 md:-right-18 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white text-[#121212] flex items-center justify-center hover:bg-neutral-100 hover:scale-105 active:scale-95 shadow-2xl transition-all cursor-pointer border border-black/15 focus:outline-none">
-        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        class="absolute -top-3.5 -right-3.5 sm:-top-4 sm:-right-4 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#121212] flex items-center justify-center hover:bg-neutral-100 hover:scale-105 active:scale-95 shadow-xl transition-all cursor-pointer border border-black/15 focus:outline-none">
+        <svg class="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -1757,12 +1808,12 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
           <div class="absolute bottom-5 left-5 right-5 text-white">
             <span class="font-mono text-[9px] uppercase tracking-widest text-[#DCE33A] font-bold block mb-1">FORBIDDEN SUYA</span>
-            <span class="font-display font-black text-sm uppercase">Victoria Island · Lagos</span>
+            <span class="font-display font-black text-xs sm:text-sm uppercase">Victoria Island · Lagos</span>
           </div>
         </div>
 
         <!-- Right Column: Brand Yellow Box with Black Headline, Text, and Form -->
-        <div class="md:col-span-7 bg-[#DCE33A] p-6 sm:p-8 text-[#121212] flex flex-col justify-center relative">
+        <div class="md:col-span-7 bg-[#DCE33A] p-5 sm:p-7 text-[#121212] flex flex-col justify-center relative">
 
           <!-- ACTIVE FORM STATE -->
           <div id="reservation-form-state">
@@ -1890,9 +1941,48 @@
       }, 350);
     }
 
+    function openMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      if (!nav) return;
+      nav.classList.remove('opacity-0', 'pointer-events-none');
+      nav.classList.add('opacity-100', 'pointer-events-auto');
+      document.body.style.overflow = 'hidden';
+
+      const items = nav.querySelectorAll('.mobile-nav-item');
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.remove('translate-y-6', 'opacity-0');
+          item.classList.add('translate-y-0', 'opacity-100');
+        }, 40 * index + 60);
+      });
+    }
+
+    function closeMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      if (!nav) return;
+      const items = nav.querySelectorAll('.mobile-nav-item');
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.remove('translate-y-0', 'opacity-100');
+          item.classList.add('translate-y-6', 'opacity-0');
+        }, 25 * (items.length - 1 - index));
+      });
+
+      setTimeout(() => {
+        nav.classList.remove('opacity-100', 'pointer-events-auto');
+        nav.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+      }, 220);
+    }
+
     function toggleMobileNav() {
       const nav = document.getElementById('mobile-nav');
-      nav.classList.toggle('hidden');
+      if (!nav) return;
+      if (nav.classList.contains('pointer-events-auto')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     }
 
     function handleReservationSubmit(e) {
