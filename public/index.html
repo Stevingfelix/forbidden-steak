@@ -64,16 +64,23 @@
       justify-content: center;
       text-align: center;
       padding: 1.5rem;
-      padding-top: 5.5rem;
-      padding-bottom: 7rem;
+      padding-top: 8rem;
+      padding-bottom: 6rem;
       max-width: 960px;
       margin: 0 auto;
     }
 
     @media (min-width: 640px) {
       .hero-center-overlay {
-        padding-top: 6.5rem;
-        padding-bottom: 11rem;
+        padding-top: 10rem;
+        padding-bottom: 9rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-center-overlay {
+        padding-top: 11.5rem;
+        padding-bottom: 10rem;
       }
     }
 
@@ -612,28 +619,19 @@
 
       <!-- Hero Bold Headline Overlay: Centered Symmetrically Across Screen Sizes (Choreographed Entrance) -->
       <div class="hero-center-overlay">
-        <!-- Live Grill Radar Pulse Badge -->
-        <div class="hero-anim-item hero-anim-1 mb-3 sm:mb-4">
-          <span
-            class="inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs tracking-[0.22em] uppercase text-[#DCE33A] font-bold bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/15 shadow-lg">
-            <span class="w-2 h-2 rounded-full bg-[#DCE33A] animate-pulse"></span>
-            LIVE MANGROVE &amp; KANO YAJI
-          </span>
-        </div>
-
         <h1
-          class="hero-anim-item hero-anim-2 font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] text-white uppercase tracking-tight leading-[0.92] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
+          class="hero-anim-item hero-anim-1 font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] text-white uppercase tracking-tight leading-[0.92] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
           <span class="block">FORGED IN</span>
           <span class="block text-[#DCE33A]">SMOKE &amp; FLAME</span>
         </h1>
 
         <p
-          class="hero-anim-item hero-anim-3 text-xs sm:text-base md:text-lg text-white/95 font-sans mt-4 sm:mt-5 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          class="hero-anim-item hero-anim-2 text-xs sm:text-base md:text-lg text-white/95 font-sans mt-4 sm:mt-5 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           Prime Northern Zebu beef and heavily marbled ram tozo, steeped in stoneground Kano yaji and blistered over glowing mangrove coals.
         </p>
 
         <!-- Properly Aligned Dual Action CTAs (No broken wrapped text, sleek large UI arrows) -->
-        <div class="hero-anim-item hero-anim-4 mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full">
+        <div class="hero-anim-item hero-anim-3 mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full">
           <button onclick="openInquiryModal()"
             class="btn-magnetic whitespace-nowrap inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:px-9 sm:py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold tracking-widest uppercase hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
             <span>Book A Table</span>
