@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forbidden Suya — Where Real Suya Breaks The Rules | Artisanal Wood-Fired Lagos Hearth</title>
+  <meta name="description"
+    content="Forbidden Suya — Handcrafted Nigerian suya, grass-fed ram tozo, prime beef skewers, and wild guinea fowl dusted in small-batch Kano yaji and charred over 1,000°F mangrove coals. Victoria Island, Lagos.">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23DCE33A'/><text y='70' x='15' font-size='60' font-family='sans-serif' font-weight='900' fill='%23121212'>FS</text></svg>">
+
+  <!-- Google Fonts: Syne, Barlow Condensed, Playfair Display, Plus Jakarta Sans, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Playfair+Display:ital,wght@1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Local and CDN @font-face fallback definitions for 100% offline & online reliability -->
+  <style>
+    @font-face {
+      font-family: 'Syne';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/public/fonts/syne-700.woff2') format('woff2'),
+        url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Syne';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url('/public/fonts/syne-800.woff2') format('woff2'),
+        url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Barlow Condensed';
+      font-style: normal;
+      font-weight: 700 900;
+      font-display: swap;
+      src: url('/public/fonts/barlow-condensed.woff2') format('woff2');
+    }
+
+    /* Unified Brand Typography: Syne across ALL headlines, titles, and display text site-wide */
+    .font-display,
+    .font-condensed {
+      font-family: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+
+    /* Hero Right Headline: Centered on mobile, firmly right-anchored with zero bleed on desktop */
+    .hero-right-overlay {
+      position: absolute;
+      top: 2rem;
+      left: 1rem;
+      right: 1rem;
+      text-align: center;
+      z-index: 20;
+    }
+
+    @media (min-width: 640px) {
+      .hero-right-overlay {
+        top: 2.75rem;
+        left: auto !important;
+        right: 4rem !important;
+        text-align: right !important;
+        max-width: min(85vw, 680px);
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-right-overlay {
+        top: 3.25rem;
+        right: 5rem !important;
+        max-width: min(85vw, 780px);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .hero-right-overlay {
+        right: 6rem !important;
+        max-width: 860px;
+      }
+    }
+
+    /* Kinetic Marquee Keyframes (Framer-Motion Smooth Animation) */
+    @keyframes marqueeLeft {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes marqueeRight {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    .animate-marquee-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 38s linear infinite;
+    }
+
+    .animate-marquee-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeRight 42s linear infinite;
+    }
+
+    .marquee-container:hover .animate-marquee-left,
+    .marquee-container:hover .animate-marquee-right {
+      animation-play-state: paused;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            suya: {
+              yellow: '#DCE33A',
+              'yellow-dark': '#CAD12D',
+              cream: '#E2E6D5',
+              'cream-light': '#ECEEE2',
+              black: '#121212',
+              dark: '#161616',
+              blue: '#88BEE8',
+              'blue-light': '#93C5FD',
+              amber: '#E59247',
+              coral: '#D8583B',
+              grid: '#BDDBEF',
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'system-ui', '-apple-system', 'sans-serif'],
+            condensed: ['Syne', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #E2E6D5;
+      color: #121212;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background-color: #DCE33A;
+      color: #121212;
+    }
+
+    /* Blueprint graph paper grid */
+    .bg-blueprint-grid {
+      background-color: #BDDBEF;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.45) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* Starburst optical flare */
+    .starburst-flare {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 200, 0.85) 25%, rgba(220, 227, 58, 0.45) 45%, transparent 70%);
+      pointer-events-none;
+      mix-blend-mode: screen;
+      filter: blur(2px);
+    }
+
+    .starburst-rays {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background:
+        linear-gradient(0deg, transparent 48.5%, rgba(255, 255, 255, 0.95) 50%, transparent 51.5%),
+        linear-gradient(90deg, transparent 48.5%, rgba(255, 255, 255, 0.95) 50%, transparent 51.5%),
+        linear-gradient(45deg, transparent 48.8%, rgba(255, 255, 255, 0.7) 50%, transparent 51.2%),
+        linear-gradient(-45deg, transparent 48.8%, rgba(255, 255, 255, 0.7) 50%, transparent 51.2%);
+      pointer-events-none;
+      mix-blend-mode: screen;
+    }
+
+    /* Modal Backdrop */
+    .modal-backdrop {
+      background: rgba(18, 18, 18, 0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Vertical marquee animations — staggered speeds with abyss fade & blur */
+    @keyframes marqueeDown {
+      0% {
+        transform: translateY(-50%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes marqueeUp {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    .marquee-col {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .marquee-down-fast {
+      animation: marqueeDown 24s linear infinite;
+    }
+
+    .marquee-up-mid {
+      animation: marqueeUp 32s linear infinite;
+    }
+
+    .marquee-down-slow {
+      animation: marqueeDown 40s linear infinite;
+    }
+
+    .marquee-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Hover parallax on individual marquee images */
+    .marquee-img {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+    }
+
+    .marquee-img:hover {
+      transform: scale(1.06);
+      filter: contrast(1.1) brightness(1.05);
+      z-index: 20;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="antialiased text-[#121212] bg-[#E2E6D5]">
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP NAVBAR (Solid Chartreuse Yellow from Screenshot) -->
+  <!-- ========================================================================= -->
+  <header class="bg-[#DCE33A] border-b border-black/15 sticky top-0 z-50 w-full">
+    <div class="w-full px-5 sm:px-8 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
+
+      <!-- Wordmark Logo: Forbidden Suya with Monochrome Logo Icon -->
+      <a href="#hero"
+        class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#121212] hover:opacity-85 transition-opacity flex items-center gap-2.5">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8 text-[#121212] flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
+          <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
+        </svg>
+        <span>Forbidden Suya</span>
+      </a>
+
+      <!-- Desktop Navigation Links (Pushed to far right end) -->
+      <nav
+        class="hidden md:flex items-center gap-7 lg:gap-9 text-xs sm:text-sm font-bold tracking-wider text-[#121212]">
+        <a href="#hero" class="hover:underline underline-offset-4">Home</a>
+        <a href="#about" class="hover:underline underline-offset-4">About</a>
+        <a href="#cuts" class="hover:underline underline-offset-4">Our Cuts</a>
+        <a href="#origins" class="hover:underline underline-offset-4">Origins</a>
+        <a href="#expect" class="hover:underline underline-offset-4">Testimonials</a>
+        <a href="#philosophy" class="hover:underline underline-offset-4">Philosophy</a>
+        <button onclick="openInquiryModal()"
+          class="hover:underline underline-offset-4 cursor-pointer font-bold bg-transparent border-0 p-0 text-[#121212] text-xs sm:text-sm tracking-wider">
+          Contact
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle (Far right on mobile) -->
+      <button id="mobile-toggle" onclick="toggleMobileNav()" class="md:hidden p-2 text-black cursor-pointer"
+        aria-label="Toggle Navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-nav"
+      class="hidden md:hidden bg-[#DCE33A] border-t border-black/15 px-6 py-4 space-y-3 text-xs font-bold uppercase tracking-wider">
+      <a href="#hero" onclick="toggleMobileNav()" class="block py-1">Home</a>
+      <a href="#about" onclick="toggleMobileNav()" class="block py-1">About</a>
+      <a href="#cuts" onclick="toggleMobileNav()" class="block py-1">Our Cuts</a>
+      <a href="#origins" onclick="toggleMobileNav()" class="block py-1">Origins</a>
+      <a href="#expect" onclick="toggleMobileNav()" class="block py-1">Testimonials</a>
+      <a href="#philosophy" onclick="toggleMobileNav()" class="block py-1">Philosophy</a>
+      <button onclick="openInquiryModal(); toggleMobileNav();"
+        class="w-full text-center py-2.5 rounded-full bg-[#121212] text-white font-bold uppercase tracking-wider mt-2 hover:bg-black/85 transition-all cursor-pointer">
+        Book A Table &rarr;
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION: Full-Bleed High-Res Suya Photo + Wavy Ribbon -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative w-full bg-[#121212] overflow-hidden">
+
+    <!-- Hero Image Container with Full Bleed -->
+    <div class="relative w-full h-[620px] sm:h-[720px] lg:h-[820px] overflow-hidden bg-[#121212]">
+      <img src="assets/suya/hero_suya_4k.jpg" alt="Artisanal handcrafted Nigerian suya sizzling over glowing embers"
+        class="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.12]">
+      <!-- Gradient scrim overlays for mood and readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60 pointer-events-none"></div>
+
+      <!-- Top-Left Text Overlay (Desktop / Tablet) -->
+      <div
+        class="absolute top-10 sm:top-14 left-6 sm:left-12 lg:left-16 z-20 max-w-sm sm:max-w-md text-white drop-shadow-md hidden md:block">
+        <p class="text-xs sm:text-sm font-semibold tracking-wide uppercase text-white/90 leading-snug mb-3">
+          We Craft Carnal Cuts<br>
+          Stand Out, Sizzle Loud, &amp; Leave<br>
+          an Impression that Sticks.
+        </p>
+        <button onclick="openInquiryModal()"
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#DCE33A] text-[#121212] text-xs font-mono font-bold tracking-wider uppercase hover:bg-[#CAD12D] active:scale-95 transition-all shadow-md cursor-pointer">
+          <span>Book A Table</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Hero Bold Headline Overlay: Centered on Mobile, Locked Right Anchor with Zero Bleed on Desktop -->
+      <div class="hero-right-overlay">
+        <span
+          class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-2 sm:mb-3">
+          ★ LIVE MANGROVE &amp; KANO YAJI
+        </span>
+        <h1
+          class="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] text-white uppercase tracking-tight leading-[0.92] drop-shadow-2xl">
+          <span class="block whitespace-nowrap">FORGED IN</span>
+          <span class="block whitespace-nowrap">SMOKE &amp;</span>
+          <span class="block whitespace-nowrap">FLAME</span>
+        </h1>
+        <p
+          class="text-xs sm:text-sm text-white/85 font-sans mt-3 sm:mt-4 max-w-xs sm:max-w-sm md:max-w-md mx-auto sm:ml-auto sm:mr-0 leading-relaxed drop-shadow-md hidden sm:block">
+          Single-origin heritage cattle dry-aged 45 days in Himalayan salt lockers. Blistered over binchotan embers.
+        </p>
+      </div>
+
+      <!-- Bottom S-Curve Wavy Ribbon Banner -->
+      <div class="absolute bottom-0 left-0 right-0 z-30 pointer-events-none translate-y-[1px]">
+        <svg viewBox="0 0 1600 220"
+          class="w-full h-[95px] sm:h-[130px] md:h-[165px] lg:h-[195px] xl:h-[220px] block select-none pointer-events-none"
+          preserveAspectRatio="none">
+          <defs>
+            <!-- Ribbon midline trajectory -->
+            <path id="ribbonCenterline" d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95" fill="none" />
+          </defs>
+
+          <!-- Cream background fill below ribbon (seamlessly blends into the About section #E2E6D5) -->
+          <path d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95 L 1640,230 L -40,230 Z"
+            fill="#E2E6D5" />
+
+          <!-- Yellow Ribbon Band (Chartreuse #DCE33A, uniform 88px thickness) -->
+          <path d="M -40,105 C 220,165 480,160 750,105 C 1020,50 1280,45 1640,95" fill="none" stroke="#DCE33A"
+            stroke-width="88" stroke-linecap="square" />
+
+          <!-- High-impact curved text sitting visibly inside the yellow ribbon -->
+          <text fill="#121212" font-family="'Syne', sans-serif" font-weight="800" font-size="34" letter-spacing="2.5">
+            <textPath href="#ribbonCenterline" startOffset="50%" text-anchor="middle" dominant-baseline="central">
+              Break the Rules ★ Where Real Suya Breaks the Rules ★ Break the Rules ★
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. ABOUT SECTION: Vintage Cream Background + 3-Line Headline (4 Words Per Line) -->
+  <!-- ========================================================================= -->
+  <section id="about" class="relative bg-[#E2E6D5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <!-- Eyebrow label -->
+      <div
+        class="inline-block font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 mb-5 font-bold">
+        ABOUT FORBIDDEN SUYA
+      </div>
+
+      <!-- 3-Line Display Headline (Strictly 3 Lines, 4 Words Per Line, No Pills, Title Case in Oswald) -->
+      <h1
+        class="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] tracking-tight text-[#121212] leading-[1.12] max-w-5xl mx-auto mb-6">
+        <span class="block whitespace-nowrap">We Craft Daring Suya,</span>
+        <span class="block whitespace-nowrap">Sizzling Cuts &amp; Feasts</span>
+        <span class="block whitespace-nowrap">That Truly Make Noise</span>
+      </h1>
+
+      <!-- Parenthetical Subtitle in Playfair Display Serif Italics - BIGGER & BOLD -->
+      <p class="font-serif italic font-black text-2xl sm:text-3xl md:text-4xl text-[#121212] tracking-tight mt-6 mb-6">
+        (because well-done is boring)
+      </p>
+
+      <!-- Balanced Body Paragraph -->
+      <p class="max-w-lg mx-auto text-sm sm:text-[15px] text-black/70 leading-relaxed font-sans mb-8">
+        At Forbidden Suya, we believe extraordinary beef isn’t merely cooked—it’s forged in smoke and flame. Sourced
+        from single-origin heritage cattle and dry-aged for 45 days in our Himalayan pink salt lockers, every bone-in
+        cut is blistered over white oak embers and binchotan charcoal for an unapologetic, mahogany crust and
+        butter-soft marbling.
+      </p>
+
+      <!-- Yellow Action Pill Button from Screenshot -->
+      <a href="#cuts"
+        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-sm border border-black/15">
+        <span>See Our Signature Cuts</span>
+        <span>&rarr;</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. "SEE HOW WE TURN EMBERS INTO OBSESSION" — 3-Column Marquee -->
+  <!-- ========================================================================= -->
+  <section class="relative w-full bg-[#DCE33A] overflow-hidden">
+    <div class="w-full flex flex-col lg:flex-row items-stretch" style="height: 720px;">
+
+      <!-- LEFT CONTENT COLUMN: Vertically centered lockup, no gap between subheadline & button, generous right padding -->
+      <div
+        class="w-full lg:w-[42%] xl:w-[40%] py-10 lg:py-14 pl-6 sm:pl-10 md:pl-12 lg:pl-14 xl:pl-18 pr-8 sm:pr-12 md:pr-14 lg:pr-16 xl:pr-20 flex flex-col justify-center z-20">
+        <div>
+          <h2
+            class="font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
+            style="font-style: normal;">
+            <span class="block whitespace-nowrap">See How</span>
+            <span class="block whitespace-nowrap">We Turn</span>
+            <span class="block whitespace-nowrap">Embers into</span>
+            <span class="block whitespace-nowrap">OBSESSION&mdash;</span>
+          </h2>
+          <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed max-w-[360px] mb-6">
+            We don&rsquo;t believe in roadside compromises, gristly cuts, or lukewarm skewers drowned in MSG. We believe
+            in spitting mangrove embers, the intoxicating fragrance of stoneground Northern yaji, sizzling ram tozo fat
+            caramelizing over iron grates, and knives slicing through flame-blistered beef that melts on contact.
+          </p>
+          <div>
+            <button onclick="openInquiryModal()"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#121212] text-white font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all cursor-pointer shadow-sm">
+              <span>Book A Table</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: 3-COLUMN MARQUEE -->
+      <div class="relative w-full lg:w-[62%] xl:w-[64%] h-[560px] sm:h-[620px] lg:h-full p-0 overflow-hidden">
+        <!-- 3-Column Flow Container (Sharp & Clean) -->
+        <div class="flex flex-row gap-[5px] w-full h-full p-0">
+          <!-- COLUMN 1: Scrolls DOWN -->
+          <div class="marquee-wrapper" style="height: 720px; width: 38%;">
+            <div class="marquee-col marquee-down-fast">
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/gallery/gallery_suya_1.jpg"
+                  alt="Assorted Nigerian Suya Platter on Slate with Yaji and Lime"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
+                <img src="assets/gallery/gallery_suya_2.jpg"
+                  alt="Chef Knife Slicing Charred Ram Tozo on Oak Cutting Board"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
+                <img src="assets/gallery/gallery_suya_3.jpg"
+                  alt="Master Mallam Dusting Yaji Pepper onto Sizzling Skewers"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 270px;">
+                <img src="assets/gallery/gallery_suya_4.jpg"
+                  alt="Forbidden Suya Luxury Subterranean Dining Room in Lagos"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/gallery/gallery_suya_1.jpg"
+                  alt="Assorted Nigerian Suya Platter on Slate with Yaji and Lime"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
+                <img src="assets/gallery/gallery_suya_2.jpg"
+                  alt="Chef Knife Slicing Charred Ram Tozo on Oak Cutting Board"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 320px;">
+                <img src="assets/gallery/gallery_suya_3.jpg"
+                  alt="Master Mallam Dusting Yaji Pepper onto Sizzling Skewers"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 270px;">
+                <img src="assets/gallery/gallery_suya_4.jpg"
+                  alt="Forbidden Suya Luxury Subterranean Dining Room in Lagos"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+            </div>
+          </div>
+          <!-- COLUMN 2: Scrolls UP -->
+          <div class="marquee-wrapper" style="height: 720px; width: 38%;">
+            <div class="marquee-col marquee-up-mid">
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 310px;">
+                <img src="assets/gallery/gallery_suya_5.jpg"
+                  alt="Stone Mortar with Artisanal Northern Yaji Spices and Kulikuli"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
+                <img src="assets/gallery/gallery_suya_6.jpg"
+                  alt="Iron Skewers of Ram Suya Blistering over Glowing Mangrove Coals"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/gallery/gallery_suya_7.jpg" alt="Smoked Craft Cocktail Lounge Bar at Forbidden Suya"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 330px;">
+                <img src="assets/gallery/gallery_suya_8.jpg"
+                  alt="Macro Close-Up of Blistered Spiced Yaji Bark on Tender Beef"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 310px;">
+                <img src="assets/gallery/gallery_suya_5.jpg"
+                  alt="Stone Mortar with Artisanal Northern Yaji Spices and Kulikuli"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 360px;">
+                <img src="assets/gallery/gallery_suya_6.jpg"
+                  alt="Iron Skewers of Ram Suya Blistering over Glowing Mangrove Coals"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/gallery/gallery_suya_7.jpg" alt="Smoked Craft Cocktail Lounge Bar at Forbidden Suya"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 330px;">
+                <img src="assets/gallery/gallery_suya_8.jpg"
+                  alt="Macro Close-Up of Blistered Spiced Yaji Bark on Tender Beef"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+            </div>
+          </div>
+          <!-- COLUMN 3: Scrolls DOWN -->
+          <div class="marquee-wrapper" style="height: 720px; width: 38%;">
+            <div class="marquee-col marquee-down-slow">
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 350px;">
+                <img src="assets/gallery/gallery_suya_9.jpg"
+                  alt="Traditional Sliced Suya in Vintage Kraft Paper with Red Onions"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/gallery/gallery_suya_10.jpg"
+                  alt="Night Live-Fire Outdoor Hearth Station Sparks in Lagos"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/gallery/gallery_suya_11.jpg" alt="Sizzling Spicy Asun Goat Ribs with Scotch Bonnets"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
+                <img src="assets/gallery/gallery_suya_12.jpg"
+                  alt="Private VIP Cellar Tasting Lounge with Numbered Brass Lockers"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 350px;">
+                <img src="assets/gallery/gallery_suya_9.jpg"
+                  alt="Traditional Sliced Suya in Vintage Kraft Paper with Red Onions"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 280px;">
+                <img src="assets/gallery/gallery_suya_10.jpg"
+                  alt="Night Live-Fire Outdoor Hearth Station Sparks in Lagos"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 340px;">
+                <img src="assets/gallery/gallery_suya_11.jpg" alt="Sizzling Spicy Asun Goat Ribs with Scotch Bonnets"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+              <div class="w-full overflow-hidden flex-shrink-0" style="height: 290px;">
+                <img src="assets/gallery/gallery_suya_12.jpg"
+                  alt="Private VIP Cellar Tasting Lounge with Numbered Brass Lockers"
+                  class="w-full h-full object-cover marquee-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. "VIEW OUR CUTS" (Interactive Cut Switcher & Showcase) -->
+  <!-- ========================================================================= -->
+  <section id="cuts"
+    class="bg-[#E2E6D5] pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 w-full">
+    <div class="w-full">
+
+      <!-- Section Header & Filter Pills: Pushed to Both Extreme Ends of the Page -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-10 sm:mb-12 w-full">
+        <div class="flex-shrink-0">
+          <span class="font-mono text-[10px] sm:text-xs tracking-widest uppercase text-black/60 font-bold block mb-1">
+            THE FORBIDDEN HEARTH
+          </span>
+          <h2
+            class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-[#121212] whitespace-nowrap">
+            View Our Cuts
+          </h2>
+        </div>
+
+        <!-- Interactive Filter Pills: STRICTLY in ONE single line on the extreme right -->
+        <div class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 lg:ml-auto">
+          <button onclick="switchCut(0)" id="cut-tab-0"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
+            Ram Tozo (Hump)
+          </button>
+          <button onclick="switchCut(1)" id="cut-tab-1"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]">
+            Prime Beef Suya
+          </button>
+          <button onclick="switchCut(2)" id="cut-tab-2"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#88BEE8]">
+            Smoked Guinea Fowl
+          </button>
+          <button onclick="switchCut(3)" id="cut-tab-3"
+            class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-white/70 text-[#121212] border border-black/15 hover:bg-[#E59247]">
+            Fire-Roasted Asun
+          </button>
+        </div>
+      </div>
+
+      <!-- Featured Interactive Cut Card: Two Columns -->
+      <div
+        class="relative grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden border border-black/15 shadow-xl bg-white min-h-[440px]">
+
+        <!-- Left: HD Suya Plating Photo with Navigation Arrows -->
+        <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto overflow-hidden bg-black">
+          <img id="cut-image" src="assets/suya/suya_skewers_fire.jpg" alt="The Ram Tozo Ritual"
+            class="w-full h-full object-cover filter contrast-105 transition-all duration-500 ease-out">
+
+          <!-- Cut Indicator Badge -->
+          <div class="absolute top-4 left-4 z-10">
+            <span id="cut-counter"
+              class="inline-block px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-white font-mono text-xs font-bold uppercase tracking-widest border border-white/20">
+              CUT 01 / 04
+            </span>
+          </div>
+
+          <!-- Quick Prev / Next Overlay Buttons -->
+          <div class="absolute bottom-4 right-4 z-10 flex items-center gap-2">
+            <button onclick="prevCut()" aria-label="Previous Cut"
+              class="w-10 h-10 rounded-full bg-black/70 hover:bg-[#DCE33A] hover:text-[#121212] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm border border-white/20 active:scale-95 text-sm font-bold">
+              &larr;
+            </button>
+            <button onclick="nextCut()" aria-label="Next Cut"
+              class="w-10 h-10 rounded-full bg-black/70 hover:bg-[#DCE33A] hover:text-[#121212] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-sm border border-white/20 active:scale-95 text-sm font-bold">
+              &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Yellow Detail Box (Dynamically updated via JS) -->
+        <div id="cut-card-details"
+          class="lg:col-span-5 bg-[#DCE33A] p-7 sm:p-10 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-black/15 transition-opacity duration-300">
+          <div>
+            <span id="cut-tag"
+              class="font-mono text-[10px] uppercase tracking-widest text-black/60 font-bold block mb-2">
+              SIGNATURE CUT · LIMITED DAILY · 450G
+            </span>
+            <h3 id="cut-title"
+              class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-[#121212] mb-3 leading-tight">
+              The Ram Tozo Ritual
+            </h3>
+            <p id="cut-desc" class="text-sm sm:text-[15px] text-black/85 font-sans leading-relaxed mb-6">
+              Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and
+              charred over 1,000°F mangrove coals until edges crackle while the center melts into spiced butter.
+            </p>
+
+            <ul id="cut-specs"
+              class="space-y-2.5 text-xs font-mono font-bold text-black/80 mb-8 border-t border-b border-black/15 py-4">
+              <li class="flex items-center justify-between">
+                <span class="text-black/60 font-normal">Marinade Protocol:</span>
+                <span id="cut-aging">Cold-Pressed Kulikuli &amp; Ginger</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-black/60 font-normal">Hearth Charcoal:</span>
+                <span id="cut-fuel">1,000°F Niger Delta Mangrove Coals</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-black/60 font-normal">Tableside Finish:</span>
+                <span id="cut-finish">Sweet Purple Shallots &amp; Fresh Plum Tomatoes</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex items-center justify-between gap-4 pt-2">
+            <button onclick="openInquiryModalWithCut()"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white hover:bg-[#88BEE8] hover:text-[#121212] font-mono text-xs font-bold uppercase tracking-wider active:scale-95 transition-all shadow-md cursor-pointer">
+              <span>Book A Table</span>
+              <span>&rarr;</span>
+            </button>
+            <span id="cut-weight" class="font-mono text-xs font-bold text-black/70 uppercase">
+              Serves 2–3 · 450g
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Cut Switcher JavaScript -->
+  <script>
+    const CUTS_DATA = [
+      {
+        title: "The Ram Tozo Ritual",
+        tag: "SIGNATURE CUT · LIMITED DAILY · 450G",
+        desc: "Heavily marbled ram hump skewered on iron spikes, double-dusted in stoneground Northern Kano yaji, and charred over 1,000°F mangrove coals until edges crackle while the center melts into spiced butter.",
+        image: "assets/suya/suya_skewers_fire.jpg",
+        aging: "Cold-Pressed Kulikuli & Ginger",
+        fuel: "1,000°F Niger Delta Mangrove Coals",
+        finish: "Sweet Purple Shallots & Fresh Plum Tomatoes",
+        weight: "Serves 2–3 · 450g Allocation"
+      },
+      {
+        title: "Prime Zebu Beef Flank",
+        tag: "SAVANNAH HERITAGE · 400G",
+        desc: "Razor-thin ribbons of grass-fed Northern Zebu beef, hand-sliced against the grain by generational Mallams. Steeped in de-oiled kulikuli presscake, calabash nutmeg, and fiery Cameroon pepper. Flash-seared for 90 seconds.",
+        image: "assets/suya/suya_platter_onions.jpg",
+        aging: "Stoneground Kano Yaji & Ginger Pods",
+        fuel: "Dense White-Hot Mangrove Coals",
+        finish: "Sliced Garden Tomatoes & Fresh Lime Squeeze",
+        weight: "Serves 1–2 · 400g Skewers"
+      },
+      {
+        title: "Smoked Guinea Fowl & Gizzards",
+        tag: "SAVANNAH WILDGAME · 600G",
+        desc: "Free-range native Savannah guinea fowl slow-smoked over sweet mahogany fruitwood embers, basted in spiced scotch-bonnet citrus glaze, and served with skewers of crackling flame-charred gizzards.",
+        image: "assets/suya/hero_suya_4k.jpg",
+        aging: "3-Hour Mahogany Wood Smoke",
+        fuel: "Fruitwood Embers & Mangrove Coals",
+        finish: "Wild Forest Honey & Charred Shallots",
+        weight: "Serves 2 · 600g Whole Split"
+      },
+      {
+        title: "Fire-Roasted Asun Goat Ribs",
+        tag: "HEARTH SPECIALTY · 500G",
+        desc: "Tender bone-in goat ribs pit-roasted over smoldering ironwood logs, then tossed over roaring open coals with charred habaneros, sweet purple onions, and crushed alligator pepper.",
+        image: "assets/suya/asun_goat_ribs.jpg",
+        aging: "Pit-Smoked Ironwood Log Slow Roast",
+        fuel: "Direct Open Flame & Blistering Embers",
+        finish: "Sizzling Cast Iron & Roasted Bird's-Eye Rodo",
+        weight: "Feast for 2 · 500g Ribs"
+      }
+    ];
+
+    let currentCutIndex = 0;
+
+    function switchCut(index) {
+      currentCutIndex = (index + CUTS_DATA.length) % CUTS_DATA.length;
+      const data = CUTS_DATA[currentCutIndex];
+
+      // Update Tab Styles
+      document.querySelectorAll('.cut-tab').forEach((tab, i) => {
+        if (i === currentCutIndex) {
+          tab.className = "cut-tab px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-[#121212] text-white shadow-sm scale-105";
+        } else {
+          tab.className = "cut-tab px-4 py-2 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-white/70 text-[#121212] border border-black/15 hover:bg-[#DCE33A]";
+        }
+      });
+
+      // Smooth Fade Transitions for Card Content
+      const details = document.getElementById('cut-card-details');
+      const img = document.getElementById('cut-image');
+
+      details.style.opacity = '0.3';
+      img.style.opacity = '0.4';
+
+      setTimeout(() => {
+        document.getElementById('cut-title').innerText = data.title;
+        document.getElementById('cut-tag').innerText = data.tag;
+        document.getElementById('cut-desc').innerText = data.desc;
+        document.getElementById('cut-aging').innerText = data.aging;
+        document.getElementById('cut-fuel').innerText = data.fuel;
+        document.getElementById('cut-finish').innerText = data.finish;
+        document.getElementById('cut-weight').innerText = data.weight;
+        document.getElementById('cut-counter').innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
+
+        img.src = data.image;
+        img.alt = data.title;
+
+        details.style.opacity = '1';
+        img.style.opacity = '1';
+      }, 150);
+    }
+
+    function prevCut() {
+      switchCut(currentCutIndex - 1);
+    }
+
+    function nextCut() {
+      switchCut(currentCutIndex + 1);
+    }
+
+    function openInquiryModalWithCut() {
+      const cut = CUTS_DATA[currentCutIndex];
+      const messageField = document.getElementById('inquiry-message');
+      if (messageField) {
+        messageField.value = `I would like to reserve a tasting experience for "${cut.title}" (${cut.tag}).`;
+      }
+      openInquiryModal();
+    }
+  </script>
+
+  </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. PART 2 MANIFESTO BANNER: Generous Spacing, Editorial Typography -->
+  <!-- ========================================================================= -->
+  <section class="bg-[#E2E6D5] py-20 sm:py-28 md:py-32 px-5 sm:px-8 lg:px-12 border-b border-black/10 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span class="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-black/60 font-bold block mb-5">
+        ★ THE MANIFESTO
+      </span>
+      <h2
+        class="font-display font-black text-xl sm:text-2xl md:text-3xl lg:text-[2.2rem] uppercase tracking-wide text-[#121212] leading-[1.4] sm:leading-[1.45] md:leading-[1.5] mb-8">
+        Anyone can roast meat on a wire... We craft suya that sparks <span
+          class="bg-[#DCE33A] px-2.5 py-1 rounded-lg">PURE OBSESSION</span> &mdash; the kind that awakens the senses,
+        melts on the tongue, &amp; redefines live-fire gastronomy.
+      </h2>
+      <button onclick="openInquiryModal()"
+        class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-widest hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
+        <span>Book A Table</span>
+        <span>&rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. "OUR ORIGINS" (Cinematic Full-Width Hero Showcase) -->
+  <!-- ========================================================================= -->
+  <section id="origins"
+    class="relative bg-[#121212] py-20 sm:py-28 overflow-hidden text-white border-t border-b border-white/10">
+
+    <div class="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 w-full">
+
+      <!-- Header Section with Live Counter: Pushed to Both Extreme Ends -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10 w-full">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-2">
+            <span>★</span>
+            <span>04 / PROVENANCE &amp; SAVANNAH TERROIRS</span>
+          </div>
+          <h2
+            class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-tight">
+            Our Origins
+          </h2>
+        </div>
+
+        <!-- Terroir Quick Tabs & Navigation Controls on Far Right -->
+        <div class="flex items-center gap-2 bg-white/5 border border-white/15 p-1 rounded-full text-xs font-mono">
+          <button id="terroir-tab-0" onclick="switchTerroir(0)"
+            class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer bg-[#DCE33A] text-[#121212]">
+            01 Zebu & Ram
+          </button>
+          <button id="terroir-tab-1" onclick="switchTerroir(1)"
+            class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white">
+            02 Kano Yaji
+          </button>
+          <button id="terroir-tab-2" onclick="switchTerroir(2)"
+            class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white">
+            03 Mangrove Coals
+          </button>
+        </div>
+      </div>
+
+      <!-- Full-Width Hero Stage (Matching media_1794986987550_e9a1adf5.jpg exactly) -->
+      <div id="origins-hero-stage"
+        class="w-full relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/15 bg-black shadow-2xl min-h-[580px] sm:min-h-[640px] md:min-h-[680px] flex flex-col justify-between">
+
+        <!-- Background Cinematic Photography -->
+        <img id="terroir-bg-img" src="assets/suya/suya_skewers_fire.jpg" alt="Heritage Zebu and Ram Tozo on Fire"
+          class="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] contrast-[1.15] transition-all duration-700">
+
+        <!-- Dark moody gradient scrim for extreme contrast and readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/35 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent pointer-events-none">
+        </div>
+
+        <!-- Top Telemetry Ribbon Ticker -->
+        <div id="terroir-top-ticker"
+          class="relative z-10 bg-black/80 backdrop-blur-md border-b border-white/10 px-5 sm:px-8 py-3 flex items-center justify-between text-[10px] sm:text-xs font-mono font-bold tracking-widest text-[#DCE33A] uppercase transition-all duration-300">
+          <span id="terroir-region">REGION 01 · SOKOTO &amp; KANO SAVANNAH</span>
+          <span id="terroir-elevation" class="hidden sm:inline text-white/50">SAHEL GRASSLANDS · FREE-GRAZING</span>
+          <span id="terroir-cure">MARBLED TOZO FAT-CAP</span>
+        </div>
+
+        <!-- Bottom Narrative Overlay -->
+        <div id="terroir-content-wrap"
+          class="relative z-10 p-6 sm:p-10 lg:p-12 xl:p-14 max-w-4xl transition-all duration-300">
+          <!-- Category Pill Badge -->
+          <span id="terroir-badge"
+            class="inline-block px-3.5 py-1.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+            Northern Savannah Genetics
+          </span>
+
+          <!-- Massive Syne Display Headline -->
+          <h3 id="terroir-title"
+            class="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] uppercase tracking-tight text-white mb-4 leading-none drop-shadow-2xl">
+            Heritage Zebu &amp; Ram Tozo
+          </h3>
+
+          <!-- Narrative Paragraph -->
+          <p id="terroir-desc"
+            class="text-xs sm:text-base md:text-lg text-white/85 font-sans max-w-2xl leading-relaxed drop-shadow-md">
+            Pasture-grazed across the vast Sahelian grasslands of Northern Nigeria. Naturally lean muscle encased in
+            rich, heavily marbled hump fat (Tozo). Flashed over 1,000°F mangrove coals, yielding an explosive
+            beef-forward profile with buttery, caramelized crackling edges.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Terroir Hero Stage Controller Script -->
+  <script>
+    const TERROIRS = [
+      {
+        region: 'REGION 01 · SOKOTO & KANO SAVANNAH',
+        elevation: 'SAHEL GRASSLANDS · FREE-GRAZING',
+        cure: 'MARBLED TOZO FAT-CAP',
+        badge: 'Northern Savannah Genetics',
+        badgeColor: 'bg-[#DCE33A] text-[#121212]',
+        tickerColor: 'text-[#DCE33A]',
+        title: 'Heritage Zebu & Ram Tozo',
+        description: 'Pasture-grazed across the vast Sahelian grasslands of Northern Nigeria. Naturally lean muscle encased in rich, heavily marbled hump fat (Tozo). Flashed over 1,000°F mangrove coals, yielding an explosive beef-forward profile with buttery, caramelized crackling edges.',
+        image: 'assets/gallery/gallery_suya_6.jpg',
+        specs: [
+          { label: 'Pasture & Forage', val: 'Sahel Wild Grasses' },
+          { label: 'Hearth Cut', val: 'Marbled Ram Tozo' },
+          { label: 'Carving Protocol', val: 'Against The Grain' }
+        ]
+      },
+      {
+        region: 'REGION 02 · KANO OLD CITY',
+        elevation: 'ANCIENT SPICE MILLS · GRANITE STONES',
+        cure: 'STONEGROUND SMALL-BATCH',
+        badge: 'Artisanal Spice Milling Guild',
+        badgeColor: 'bg-[#88BEE8] text-[#121212]',
+        tickerColor: 'text-[#88BEE8]',
+        title: 'Stoneground Kano Yaji',
+        description: 'The soul of Forbidden Suya. De-oiled kulikuli groundnut presscake, sun-dried bird\'s eye chilies, roasted calabash nutmeg, wild ginger root, and fragrant Uda selim pods. Ground on generational granite millstones in Kano Old City for unmatched aromatics and depth.',
+        image: 'assets/gallery/gallery_suya_5.jpg',
+        specs: [
+          { label: 'Base Presscake', val: 'De-Oiled Kulikuli' },
+          { label: 'Heat & Aromatics', val: 'Cameroon Chili & Ginger' },
+          { label: 'Milling Method', val: 'Granite Millstone' }
+        ]
+      },
+      {
+        region: 'REGION 03 · NIGER DELTA & CROSS RIVER',
+        elevation: 'TRADITIONAL CLAY KILNS · SUSTAINABLE',
+        cure: '1,000°F SMOKELESS CHAR',
+        badge: 'High-Density Mangrove Embers',
+        badgeColor: 'bg-[#E59247] text-white',
+        tickerColor: 'text-[#E59247]',
+        title: 'Cross River Mangrove Hardwood',
+        description: 'Sustainably harvested mangrove and ironwood charcoal fired slowly in clay pit kilns. Burning chemical-free, smokeless, and radiant at over 1,000°F, delivering the blistered sear, radiant crust, and sweet woodsmoke perfume that makes Forbidden Suya unforgettable.',
+        image: 'assets/gallery/gallery_suya_12.jpg',
+        specs: [
+          { label: 'Wood Density', val: 'Hardwood Mangrove' },
+          { label: 'Kiln Temperature', val: '1,000°F Clean Ember' },
+          { label: 'Aromatic Profile', val: 'Sweet Forest Embers' }
+        ]
+      }
+    ];
+
+    let currentTerroirIndex = 0;
+
+    function switchTerroir(index) {
+      if (index < 0) index = TERROIRS.length - 1;
+      if (index >= TERROIRS.length) index = 0;
+      currentTerroirIndex = index;
+      const data = TERROIRS[index];
+
+      // Update tabs
+      for (let i = 0; i < TERROIRS.length; i++) {
+        const tab = document.getElementById(`terroir-tab-${i}`);
+        if (tab) {
+          if (i === index) {
+            tab.className = 'px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer bg-[#DCE33A] text-[#121212]';
+          } else {
+            tab.className = 'px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer text-white/70 hover:text-white';
+          }
+        }
+      }
+
+      // Smooth fade transition
+      const content = document.getElementById('terroir-content-wrap');
+      const bgImg = document.getElementById('terroir-bg-img');
+      const ticker = document.getElementById('terroir-top-ticker');
+
+      if (content) content.style.opacity = '0.3';
+      if (bgImg) bgImg.style.opacity = '0.5';
+
+      setTimeout(() => {
+        if (bgImg) {
+          bgImg.src = data.image;
+          bgImg.alt = data.title;
+          bgImg.style.opacity = '1';
+        }
+
+        // Ticker
+        const regionEl = document.getElementById('terroir-region');
+        const elevEl = document.getElementById('terroir-elevation');
+        const cureEl = document.getElementById('terroir-cure');
+        if (regionEl) regionEl.textContent = data.region;
+        if (elevEl) elevEl.textContent = data.elevation;
+        if (cureEl) cureEl.textContent = data.cure;
+        if (ticker) {
+          ticker.className = `relative z-10 bg-black/80 backdrop-blur-md border-b border-white/10 px-5 sm:px-8 py-3 flex items-center justify-between text-[10px] sm:text-xs font-mono font-bold tracking-widest ${data.tickerColor} uppercase transition-all duration-300`;
+        }
+
+        // Badge & Title & Desc
+        const badgeEl = document.getElementById('terroir-badge');
+        const titleEl = document.getElementById('terroir-title');
+        const descEl = document.getElementById('terroir-desc');
+
+        if (badgeEl) {
+          badgeEl.className = `inline-block px-3.5 py-1.5 rounded-full ${data.badgeColor} font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-4 shadow-sm`;
+          badgeEl.textContent = data.badge;
+        }
+        if (titleEl) titleEl.textContent = data.title;
+        if (descEl) descEl.textContent = data.description;
+
+
+        if (content) content.style.opacity = '1';
+      }, 150);
+    }
+
+    function prevTerroir() {
+      switchTerroir(currentTerroirIndex - 1);
+    }
+
+    function nextTerroir() {
+      switchTerroir(currentTerroirIndex + 1);
+    }
+  </script>
+
+  <!-- ========================================================================= -->
+  <!-- 9. "TESTIMONIALS & ACCLAIM" (Concept C: Dual Infinite Kinetic Marquee + Interactive Spotlight) -->
+  <!-- ========================================================================= -->
+  <section id="expect" class="bg-[#E2E6D5] py-20 sm:py-28 overflow-hidden border-b border-black/10 w-full">
+    <div class="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 mb-12 sm:mb-16 w-full">
+
+      <!-- Section Editorial Header: Pushed to Both Extreme Ends -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 w-full">
+        <div class="flex-shrink-0">
+          <div
+            class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-black/60 font-bold mb-3">
+            <span>★</span>
+            <span>05 / WHAT PEOPLE SAY</span>
+          </div>
+          <h2
+            class="font-display font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl uppercase tracking-tight text-[#121212] leading-[0.92]">
+            What People Say
+          </h2>
+        </div>
+        <p class="font-sans text-sm sm:text-base md:text-lg text-black/80 leading-relaxed max-w-md md:text-right">
+          Real reviews and words from Lagos diners, regulars, and suya lovers who eat at our live-fire hearth.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Dual Kinetic Marquee Tracks (Smooth Framer-Style Continuous Animation with People Portait Avatars) -->
+    <div class="marquee-container space-y-4 sm:space-y-6 overflow-hidden"
+      style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+
+      <!-- TRACK 01: Glides Left -->
+      <div class="animate-marquee-left flex gap-4 sm:gap-6 items-center">
+        <!-- PERSON 1: Babatunde A. -->
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_1.jpg" alt="Babatunde A."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#DCE33A] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Babatunde
+                A.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Diner · Victoria Island</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Best suya
+              in Lagos, very soft and juicy. The spice level is just perfect.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- PERSON 2: Zainab M. -->
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_2.jpg" alt="Zainab M."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-black flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Zainab
+                M.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Food Lover · Lekki Phase
+                1</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Their ram
+              tozo literally melts in your mouth! You won't touch roadside suya again.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- PERSON 3: Chukwuma O. -->
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_3.jpg" alt="Chukwuma O."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#E59247] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Chukwuma
+                O.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Friday Regular · Lagos</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Came with
+              friends on Friday night. The meat quality and cold drinks are 10/10.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- PERSON 4: Amara N. -->
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_4.jpg" alt="Amara N."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-black flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Amara
+                N.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Guest · Ikoyi</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The yaji
+              spice hits completely different. Fresh, aromatic, and not oily at all.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET 1 FOR SEAMLESS 100% INFINITE LOOP -->
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_1.jpg" alt="Babatunde A."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#DCE33A] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Babatunde
+                A.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Diner · Victoria Island</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Best suya
+              in Lagos, very soft and juicy. The spice level is just perfect.&rdquo;</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_2.jpg" alt="Zainab M."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-black flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Zainab
+                M.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Food Lover · Lekki Phase
+                1</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Their ram
+              tozo literally melts in your mouth! You won't touch roadside suya again.&rdquo;</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_3.jpg" alt="Chukwuma O."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#E59247] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Chukwuma
+                O.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Friday Regular · Lagos</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Came with
+              friends on Friday night. The meat quality and cold drinks are 10/10.&rdquo;</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_4.jpg" alt="Amara N."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-black flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Amara
+                N.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Guest · Ikoyi</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The yaji
+              spice hits completely different. Fresh, aromatic, and not oily at all.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRACK 02: Glides Right -->
+      <div class="animate-marquee-right flex gap-4 sm:gap-6 items-center">
+        <!-- PERSON 5: Dr. Olumide B. -->
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_5.jpg" alt="Dr. Olumide B."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#88BEE8] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#88BEE8] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Dr.
+                Olumide B.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Regular Guest · Victoria
+                Island</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Finally a
+              clean, luxury suya spot in Lagos where the beef is always fresh and tender.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- PERSON 6: Folake D. -->
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_6.jpg" alt="Folake D."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#DCE33A] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Folake
+                D.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Diner · Oniru</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The masa
+              and spicy asun platter here? Absolutely delicious. We cleared the whole plate.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- PERSON 7: Kelechi O. -->
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_7.jpg" alt="Kelechi O."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-black flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Kelechi
+                O.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Weekend Patron · Lagos</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;No
+              gristle, no tough meat. Just high quality suya straight from the live coals.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- PERSON 8: Damilola A. -->
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_8.jpg" alt="Damilola A."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#E59247] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Damilola
+                A.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Food Blogger · Lagos</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Hands
+              down the best suya spot on the Island. Proper fire-roasted perfection.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET 2 FOR SEAMLESS 100% INFINITE LOOP -->
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_5.jpg" alt="Dr. Olumide B."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#88BEE8] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#88BEE8] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Dr.
+                Olumide B.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Regular Guest · Victoria
+                Island</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Finally a
+              clean, luxury suya spot in Lagos where the beef is always fresh and tender.&rdquo;</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_6.jpg" alt="Folake D."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#DCE33A] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Folake
+                D.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Diner · Oniru</span>
+              <span class="text-[#DCE33A] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;The masa
+              and spicy asun platter here? Absolutely delicious. We cleared the whole plate.&rdquo;</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-4 bg-white/90 text-black p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-black/15 shadow-sm flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_7.jpg" alt="Kelechi O."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-black flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-black text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Kelechi
+                O.</span>
+              <span class="font-mono text-[10px] text-black/50 uppercase tracking-widest">Weekend Patron · Lagos</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;No
+              gristle, no tough meat. Just high quality suya straight from the live coals.&rdquo;</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-4 bg-[#121212] text-white p-3 sm:p-4 pr-6 sm:pr-8 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg flex-shrink-0 hover:scale-[1.02] transition-transform cursor-default">
+          <img src="assets/avatars/critic_8.jpg" alt="Damilola A."
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-[#E59247] flex-shrink-0">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-[#E59247] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">Damilola
+                A.</span>
+              <span class="font-mono text-[10px] text-white/50 uppercase tracking-widest">Food Blogger · Lagos</span>
+              <span class="text-[#E59247] text-xs">★★★★★</span>
+            </div>
+            <p class="font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-tight">&ldquo;Hands
+              down the best suya spot on the Island. Proper fire-roasted perfection.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Reserve Invitation Strip -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16 mt-12 sm:mt-16 text-center">
+      <div class="inline-flex flex-wrap items-center justify-center gap-4">
+        <button onclick="openInquiryModal()"
+          class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#121212] text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
+          <span>Book A Table</span>
+          <span>&rarr;</span>
+        </button>
+        <button onclick="openInquiryModal()"
+          class="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-black/20 text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-black/5 transition-all cursor-pointer">
+          <span>Book A VIP Table</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 10. "OUR PHILOSOPHY" (Full-Width Chartreuse Yellow Section) -->
+  <!-- ========================================================================= -->
+  <section id="philosophy"
+    class="bg-[#DCE33A] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-black/15 text-center">
+    <div class="max-w-3xl mx-auto">
+
+      <span class="font-mono text-[10px] tracking-widest uppercase text-black/60 font-bold block mb-3">
+        OUR PHILOSOPHY
+      </span>
+
+      <h2
+        class="font-display font-black text-2xl sm:text-3xl md:text-[2.25rem] uppercase tracking-tight text-[#121212] leading-[1.2] mb-6">
+        You're Not Here For "Safe." You're Here to TASTE PERFECTION, Savor The Smoke, &amp; Experience Pure Carnal
+        Luxury.
+      </h2>
+
+      <p class="max-w-lg mx-auto text-xs sm:text-sm text-black/80 leading-relaxed font-sans mb-8">
+        We exist for those who demand more from their table than predictable cuts and bland traditions. When you sit at
+        Forbidden Suya, you taste the unyielding dedication of farmers who honor heritage genetics, butchers who view
+        aging as fine art, and pitmasters who speak fluent fire.
+      </p>
+
+      <button onclick="openInquiryModal()"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
+        <span>Book A Table</span>
+        <span>&rarr;</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 11. "READY TO DO THIS?" (Dark Dramatic Atmosphere with CTA) -->
+  <!-- ========================================================================= -->
+  <section class="relative bg-[#121212] py-36 sm:py-48 md:py-60 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[580px] sm:min-h-[700px] flex items-center justify-center">
+
+    <!-- Atmospheric suya dining background with glowing embers visible -->
+    <div class="absolute inset-0 z-0 opacity-55">
+      <img src="assets/suya/hero_suya_4k.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
+        class="w-full h-full object-cover filter contrast-125 brightness-[0.7]">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/45 to-[#121212]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
+      <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#DCE33A] block mb-3">
+        LET'S CONNECT
+      </span>
+
+      <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-6">
+        Ready to Do This?
+      </h2>
+
+      <p class="max-w-md mx-auto text-xs sm:text-sm text-white/90 font-sans leading-relaxed mb-8">
+        Reservations at the Live Hearth and private VIP lounge in Victoria Island open 30 days in advance. Secure your
+        table before the evening’s fresh skewers sell out.
+      </p>
+
+      <button onclick="openInquiryModal()"
+        class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
+        <span>Book A Table &rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 12. FOOTER: 6-Thumbnail Photo Gallery + Giant "FORBIDDEN SUYA" Watermark -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#E2E6D5] pt-14 pb-10 px-4 sm:px-6 lg:px-8 border-t border-black/15">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Nav Links -->
+      <div
+        class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs font-mono font-bold uppercase tracking-wider text-black/80 mb-8">
+        <a href="#hero" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">The Hearth</a>
+        <a href="#cuts" class="hover:underline">Our Cuts</a>
+        <a href="#origins" class="hover:underline">Origins</a>
+        <a href="#expect" class="hover:underline">Ritual</a>
+        <a href="#philosophy" class="hover:underline">Philosophy</a>
+      </div>
+
+      <!-- 6 Thumbnail Suya & Flame Photos in a Row (Dedicated Distinct Set) -->
+      <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-10">
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/footer/footer_suya_1.jpg" alt="Marinated Ram Tozo sizzling over coals"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/footer/footer_suya_2.jpg" alt="Barbecue skewers over live fire"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/footer/footer_suya_3.jpg" alt="Skewers grilling on open coals"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/footer/footer_suya_4.jpg" alt="Sizzling meat ribs on board"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/footer/footer_suya_5.jpg" alt="Glistening spiced skewers with yaji"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
+          <img src="assets/footer/footer_suya_6.jpg" alt="Sliced flame-roasted meat platter"
+            class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
+        </div>
+      </div>
+
+      <!-- Giant Outlined / Muted Watermark -->
+      <div class="text-center overflow-hidden mb-6">
+        <h3
+          class="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-black/15 uppercase select-none">
+          FORBIDDEN SUYA
+        </h3>
+      </div>
+
+      <!-- Copyright & Bottom info -->
+      <div class="text-center font-mono text-[11px] text-black/50 space-y-1">
+        <p>&copy; 2026 Forbidden Suya Co. All Rights Reserved. Where Real Suya Breaks the Rules.</p>
+        <p>14 Ozumba Mbadiwe Avenue, Victoria Island, Lagos, Nigeria · +234 (0) 1 888 7892 · concierge@forbiddensuya.ng
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 13. RESERVATION POPUP MODAL (Exact match to Screenshot Modal Form) -->
+  <!-- ========================================================================= -->
+  <div id="inquiry-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+    <!-- Backdrop -->
+    <div onclick="closeInquiryModal()" class="absolute inset-0 modal-backdrop"></div>
+
+    <!-- Modal Content Box with Floating External Close Button -->
+    <div
+      class="relative z-10 w-full max-w-2xl transform scale-95 transition-transform duration-300"
+      id="modal-box">
+
+      <!-- Floating External Close 'X' Button -->
+      <button onclick="closeInquiryModal()" aria-label="Close Modal"
+        class="absolute -top-3.5 -right-3.5 sm:-top-4 sm:-right-4 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#121212] text-white flex items-center justify-center hover:bg-black active:scale-90 text-xl font-bold border-2 border-white/30 shadow-2xl transition-all cursor-pointer">
+        &times;
+      </button>
+
+      <!-- Inner Rounded Card Container -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-12 border border-black/15">
+        <!-- Left Column: High-Impact Building & Hearth Photo -->
+        <div class="hidden md:block md:col-span-5 bg-[#121212] relative overflow-hidden">
+          <img src="assets/suya/suya_building_lagos.jpg" alt="Forbidden Suya Victoria Island Flagship"
+            class="w-full h-full object-cover filter contrast-110 brightness-95">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-5 left-5 right-5 text-white">
+            <span class="font-mono text-[9px] uppercase tracking-widest text-[#DCE33A] font-bold block mb-1">FORBIDDEN SUYA</span>
+            <span class="font-display font-black text-sm uppercase">Victoria Island · Lagos</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Brand Yellow Box with Black Headline, Text, and Form -->
+        <div class="md:col-span-7 bg-[#DCE33A] p-6 sm:p-8 text-[#121212] flex flex-col justify-center">
+
+          <h3 class="font-display font-black text-xl sm:text-2xl leading-tight mb-2 uppercase text-[#121212]">
+            Reserve Your Table At Forbidden Suya
+          </h3>
+
+          <p class="text-xs sm:text-sm text-black/80 font-sans mb-5 leading-relaxed">
+            Grab your seat at the Master Mallam’s Hearth or private VIP cellar lounge in Victoria Island:
+          </p>
+
+          <form onsubmit="handleReservationSubmit(event)" class="space-y-3">
+            <div>
+              <input type="text" required placeholder="First &amp; Last Name"
+                class="w-full px-4 py-3 rounded-lg bg-white text-[#121212] placeholder-black/40 text-xs font-semibold border border-black/15 focus:outline-none focus:ring-2 focus:ring-[#121212]">
+            </div>
+
+            <div>
+              <input type="email" required placeholder="Email Address"
+                class="w-full px-4 py-3 rounded-lg bg-white text-[#121212] placeholder-black/40 text-xs font-semibold border border-black/15 focus:outline-none focus:ring-2 focus:ring-[#121212]">
+            </div>
+
+            <div>
+              <select
+                class="w-full px-4 py-3 rounded-lg bg-white text-[#121212] text-xs font-semibold border border-black/15 focus:outline-none focus:ring-2 focus:ring-[#121212]">
+                <option value="table_2_4">Table for 2 - 4 (Evening Tasting &amp; Cocktails)</option>
+                <option value="vip_lounge">VIP Tasting Vault (5 - 10 Guests)</option>
+                <option value="hearth_counter">Master Mallam's Live Hearth Counter</option>
+                <option value="private_feast">Private Feast &amp; Celebration Allocation</option>
+              </select>
+            </div>
+
+            <button type="submit"
+              class="w-full py-3.5 rounded-lg bg-[#121212] hover:bg-black active:scale-[0.99] text-white font-display font-black uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md cursor-pointer mt-1">
+              Book A Table &rarr;
+            </button>
+
+            <p class="text-[10px] text-black/60 text-center font-sans mt-2">
+              We respect your privacy. No spam, only priority table confirmations &amp; reservations in Victoria Island, Lagos.
+            </p>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal & Nav -->
+  <script>
+    function openInquiryModal() {
+      const modal = document.getElementById('inquiry-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }
+
+    function closeInquiryModal() {
+      const modal = document.getElementById('inquiry-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      box.classList.remove('scale-100');
+      box.classList.add('scale-95');
+    }
+
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('hidden');
+    }
+
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your skewer reservation request at Forbidden Suya, Victoria Island has been received. Our Concierge will confirm your table shortly.');
+      closeInquiryModal();
+    }
+  </script>
+
+</body>
+
+</html>
