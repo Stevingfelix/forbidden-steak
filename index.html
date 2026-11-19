@@ -63,9 +63,9 @@
       align-items: center;
       justify-content: flex-start;
       text-align: center;
-      padding: 1.5rem;
-      padding-top: 9rem;
-      padding-bottom: 6rem;
+      padding: 1.25rem;
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
       max-width: 980px;
       margin: 0 auto;
     }
@@ -470,7 +470,7 @@
   <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-transparent border-b border-transparent">
     <div class="w-full px-5 sm:px-8 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
 
-      <!-- Wordmark Logo: Monochrome Flame Icon + Wordmark in Pure White -->
+      <!-- Wordmark Logo: Monochrome Flame Icon (Text hidden on mobile, visible on desktop) -->
       <a href="#hero"
         class="font-display font-black text-2xl sm:text-3xl tracking-tight text-white hover:text-[#DCE33A] transition-colors flex items-center gap-2.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
         <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white flex-shrink-0 transition-colors" viewBox="0 0 32 32" fill="currentColor">
@@ -478,7 +478,7 @@
             d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
           <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
         </svg>
-        <span class="inline">Forbidden Suya</span>
+        <span class="hidden sm:inline">Forbidden Suya</span>
       </a>
 
       <!-- Desktop Navigation Links (Brutalist Syne Display Typography with Sleek Hover Indicator) -->
@@ -528,15 +528,14 @@
     <div id="mobile-nav"
       class="fixed inset-0 z-[100] bg-[#121212]/98 backdrop-blur-2xl text-white flex flex-col justify-between p-6 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
       
-      <!-- Top Bar: Flame Emblem Logo & White Close Icon -->
+      <!-- Top Bar: Flame Emblem Logo & White Close Icon (No text on mobile) -->
       <div class="flex items-center justify-between w-full border-b border-white/10 pb-4">
-        <div class="flex items-center gap-2.5 text-white">
-          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white" viewBox="0 0 32 32" fill="currentColor">
+        <div class="flex items-center text-white">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-[#DCE33A]" viewBox="0 0 32 32" fill="currentColor">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
             <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
           </svg>
-          <span class="font-display font-black text-xl tracking-tight text-white">Forbidden Suya</span>
         </div>
 
         <button onclick="closeMobileNav()" aria-label="Close Navigation"
@@ -600,8 +599,8 @@
   <!-- ========================================================================= -->
   <section id="hero" class="relative w-full bg-[#121212] overflow-hidden">
 
-    <!-- Hero Media Container with Full Bleed Live Video Background -->
-    <div class="relative w-full h-[760px] sm:h-[860px] lg:h-[960px] overflow-hidden bg-[#121212]">
+    <!-- Hero Media Container with Full Bleed Live Video Background (Sized so yellow ribbon shows on mobile) -->
+    <div class="relative w-full h-[100svh] min-h-[580px] max-h-[720px] sm:max-h-none sm:min-h-[820px] sm:h-[860px] lg:h-[960px] overflow-hidden bg-[#121212]">
       <!-- Background Video: Autoplay, Loop, Muted, Playsinline for 100% Mobile & Desktop Support -->
       <video autoplay loop muted playsinline poster="assets/suya/hero_suya_4k.jpg"
         class="w-full h-full object-cover object-center filter brightness-[0.94] contrast-[1.12]">
@@ -620,20 +619,20 @@
       <!-- Hero Bold Headline Overlay: Centered Symmetrically Across Screen Sizes (Choreographed Entrance) -->
       <div class="hero-center-overlay">
         <h1
-          class="hero-anim-item hero-anim-1 font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.75rem] xl:text-[5.25rem] text-white uppercase tracking-tight leading-[0.94] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
+          class="hero-anim-item hero-anim-1 font-display font-black text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-[4.75rem] xl:text-[5.25rem] text-white uppercase tracking-tight leading-[0.96] sm:leading-[0.94] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
           <span class="block whitespace-normal sm:whitespace-nowrap">LAGOS’ UNDISPUTED</span>
           <span class="block text-[#DCE33A] whitespace-normal sm:whitespace-nowrap">SUYA OBSESSION</span>
         </h1>
 
         <p
-          class="hero-anim-item hero-anim-2 text-xs sm:text-base md:text-lg text-white/95 font-sans mt-4 sm:mt-5 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          class="hero-anim-item hero-anim-2 text-xs sm:text-base md:text-lg text-white/95 font-sans mt-2.5 sm:mt-5 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           From Victoria Island embers to midnight connoisseurs. The standard by which all Lagos suya is judged.
         </p>
 
         <!-- Properly Aligned Dual Action CTAs (No broken wrapped text, sleek large UI arrows) -->
-        <div class="hero-anim-item hero-anim-3 mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full">
+        <div class="hero-anim-item hero-anim-3 mt-4 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-5 w-full">
           <button onclick="openInquiryModal()"
-            class="btn-magnetic whitespace-nowrap inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:px-9 sm:py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold tracking-widest uppercase hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
+            class="btn-magnetic whitespace-nowrap inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-2.5 sm:px-9 sm:py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold tracking-widest uppercase hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
             <span>Book A Table</span>
             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
@@ -641,7 +640,7 @@
           </button>
           
           <a href="#cuts"
-            class="btn-magnetic-dark whitespace-nowrap inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:px-9 sm:py-4 rounded-full bg-black/60 hover:bg-black/80 active:scale-95 text-white font-mono text-xs sm:text-sm font-bold tracking-widest uppercase backdrop-blur-md border border-white/25 transition-all shadow-xl cursor-pointer">
+            class="btn-magnetic-dark whitespace-nowrap inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-2.5 sm:px-9 sm:py-4 rounded-full bg-black/60 hover:bg-black/80 active:scale-95 text-white font-mono text-xs sm:text-sm font-bold tracking-widest uppercase backdrop-blur-md border border-white/25 transition-all shadow-xl cursor-pointer">
             <span>Explore The Cuts</span>
             <svg class="w-4 h-4 flex-shrink-0 text-[#DCE33A]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"></path>
