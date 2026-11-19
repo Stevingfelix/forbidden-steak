@@ -813,7 +813,7 @@
           <div class="absolute top-4 left-4 z-10">
             <span id="cut-counter"
               class="inline-block px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-white font-mono text-xs font-bold uppercase tracking-widest border border-white/20">
-              CUT 01 / 04
+              CUT 01
             </span>
           </div>
 
@@ -958,7 +958,7 @@
         document.getElementById('cut-weight').innerText = data.weight;
         
         const counterEl = document.getElementById('cut-counter');
-        if (counterEl) counterEl.innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
+        if (counterEl) counterEl.innerText = `CUT 0${currentCutIndex + 1}`;
         const counterMobileEl = document.getElementById('cut-counter-mobile');
         if (counterMobileEl) counterMobileEl.innerText = `CUT 0${currentCutIndex + 1} / 0${CUTS_DATA.length}`;
 
