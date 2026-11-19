@@ -381,20 +381,19 @@
     <div id="mobile-nav"
       class="fixed inset-0 z-[100] bg-[#DCE33A] text-[#121212] flex flex-col justify-between p-6 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
       
-      <!-- Top Bar: Wordmark / Logo & Dedicated Close Button -->
+      <!-- Top Bar: Flame Emblem Logo & Direct Black Close Icon (No White Background) -->
       <div class="flex items-center justify-between w-full border-b border-black/15 pb-4">
-        <div class="flex items-center gap-2 font-display font-black text-xl uppercase tracking-tight text-[#121212]">
-          <svg class="w-6 h-6 text-[#121212]" viewBox="0 0 32 32" fill="currentColor">
+        <div class="flex items-center text-[#121212]">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-[#121212]" viewBox="0 0 32 32" fill="currentColor">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2ZM16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
             <rect x="6" y="27" width="20" height="2.5" rx="1.25" />
           </svg>
-          <span>Forbidden Suya</span>
         </div>
 
         <button onclick="closeMobileNav()" aria-label="Close Navigation"
-          class="w-10 h-10 rounded-full bg-white text-[#121212] flex items-center justify-center shadow-md active:scale-95 transition-transform border border-black/15 cursor-pointer">
-          <svg class="w-5 h-5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          class="p-2 -mr-2 text-[#121212] hover:opacity-70 active:scale-90 transition-all cursor-pointer">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
