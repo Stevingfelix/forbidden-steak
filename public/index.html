@@ -423,6 +423,7 @@
         opacity: 0 !important;
       }
     }
+  </style>
 </head>
 
 <body class="antialiased text-[#121212] bg-[#E2E6D5]">
@@ -682,21 +683,21 @@
       <!-- LEFT CONTENT COLUMN: Centered on mobile, Left-aligned on desktop -->
       <div
         class="w-full lg:w-[42%] xl:w-[40%] py-10 lg:py-14 px-6 sm:px-10 md:px-12 lg:pl-14 xl:pl-18 lg:pr-12 xl:pr-16 flex flex-col justify-center items-center lg:items-start text-center lg:text-left z-20">
-        <div class="reveal-on-scroll max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div class="max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left">
           <h2
-            class="text-center lg:text-left font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
+            class="reveal-on-scroll stagger-1 text-center lg:text-left font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
             style="font-style: normal;">
             <span class="block">See How</span>
             <span class="block">We Turn</span>
             <span class="block">Embers into</span>
             <span class="block">OBSESSION</span>
           </h2>
-          <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed text-center lg:text-left mb-6">
+          <p class="reveal-on-scroll stagger-2 text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed text-center lg:text-left mb-6">
             We don&rsquo;t believe in roadside compromises, gristly cuts, or lukewarm skewers drowned in MSG. We believe
             in spitting mangrove embers, the intoxicating fragrance of stoneground Northern yaji, sizzling ram tozo fat
             caramelizing over iron grates, and knives slicing through flame-blistered beef that melts on contact.
           </p>
-          <div class="flex justify-center lg:justify-start">
+          <div class="reveal-on-scroll stagger-3 flex justify-center lg:justify-start">
             <button onclick="openInquiryModal()"
               class="btn-magnetic-dark inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all cursor-pointer shadow-md">
               <span>Book A Table</span>
@@ -854,19 +855,19 @@
     <div class="w-full">
 
       <!-- Section Header & Filter Pills: Centered on mobile, Pushed to extreme ends on desktop -->
-      <div class="reveal-on-scroll flex flex-col lg:flex-row lg:items-end justify-between items-center lg:items-end text-center lg:text-left gap-5 mb-8 sm:mb-12 w-full">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between items-center lg:items-end text-center lg:text-left gap-5 mb-8 sm:mb-12 w-full">
         <div class="text-center lg:text-left flex-shrink-0">
-          <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-2">
+          <span class="reveal-on-scroll stagger-1 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-2">
             THE LIVE GRILL
           </span>
           <h2
-            class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-[#121212]">
+            class="reveal-on-scroll stagger-2 font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-[#121212]">
             View Our Cuts
           </h2>
         </div>
 
         <!-- Mobile Pagination Arrows (Replacing tags on mobile with sleek UI controls) -->
-        <div class="flex lg:hidden items-center justify-center gap-3">
+        <div class="reveal-on-scroll stagger-3 flex lg:hidden items-center justify-center gap-3">
           <button onclick="prevCut()" aria-label="Previous Cut"
             class="w-10 h-10 rounded-full bg-[#121212] text-white hover:bg-[#DCE33A] hover:text-[#121212] flex items-center justify-center transition-all active:scale-95 shadow-sm cursor-pointer border border-black/10">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -885,7 +886,7 @@
         </div>
 
         <!-- Desktop Interactive Filter Pills (Hidden on mobile) -->
-        <div class="hidden lg:flex items-center justify-end gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 max-w-full lg:ml-auto">
+        <div class="reveal-on-scroll stagger-3 hidden lg:flex items-center justify-end gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 max-w-full lg:ml-auto">
           <button onclick="switchCut(0)" id="cut-tab-0"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
             Ram Tozo (Hump)
@@ -1124,20 +1125,20 @@
     <div class="px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 w-full">
 
       <!-- Header Section: Centered on mobile, Split extreme ends on desktop -->
-      <div class="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between items-center md:items-end text-center md:text-left gap-6 mb-8 sm:mb-10 w-full">
+      <div class="flex flex-col md:flex-row md:items-end justify-between items-center md:items-end text-center md:text-left gap-6 mb-8 sm:mb-10 w-full">
         <div class="text-center md:text-left">
           <div
-            class="inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-2">
+            class="reveal-on-scroll stagger-1 inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-2">
             04 / PROVENANCE &amp; SAVANNAH TERROIRS
           </div>
           <h2
-            class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-tight">
+            class="reveal-on-scroll stagger-2 font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-tight">
             Our Origins
           </h2>
         </div>
 
         <!-- Terroir Quick Tabs: Centered on mobile, Right-aligned on desktop (Single Line on Mobile) -->
-        <div class="flex items-center justify-center md:justify-end gap-1.5 sm:gap-2 bg-white/5 border border-white/15 p-1 rounded-full font-mono max-w-full overflow-x-auto no-scrollbar flex-nowrap mx-auto md:mx-0">
+        <div class="reveal-on-scroll stagger-3 flex items-center justify-center md:justify-end gap-1.5 sm:gap-2 bg-white/5 border border-white/15 p-1 rounded-full font-mono max-w-full overflow-x-auto no-scrollbar flex-nowrap mx-auto md:mx-0">
           <button id="terroir-tab-0" onclick="switchTerroir(0)"
             class="px-2.5 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer whitespace-nowrap flex-shrink-0 text-[10px] sm:text-xs bg-[#DCE33A] text-[#121212]">
             01 Zebu &amp; Ram
@@ -1335,18 +1336,18 @@
     <div class="px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 mb-12 sm:mb-16 w-full">
 
       <!-- Section Editorial Header: Centered on mobile, Split extreme ends on desktop -->
-      <div class="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between items-center md:items-end text-center md:text-left gap-6 w-full">
+      <div class="flex flex-col md:flex-row md:items-end justify-between items-center md:items-end text-center md:text-left gap-6 w-full">
         <div class="text-center md:text-left flex-shrink-0">
           <div
-            class="inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold mb-3">
+            class="reveal-on-scroll stagger-1 inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold mb-3">
             05 / WHAT PEOPLE SAY
           </div>
           <h2
-            class="font-display font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl uppercase tracking-tight text-[#121212] leading-[0.92]">
+            class="reveal-on-scroll stagger-2 font-display font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl uppercase tracking-tight text-[#121212] leading-[0.92]">
             What People Say
           </h2>
         </div>
-        <p class="font-sans text-sm sm:text-base md:text-lg text-black/80 leading-relaxed text-center md:text-right max-w-md">
+        <p class="reveal-on-scroll stagger-3 font-sans text-sm sm:text-base md:text-lg text-black/80 leading-relaxed text-center md:text-right max-w-md">
           Real reviews and words from Lagos diners, regulars, and suya lovers who eat at our live-fire grill.
         </p>
       </div>
@@ -1750,7 +1751,7 @@
       stopSpotlightAutoTimer();
       spotlightAutoTimer = setInterval(() => {
         nextSpotlight(true);
-      }, 4500);
+      }, 2000);
     }
 
     function stopSpotlightAutoTimer() {
@@ -1846,26 +1847,26 @@
   <!-- ========================================================================= -->
   <section id="philosophy"
     class="bg-[#DCE33A] py-16 sm:py-24 px-6 sm:px-10 lg:px-12 border-b border-black/15 text-center">
-    <div class="reveal-on-scroll max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto">
 
-      <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-3">
+      <span class="reveal-on-scroll stagger-1 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-3">
         OUR PHILOSOPHY
       </span>
 
       <h2
-        class="font-display font-black text-2xl sm:text-3xl md:text-[2.25rem] uppercase tracking-tight text-[#121212] leading-[1.2] mb-6">
+        class="reveal-on-scroll stagger-2 font-display font-black text-2xl sm:text-3xl md:text-[2.25rem] uppercase tracking-tight text-[#121212] leading-[1.2] mb-6">
         You're Not Here For "Safe." You're Here to TASTE PERFECTION, Savor The Smoke, &amp; Experience Pure Carnal
         Luxury.
       </h2>
 
-      <p class="max-w-lg mx-auto text-xs sm:text-sm text-black/80 leading-relaxed font-sans mb-8">
+      <p class="reveal-on-scroll stagger-3 max-w-lg mx-auto text-xs sm:text-sm text-black/80 leading-relaxed font-sans mb-8">
         We exist for those who demand more from their table than predictable cuts and bland traditions. When you sit at
         Forbidden Suya, you taste the unyielding dedication of farmers who honor heritage genetics, butchers who view
         aging as fine art, and pitmasters who speak fluent fire.
       </p>
 
       <button onclick="openInquiryModal()"
-        class="btn-magnetic-dark inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
+        class="reveal-on-scroll stagger-4 btn-magnetic-dark inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all shadow-md cursor-pointer">
         <span>Book A Table</span>
         <span>&rarr;</span>
       </button>
@@ -1890,14 +1891,14 @@
     <div class="relative z-10 max-w-7xl mx-auto">
       
       <!-- Section Header: Centered on mobile, Left-aligned on desktop -->
-      <div class="reveal-on-scroll max-w-2xl mb-12 sm:mb-16 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-        <div class="inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-3">
+      <div class="max-w-2xl mb-12 sm:mb-16 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+        <div class="reveal-on-scroll stagger-1 inline-block font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-3">
           06 / LIVE GRILL &amp; INQUIRIES
         </div>
-        <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-4 leading-tight">
+        <h2 class="reveal-on-scroll stagger-2 font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-4 leading-tight">
           Connect With Us
         </h2>
-        <p class="text-sm sm:text-base text-white/80 font-sans leading-relaxed">
+        <p class="reveal-on-scroll stagger-3 text-sm sm:text-base text-white/80 font-sans leading-relaxed">
           Questions regarding private dining buyouts, bespoke chef tastings, press, or corporate feasts? Send our concierge team an inquiry. For direct dining reservations, use our table booking concierge.
         </p>
       </div>
@@ -2006,11 +2007,11 @@
   <!-- 12. FOOTER: 6-Thumbnail Photo Gallery + Giant "FORBIDDEN SUYA" Watermark -->
   <!-- ========================================================================= -->
   <footer class="bg-[#E2E6D5] pt-14 pb-10 px-4 sm:px-6 lg:px-8 border-t border-black/15">
-    <div class="reveal-on-scroll max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto">
 
       <!-- Nav Links -->
       <div
-        class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs font-mono font-bold uppercase tracking-wider text-black/80 mb-8">
+        class="reveal-on-scroll stagger-1 flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs font-mono font-bold uppercase tracking-wider text-black/80 mb-8">
         <a href="#hero" class="hover:underline">Home</a>
         <a href="#about" class="hover:underline">About</a>
         <a href="#cuts" class="hover:underline">Our Cuts</a>
@@ -2021,7 +2022,7 @@
       </div>
 
       <!-- 6 Thumbnail Suya & Flame Photos in a Row (Dedicated Distinct Set) -->
-      <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-10">
+      <div class="reveal-scale stagger-2 grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-10">
         <div class="aspect-square rounded-xl overflow-hidden border border-black/10">
           <img src="assets/footer/footer_suya_1.jpg" alt="Marinated Ram Tozo sizzling over coals"
             class="w-full h-full object-cover filter contrast-105 hover:scale-110 transition-transform">
@@ -2049,7 +2050,7 @@
       </div>
 
       <!-- Giant Outlined / Muted Watermark -->
-      <div class="text-center overflow-hidden mb-6">
+      <div class="reveal-on-scroll stagger-3 text-center overflow-hidden mb-6">
         <h3
           class="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-black/15 uppercase select-none">
           FORBIDDEN SUYA
@@ -2219,6 +2220,16 @@
     </div>
   </div>
 
+  <!-- ========================================================================= -->
+  <!-- 15. FLOATING BACK TO TOP BUTTON (Bottom Right, Brand Chartreuse & Charcoal) -->
+  <!-- ========================================================================= -->
+  <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to Top"
+    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-[#121212] text-[#DCE33A] border border-[#DCE33A]/40 shadow-2xl flex items-center justify-center opacity-0 pointer-events-none translate-y-4 hover:bg-[#DCE33A] hover:text-[#121212] hover:border-[#121212] active:scale-90 transition-all duration-300 btn-magnetic group cursor-pointer focus:outline-none [-webkit-tap-highlight-color:transparent]">
+    <svg class="w-5 h-5 transform group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+    </svg>
+  </button>
+
   <!-- JavaScript for Modal, Nav, Contact Form & Preloader -->
   <script>
     // Flat Flame & Typewriter Preloader Animation + Framer Motion Hero Choreography
@@ -2252,9 +2263,10 @@
         document.body.classList.add('hero-loaded');
       }
 
-      // Initialize Framer Motion Scroll Reveals & Progress
+      // Initialize Framer Motion Scroll Reveals, Progress & Back To Top
       initScrollReveals();
       initScrollProgress();
+      initBackToTop();
     });
 
     // Real-time Scroll Progress Tracker
@@ -2268,6 +2280,26 @@
         if (height > 0) {
           const scrolled = (winScroll / height) * 100;
           bar.style.width = scrolled + '%';
+        }
+      }, { passive: true });
+    }
+
+    // Floating Back to Top Controller
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function initBackToTop() {
+      const btn = document.getElementById('back-to-top');
+      if (!btn) return;
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 320) {
+          btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+          btn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+          btn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+          btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
         }
       }, { passive: true });
     }
@@ -2286,14 +2318,24 @@
             }
           });
         }, {
-          threshold: 0.1,
-          rootMargin: '0px 0px -40px 0px'
+          threshold: 0.05,
+          rootMargin: '0px 0px -20px 0px'
         });
 
         revealElements.forEach(el => observer.observe(el));
       } else {
         revealElements.forEach(el => el.classList.add('is-visible'));
       }
+
+      // Safeguard: Check if any elements are already in initial viewport
+      setTimeout(() => {
+        revealElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('is-visible');
+          }
+        });
+      }, 300);
     }
 
     function openInquiryModal() {
