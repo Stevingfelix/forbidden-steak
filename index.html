@@ -56,7 +56,7 @@
     /* Hero Right Headline: Centered on mobile, firmly right-anchored with zero bleed on desktop */
     .hero-right-overlay {
       position: absolute;
-      top: 4.75rem;
+      top: 6.5rem;
       left: 1.25rem;
       right: 1.25rem;
       text-align: center;
@@ -65,7 +65,7 @@
 
     @media (min-width: 640px) {
       .hero-right-overlay {
-        top: 2.75rem;
+        top: 3.5rem;
         left: auto !important;
         right: 4rem !important;
         text-align: right !important;
@@ -455,9 +455,10 @@
     <!-- Hero Image Container with Full Bleed -->
     <div class="relative w-full h-[620px] sm:h-[720px] lg:h-[820px] overflow-hidden bg-[#121212]">
       <img src="assets/suya/hero_suya_4k.jpg" alt="Artisanal handcrafted Nigerian suya sizzling over glowing embers"
-        class="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.12]">
-      <!-- Gradient scrim overlays for mood and readability -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60 pointer-events-none"></div>
+        class="w-full h-full object-cover object-center filter brightness-[0.68] contrast-[1.2]">
+      <!-- Darker tint and gradient scrim overlays for punchy contrast and readability -->
+      <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/75 pointer-events-none"></div>
 
       <!-- Top-Left Text Overlay (Desktop / Tablet) -->
       <div
@@ -490,6 +491,13 @@
           class="text-xs sm:text-sm text-white/90 font-sans mt-3 sm:mt-4 max-w-xs sm:max-w-sm md:max-w-md mx-auto sm:ml-auto sm:mr-0 leading-relaxed drop-shadow-md block">
           Single-origin heritage cattle dry-aged 45 days in Himalayan salt lockers. Blistered over binchotan embers.
         </p>
+        <div class="mt-5 sm:mt-6 flex justify-center sm:justify-end">
+          <button onclick="openInquiryModal()"
+            class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold tracking-wider uppercase hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
+            <span>Book A Table</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
       </div>
 
       <!-- Bottom S-Curve Wavy Ribbon Banner -->
@@ -571,26 +579,26 @@
   <section class="relative w-full bg-[#DCE33A] overflow-hidden">
     <div class="w-full flex flex-col lg:flex-row items-stretch" style="height: 720px;">
 
-      <!-- LEFT CONTENT COLUMN: Vertically centered lockup, no gap between subheadline & button, generous right padding -->
+      <!-- LEFT CONTENT COLUMN: Vertically centered lockup, headline, subheadline and button centered -->
       <div
-        class="w-full lg:w-[42%] xl:w-[40%] py-10 lg:py-14 pl-6 sm:pl-10 md:pl-12 lg:pl-14 xl:pl-18 pr-8 sm:pr-12 md:pr-14 lg:pr-16 xl:pr-20 flex flex-col justify-center z-20">
-        <div>
+        class="w-full lg:w-[42%] xl:w-[40%] py-10 lg:py-14 px-6 sm:px-10 md:px-12 lg:px-14 flex flex-col justify-center items-center text-center z-20">
+        <div class="max-w-[420px] mx-auto flex flex-col items-center text-center">
           <h2
-            class="font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
+            class="text-center font-display font-black text-3xl sm:text-4xl md:text-[2.8rem] lg:text-[3.15rem] xl:text-[3.55rem] text-[#121212] leading-[0.94] tracking-tight mb-5"
             style="font-style: normal;">
             <span class="block">See How</span>
             <span class="block">We Turn</span>
             <span class="block">Embers into</span>
             <span class="block">OBSESSION</span>
           </h2>
-          <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed max-w-[360px] mb-6">
+          <p class="text-xs sm:text-sm md:text-[15px] text-black/80 font-sans leading-relaxed text-center mb-6">
             We don&rsquo;t believe in roadside compromises, gristly cuts, or lukewarm skewers drowned in MSG. We believe
             in spitting mangrove embers, the intoxicating fragrance of stoneground Northern yaji, sizzling ram tozo fat
             caramelizing over iron grates, and knives slicing through flame-blistered beef that melts on contact.
           </p>
-          <div>
+          <div class="flex justify-center">
             <button onclick="openInquiryModal()"
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#121212] text-white font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all cursor-pointer shadow-sm">
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#121212] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-black/85 active:scale-95 transition-all cursor-pointer shadow-md">
               <span>Book A Table</span>
               <span>&rarr;</span>
             </button>
@@ -745,9 +753,9 @@
     class="bg-[#E2E6D5] pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 w-full">
     <div class="w-full">
 
-      <!-- Section Header & Filter Pills: Pushed to Both Extreme Ends of the Page -->
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-10 sm:mb-12 w-full">
-        <div class="flex-shrink-0">
+      <!-- Section Header & Filter Pills: Centered -->
+      <div class="flex flex-col items-center justify-center text-center gap-6 mb-10 sm:mb-12 w-full">
+        <div class="text-center">
           <span class="font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold block mb-2">
             THE LIVE GRILL
           </span>
@@ -757,8 +765,8 @@
           </h2>
         </div>
 
-        <!-- Interactive Filter Pills: STRICTLY in ONE single line on the extreme right -->
-        <div class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 lg:ml-auto">
+        <!-- Interactive Filter Pills: Centered -->
+        <div class="flex items-center justify-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar flex-nowrap py-1 mx-auto max-w-full">
           <button onclick="switchCut(0)" id="cut-tab-0"
             class="cut-tab px-4 py-2.5 rounded-full font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex-shrink-0 bg-[#121212] text-white shadow-sm">
             Ram Tozo (Hump)
@@ -992,9 +1000,9 @@
 
     <div class="px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 w-full">
 
-      <!-- Header Section with Live Counter: Pushed to Both Extreme Ends -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10 w-full">
-        <div>
+      <!-- Header Section: Centered -->
+      <div class="flex flex-col items-center justify-center text-center gap-6 mb-8 sm:mb-10 w-full">
+        <div class="text-center">
           <div
             class="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-2">
             <span>★</span>
@@ -1006,8 +1014,8 @@
           </h2>
         </div>
 
-        <!-- Terroir Quick Tabs & Navigation Controls on Far Right -->
-        <div class="flex items-center gap-2 bg-white/5 border border-white/15 p-1 rounded-full text-xs font-mono">
+        <!-- Terroir Quick Tabs & Navigation Controls: Centered -->
+        <div class="flex items-center justify-center gap-2 bg-white/5 border border-white/15 p-1 rounded-full text-xs font-mono mx-auto">
           <button id="terroir-tab-0" onclick="switchTerroir(0)"
             class="px-3.5 py-1.5 rounded-full font-bold uppercase transition-all cursor-pointer bg-[#DCE33A] text-[#121212]">
             01 Zebu & Ram
@@ -1204,20 +1212,20 @@
   <section id="expect" class="bg-[#E2E6D5] py-20 sm:py-28 overflow-hidden border-b border-black/10 w-full">
     <div class="px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 mb-12 sm:mb-16 w-full">
 
-      <!-- Section Editorial Header: Pushed to Both Extreme Ends -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 w-full">
-        <div class="flex-shrink-0">
+      <!-- Section Editorial Header: Centered -->
+      <div class="flex flex-col items-center justify-center text-center gap-4 max-w-3xl mx-auto w-full">
+        <div>
           <div
             class="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-black/60 font-bold mb-3">
             <span>★</span>
             <span>05 / WHAT PEOPLE SAY</span>
           </div>
           <h2
-            class="font-display font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl uppercase tracking-tight text-[#121212] leading-[0.92]">
+            class="font-display font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl uppercase tracking-tight text-[#121212] leading-[0.92] text-center">
             What People Say
           </h2>
         </div>
-        <p class="font-sans text-sm sm:text-base md:text-lg text-black/80 leading-relaxed max-w-md md:text-right">
+        <p class="font-sans text-sm sm:text-base md:text-lg text-black/80 leading-relaxed text-center max-w-xl mx-auto">
           Real reviews and words from Lagos diners, regulars, and suya lovers who eat at our live-fire grill.
         </p>
       </div>
@@ -1567,16 +1575,16 @@
 
     <div class="relative z-10 max-w-7xl mx-auto">
       
-      <!-- Section Header -->
-      <div class="max-w-2xl mb-12 sm:mb-16">
+      <!-- Section Header: Centered -->
+      <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-center flex flex-col items-center">
         <div class="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-[0.22em] uppercase text-[#DCE33A] font-bold mb-3">
           <span>★</span>
           <span>06 / LIVE GRILL &amp; INQUIRIES</span>
         </div>
-        <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-4 leading-tight">
+        <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-4 leading-tight text-center">
           Connect With Us
         </h2>
-        <p class="text-sm sm:text-base text-white/80 font-sans leading-relaxed">
+        <p class="text-sm sm:text-base text-white/80 font-sans leading-relaxed text-center max-w-xl mx-auto">
           Questions regarding private dining buyouts, bespoke chef tastings, press, or corporate feasts? Send our concierge team an inquiry. For direct dining reservations, use our table booking concierge.
         </p>
       </div>
@@ -1783,10 +1791,10 @@
       class="relative z-10 w-full max-w-xl transform scale-95 transition-transform duration-300"
       id="modal-box">
 
-      <!-- Floating External Close Button (Completely Floating Outside the Container) -->
+      <!-- Close Button: Sits inside container on mobile (black icon, no background) & floats outside on desktop -->
       <button onclick="closeInquiryModal()" aria-label="Close Modal"
-        class="absolute -top-12 right-0 sm:-top-3 sm:-right-14 md:-right-16 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#121212] flex items-center justify-center hover:bg-neutral-100 hover:scale-105 active:scale-95 shadow-2xl transition-all cursor-pointer border border-black/15 focus:outline-none">
-        <svg class="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        class="absolute top-3.5 right-3.5 sm:-top-3 sm:-right-14 md:-right-16 z-50 p-1.5 sm:p-0 text-[#121212] bg-transparent sm:bg-white sm:w-10 sm:h-10 sm:rounded-full sm:shadow-2xl sm:border sm:border-black/15 flex items-center justify-center hover:opacity-75 sm:hover:bg-neutral-100 active:scale-90 sm:active:scale-95 transition-all cursor-pointer focus:outline-none">
+        <svg class="w-6 h-6 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -1890,10 +1898,10 @@
       class="relative z-10 w-full max-w-md transform scale-95 transition-transform duration-300"
       id="contact-success-box">
 
-      <!-- Floating External Close Button (Completely Floating Outside the Container) -->
+      <!-- Close Button: Sits inside container on mobile (black icon, no background) & floats outside on desktop -->
       <button onclick="closeContactSuccessModal()" aria-label="Close Modal"
-        class="absolute -top-12 right-0 sm:-top-3 sm:-right-14 md:-right-16 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#121212] flex items-center justify-center hover:bg-neutral-100 hover:scale-105 active:scale-95 shadow-2xl transition-all cursor-pointer border border-black/15 focus:outline-none">
-        <svg class="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        class="absolute top-3.5 right-3.5 sm:-top-3 sm:-right-14 md:-right-16 z-50 p-1.5 sm:p-0 text-[#121212] bg-transparent sm:bg-white sm:w-10 sm:h-10 sm:rounded-full sm:shadow-2xl sm:border sm:border-black/15 flex items-center justify-center hover:opacity-75 sm:hover:bg-neutral-100 active:scale-90 sm:active:scale-95 transition-all cursor-pointer focus:outline-none">
+        <svg class="w-6 h-6 sm:w-4.5 sm:h-4.5 text-[#121212]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
