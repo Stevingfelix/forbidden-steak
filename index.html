@@ -270,10 +270,141 @@
       z-index: 20;
       position: relative;
     }
+
+    /* Flame flicker & burn animations for preloader */
+    @keyframes fireFlicker {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 14px rgba(220, 227, 58, 0.85))
+                drop-shadow(0 -8px 24px rgba(245, 158, 11, 0.85))
+                drop-shadow(0 -16px 36px rgba(239, 68, 68, 0.65));
+      }
+      20% {
+        transform: scale(1.06, 0.95) rotate(-1.5deg);
+        filter: drop-shadow(0 0 18px rgba(220, 227, 58, 1))
+                drop-shadow(0 -12px 32px rgba(245, 158, 11, 0.95))
+                drop-shadow(0 -22px 45px rgba(239, 68, 68, 0.75));
+      }
+      40% {
+        transform: scale(0.96, 1.05) rotate(1deg);
+        filter: drop-shadow(0 0 12px rgba(220, 227, 58, 0.75))
+                drop-shadow(0 -6px 20px rgba(245, 158, 11, 0.7))
+                drop-shadow(0 -14px 30px rgba(239, 68, 68, 0.55));
+      }
+      60% {
+        transform: scale(1.05, 0.97) rotate(-1deg);
+        filter: drop-shadow(0 0 22px rgba(220, 227, 58, 1))
+                drop-shadow(0 -14px 38px rgba(245, 158, 11, 1))
+                drop-shadow(0 -24px 50px rgba(239, 68, 68, 0.85));
+      }
+      80% {
+        transform: scale(0.97, 1.04) rotate(1.2deg);
+        filter: drop-shadow(0 0 15px rgba(220, 227, 58, 0.85))
+                drop-shadow(0 -10px 26px rgba(245, 158, 11, 0.8))
+                drop-shadow(0 -18px 38px rgba(239, 68, 68, 0.65));
+      }
+    }
+
+    @keyframes riseEmber {
+      0% {
+        transform: translateY(0) scale(1) translateX(0);
+        opacity: 0.95;
+      }
+      50% {
+        transform: translateY(-40px) scale(0.8) translateX(6px);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-90px) scale(0.2) translateX(-8px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes preloaderBar {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .fire-burn {
+      animation: fireFlicker 0.4s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+
+    .ember-particle {
+      position: absolute;
+      border-radius: 9999px;
+      pointer-events: none;
+      animation: riseEmber linear infinite;
+    }
+
+    .preloader-progress {
+      animation: preloaderBar 2s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+    }
   </style>
 </head>
 
 <body class="antialiased text-[#121212] bg-[#E2E6D5]">
+
+  <!-- ========================================================================= -->
+  <!-- 0. BURNING FLAME LIVE-FIRE PRELOADER (2 Seconds) -->
+  <!-- ========================================================================= -->
+  <div id="preloader"
+    class="fixed inset-0 z-[99999] bg-[#121212] flex flex-col items-center justify-center transition-opacity duration-700 select-none pointer-events-auto">
+    
+    <div class="relative flex flex-col items-center justify-center px-4">
+      <!-- Rising Fire Embers Particles -->
+      <div class="absolute inset-0 -top-14 pointer-events-none overflow-visible">
+        <span class="ember-particle bg-[#DCE33A] w-1.5 h-1.5 left-[22%]" style="animation-duration: 1.8s; animation-delay: 0.1s;"></span>
+        <span class="ember-particle bg-[#F59E0B] w-2 h-2 left-[48%]" style="animation-duration: 2.1s; animation-delay: 0.4s;"></span>
+        <span class="ember-particle bg-[#EF4444] w-1.5 h-1.5 left-[68%]" style="animation-duration: 1.6s; animation-delay: 0.2s;"></span>
+        <span class="ember-particle bg-[#DCE33A] w-1 h-1 left-[35%]" style="animation-duration: 1.9s; animation-delay: 0.7s;"></span>
+        <span class="ember-particle bg-[#FBBF24] w-2 h-2 left-[78%]" style="animation-duration: 2.3s; animation-delay: 0.5s;"></span>
+      </div>
+
+      <!-- Burning Flame SVG Emblem (Header Icon with Fire Gradient & Glow) -->
+      <svg class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 fire-burn flex-shrink-0 relative z-10" viewBox="0 0 32 32">
+        <defs>
+          <linearGradient id="preloaderFireGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#DC2626" />
+            <stop offset="35%" stop-color="#EA580C" />
+            <stop offset="70%" stop-color="#F59E0B" />
+            <stop offset="100%" stop-color="#DCE33A" />
+          </linearGradient>
+          <linearGradient id="preloaderCoreGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#EA580C" />
+            <stop offset="50%" stop-color="#FDE047" />
+            <stop offset="100%" stop-color="#FFFFFF" />
+          </linearGradient>
+        </defs>
+        <!-- Outer flame body with fire gradient -->
+        <path fill="url(#preloaderFireGrad)"
+          d="M16 2C13.2 6.5 9 10.2 9 16C9 21.5 12.1 26 16 26C19.9 26 23 21.5 23 16C23 10.2 18.8 6.5 16 2Z" />
+        <!-- Inner dancing core flame -->
+        <path fill="url(#preloaderCoreGrad)"
+          d="M16 13C14.5 15.5 13 17.5 13 20C13 21.7 14.3 23 16 23C17.7 23 19 21.7 19 20C19 17.5 17.5 15.5 16 13Z" />
+        <!-- Hearth base -->
+        <rect x="6" y="27" width="20" height="2.5" rx="1.25" fill="#DCE33A" />
+      </svg>
+
+      <!-- Wordmark below emblem -->
+      <h1 class="font-display font-black text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.22em] text-white mt-6 drop-shadow-lg text-center">
+        Forbidden Suya
+      </h1>
+
+      <p class="font-mono text-[10px] sm:text-xs text-[#DCE33A] tracking-[0.3em] uppercase mt-2 font-bold text-center">
+        Live-Fire Hearth &middot; Victoria Island &middot; Lagos
+      </p>
+
+      <!-- Sleek 2-second Progress Bar -->
+      <div class="w-44 sm:w-56 h-[3px] bg-white/10 rounded-full overflow-hidden mt-6">
+        <div class="h-full bg-gradient-to-r from-[#DCE33A] via-[#F59E0B] to-[#DCE33A] rounded-full preloader-progress"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ========================================================================= -->
   <!-- 1. TOP NAVBAR (Solid Chartreuse Yellow from Screenshot) -->
@@ -301,10 +432,7 @@
         <a href="#origins" class="hover:underline underline-offset-4">Origins</a>
         <a href="#expect" class="hover:underline underline-offset-4">Testimonials</a>
         <a href="#philosophy" class="hover:underline underline-offset-4">Philosophy</a>
-        <button onclick="openInquiryModal()"
-          class="hover:underline underline-offset-4 cursor-pointer font-bold bg-transparent border-0 p-0 text-[#121212] text-xs sm:text-sm tracking-wider">
-          Contact
-        </button>
+        <a href="#contact" class="hover:underline underline-offset-4">Contact</a>
       </nav>
 
       <!-- Mobile Menu Toggle (Far right on mobile) -->
@@ -326,6 +454,7 @@
       <a href="#origins" onclick="toggleMobileNav()" class="block py-1">Origins</a>
       <a href="#expect" onclick="toggleMobileNav()" class="block py-1">Testimonials</a>
       <a href="#philosophy" onclick="toggleMobileNav()" class="block py-1">Philosophy</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-1">Contact</a>
       <button onclick="openInquiryModal(); toggleMobileNav();"
         class="w-full text-center py-2.5 rounded-full bg-[#121212] text-white font-bold uppercase tracking-wider mt-2 hover:bg-black/85 transition-all cursor-pointer">
         Book A Table &rarr;
@@ -1448,35 +1577,155 @@
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 11. "READY TO DO THIS?" (Dark Dramatic Atmosphere with CTA) -->
+  <!-- 11. "CONTACT US" (Live Hearth & Concierge Inquiry Section) -->
   <!-- ========================================================================= -->
-  <section class="relative bg-[#121212] py-36 sm:py-48 md:py-60 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[580px] sm:min-h-[700px] flex items-center justify-center">
+  <section id="contact"
+    class="relative bg-[#121212] py-24 sm:py-32 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden border-t border-white/10 text-white">
 
     <!-- Atmospheric suya dining background with glowing embers visible -->
-    <div class="absolute inset-0 z-0 opacity-55">
+    <div class="absolute inset-0 z-0 opacity-40">
       <img src="assets/suya/hero_suya_4k.jpg" alt="Handcrafted artisanal Nigerian suya on embers"
         class="w-full h-full object-cover filter contrast-125 brightness-[0.7]">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/45 to-[#121212]"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/75 to-[#121212]"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-[#121212]"></div>
     </div>
 
-    <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
-      <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#DCE33A] block mb-3">
-        LET'S CONNECT
-      </span>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-12 sm:mb-16">
+        <div class="inline-flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#DCE33A] font-bold mb-3">
+          <span>★</span>
+          <span>06 / LIVE HEARTH &amp; INQUIRIES</span>
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-4 leading-tight">
+          Contact The Hearth
+        </h2>
+        <p class="text-sm sm:text-base text-white/80 font-sans leading-relaxed">
+          Questions regarding private hearth buyouts, bespoke chef tastings, press, or corporate feasts? Send our concierge team an inquiry. For direct dining reservations, use our table booking concierge.
+        </p>
+      </div>
 
-      <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white mb-6">
-        Ready to Do This?
-      </h2>
+      <!-- 2-Column Layout: Contact Info / Reservation Callout + Contact Form -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        <!-- Left Column: Sanctuary Address & Reservation Direct Action -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Location & Details Card -->
+          <div class="bg-black/60 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl">
+            <span class="font-mono text-[10px] tracking-widest uppercase text-[#DCE33A] font-bold block mb-3">
+              VICTORIA ISLAND SANCTUARY
+            </span>
+            <h3 class="font-display font-black text-2xl uppercase tracking-tight text-white mb-2">
+              14 Ozumba Mbadiwe Ave
+            </h3>
+            <p class="text-xs sm:text-sm text-white/70 font-sans leading-relaxed mb-6">
+              Victoria Island, Lagos, Nigeria.<br>
+              Valet parking available at our private hearth entrance.
+            </p>
 
-      <p class="max-w-md mx-auto text-xs sm:text-sm text-white/90 font-sans leading-relaxed mb-8">
-        Reservations at the Live Hearth and private VIP lounge in Victoria Island open 30 days in advance. Secure your
-        table before the evening’s fresh skewers sell out.
-      </p>
+            <div class="border-t border-white/10 pt-5 space-y-4 font-mono text-xs">
+              <div>
+                <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1">Live Hearth Hours</div>
+                <div class="text-white font-bold">Tuesday &ndash; Thursday: 5:00 PM &ndash; 1:00 AM</div>
+                <div class="text-white font-bold">Friday &ndash; Sunday: 4:00 PM &ndash; 2:00 AM</div>
+                <div class="text-[#DCE33A]">Monday: Coals Rest (Closed)</div>
+              </div>
+              <div class="border-t border-white/5 pt-3">
+                <div class="text-white/40 uppercase tracking-widest text-[10px] mb-1">Direct Inquiries</div>
+                <div class="text-white font-bold">+234 (0) 1 888 7892</div>
+                <div class="text-white/80 font-mono text-xs">concierge@forbiddensuya.ng</div>
+              </div>
+            </div>
+          </div>
 
-      <button onclick="openInquiryModal()"
-        class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-xl cursor-pointer">
-        <span>Book A Table &rarr;</span>
-      </button>
+          <!-- Reservation Notice Callout -->
+          <div class="bg-[#DCE33A]/10 border border-[#DCE33A]/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-xl">
+            <div class="flex items-center gap-2 mb-2 font-mono text-[10px] tracking-widest uppercase text-[#DCE33A] font-bold">
+              <span>★</span>
+              <span>TABLE RESERVATIONS</span>
+            </div>
+            <h4 class="font-display font-black text-xl uppercase tracking-tight text-white mb-2">
+              Looking To Dine Tonight?
+            </h4>
+            <p class="text-xs sm:text-sm text-white/75 font-sans leading-relaxed mb-5">
+              Individual and group table reservations at the Live Hearth counter or VIP vault are handled exclusively through our booking concierge.
+            </p>
+            <button onclick="openInquiryModal()"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs font-bold uppercase tracking-wider hover:bg-[#CAD12D] active:scale-95 transition-all shadow-md cursor-pointer">
+              <span>Book A Table</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Contact Us Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-[#181818]/90 border border-white/15 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl">
+            <h3 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-2">
+              Send An Inquiry
+            </h3>
+            <p class="text-xs sm:text-sm text-white/70 font-sans mb-6 leading-relaxed">
+              Fill out the form below and our Victoria Island concierge team will connect with you directly.
+            </p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 sm:space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Name *</label>
+                  <input type="text" required placeholder="e.g. Babatunde Adeleke"
+                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                </div>
+                <div>
+                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Email Address *</label>
+                  <input type="email" required placeholder="name@domain.com"
+                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Phone / WhatsApp</label>
+                  <input type="tel" placeholder="+234 800 000 0000"
+                    class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors">
+                </div>
+                <div>
+                  <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Inquiry Type *</label>
+                  <select required
+                    class="w-full bg-[#1e1e1e] border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white outline-none transition-colors">
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Private Hearth Buyout">Private Hearth Buyout / Event</option>
+                    <option value="Corporate Dining">Corporate Dining &amp; Gifting</option>
+                    <option value="Press & Media">Press &amp; Media Inquiries</option>
+                    <option value="Careers">Careers &amp; Stagiaire</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-1.5">Your Message *</label>
+                <textarea required rows="4" placeholder="Tell us how we can help, expected dates, or specific requirements..."
+                  class="w-full bg-white/5 border border-white/15 focus:border-[#DCE33A] rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full py-4 rounded-full bg-[#DCE33A] text-[#121212] font-mono text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-[#CAD12D] active:scale-[0.99] transition-all shadow-xl cursor-pointer">
+                Send Message &rarr;
+              </button>
+
+              <div id="contact-status" class="hidden mt-4 p-4 rounded-xl bg-black/60 border border-[#DCE33A]/40 text-center">
+                <span class="text-[#DCE33A] text-xs font-mono font-bold uppercase tracking-wider block">
+                  ✓ Message Received &mdash; Our concierge team will reply within 24 hours.
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -1495,6 +1744,7 @@
         <a href="#origins" class="hover:underline">Origins</a>
         <a href="#expect" class="hover:underline">Ritual</a>
         <a href="#philosophy" class="hover:underline">Philosophy</a>
+        <a href="#contact" class="hover:underline">Contact</a>
       </div>
 
       <!-- 6 Thumbnail Suya & Flame Photos in a Row (Dedicated Distinct Set) -->
@@ -1623,8 +1873,21 @@
     </div>
   </div>
 
-  <!-- JavaScript for Modal & Nav -->
+  <!-- JavaScript for Modal, Nav, Contact Form & Preloader -->
   <script>
+    // 2-Second Live-Fire Preloader Dismissal
+    window.addEventListener('DOMContentLoaded', function () {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        setTimeout(function () {
+          preloader.classList.add('opacity-0', 'pointer-events-none');
+          setTimeout(function () {
+            preloader.style.display = 'none';
+          }, 700);
+        }, 2000);
+      }
+    });
+
     function openInquiryModal() {
       const modal = document.getElementById('inquiry-modal');
       const box = document.getElementById('modal-box');
@@ -1648,8 +1911,21 @@
 
     function handleReservationSubmit(e) {
       e.preventDefault();
-      alert('Thank you! Your skewer reservation request at Forbidden Suya, Victoria Island has been received. Our Concierge will confirm your table shortly.');
+      alert('Thank you! Your table reservation request at Forbidden Suya, Victoria Island has been received. Our Concierge will confirm your booking shortly.');
       closeInquiryModal();
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById('contact-status');
+      if (status) {
+        status.classList.remove('hidden');
+        form.reset();
+        setTimeout(function () {
+          status.classList.add('hidden');
+        }, 6000);
+      }
     }
   </script>
 
